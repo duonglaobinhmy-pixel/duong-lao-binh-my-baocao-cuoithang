@@ -1,1 +1,36 @@
-
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#f4f6f8;color:#1c2b1c}
+header{background:#2e7d32;color:#fff;padding:14px 18px}
+header h1{margin:0;font-size:20px}
+header .sub{font-size:13px;opacity:.92;margin-top:4px}
+.tabs{display:flex;gap:6px;background:#fff;border-bottom:1px solid #ddd;padding:8px 12px 0;position:sticky;top:0;z-index:10}
+.tabs button{border:1px solid #ddd;border-bottom:none;background:#eef2ee;color:#33503a;
+  padding:9px 16px;border-radius:8px 8px 0 0;font-size:15px;font-weight:600;cursor:pointer}
+.tabs button.active{background:#2e7d32;color:#fff}
+.panel{display:none;padding:14px}
+.panel.active{display:block}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.bar input,.bar select{padding:8px 10px;border:1px solid #ccc;border-radius:8px;font-size:14px}
+.bar input{flex:1;min-width:180px}
+.count{font-size:13px;color:#555}
+.tablewrap{overflow:auto;border:1px solid #e3e6e8;border-radius:8px;background:#fff}
+table{width:100%;border-collapse:collapse;min-width:680px}
+th,td{border:1px solid #e3e6e8;padding:7px 9px;font-size:14px;text-align:center;white-space:nowrap}
+th{background:#8DC63F;color:#1b3a1b}
+td.l,th.l{text-align:left;white-space:normal}
+tbody tr:nth-child(even) td{background:#fafbfa}
+.tot td{background:#ED7D31!important;color:#5a2d00;font-weight:700}
+.yellow{background:#fff7d6}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;background:#eef4e6;color:#2e7d32}
+td.gc{font-size:12px;color:#444;text-align:left;white-space:normal;max-width:360px}
+.yes{color:#2e7d32;font-weight:600}.no{color:#b00}
+mark{background:#ffe28a;padding:0}
+@media(max-width:640px){header h1{font-size:17px}.tabs button{padding:8px 10px;font-size:13px}}
+.btn{padding:8px 12px;border:1px solid #ccc;border-radius:8px;background:#fff;font-size:14px;cursor:pointer}
+.btn.on{background:#2e7d32;color:#fff;border-color:#2e7d32}
+.btn.green{background:#2e7d32;color:#fff;border-color:#2e7d32}
+.btn.red{background:#fff;color:#b00;border-color:#e0b4b4}
+.tag{font-size:11px;padding:1px 6px;border-radius:8px}
+.tag.add{background:#d6f0d6;color:#1b6b1b}.tag.edt{background:#fff0c2;color:#7a5a00}
+button.del{padding:3px 8px;border:1px solid #e0b4b4;background:#fff;color:#b00;border-radius:6px;cursor:pointer;font-size:12px}
+td[contenteditable]{background:#fffdf2;outline:1px dashed #d8c98a}
