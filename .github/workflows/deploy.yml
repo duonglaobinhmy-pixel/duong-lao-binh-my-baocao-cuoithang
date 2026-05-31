@@ -1,0 +1,41 @@
+# .github/workflows/deploy.yml
+# Tự deploy GitHub Pages mỗi khi có commit mới vào nhánh main
+# (n8n PUT data.json -> commit mới -> chạy workflow -> deploy bản mới nhất)
+name: Deploy Pages
+
+on:
+  push:
+    branches: [main]      # mọi commit vào main đều deploy
+  workflow_dispatch:       # cho phép bấm chạy tay trong tab Actions
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# luôn ưu tiên lần deploy mới nhất, hủy lần đang chạy dở
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout (lấy commit mới nhất)
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload toàn bộ thư mục repo
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'        # deploy nguyên gốc repo (index.html, style.css, app.js, data.json)
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
