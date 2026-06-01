@@ -7,11 +7,6 @@
 // ============================================================
 (function(){
   const EDIT_PASS='1398';   // mật khẩu mở chế độ sửa tay
-  // ====== LƯU THẲNG LÊN GITHUB (điền token để bật nút 'Lưu lên hệ thống') ======
-  // CẢNH BÁO: repo công khai -> ai xem mã nguồn trang cũng thấy token này.
-  // Nên dùng Fine-grained token chỉ quyền Contents (Read/Write) cho ĐÚNG repo này, và đổi token định kỳ.
-  const GH={ owner:'duonglaobinhmy-pixel', repo:'duong-lao-binh-my-baocao-cuoithang', branch:'main',
-             token:'DAN_TOKEN_GITHUB_VAO_DAY' };
 
   const ZCOLS=[
     ['label','Cơ sở','l'],['nhapMoi','Nhập mới'],['chuyenNB','Điều chuyển NB'],['veLai','Xuất viện về khu lại'],
@@ -192,23 +187,6 @@
     const blob=new Blob([JSON.stringify(buildExport(),null,2)],{type:'application/json'});
     const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='data.json';a.click();
   }
-  async function pushToGitHub(){
-    if(!unlocked){alert('Bấm ✎ Sửa tay và nhập mật khẩu trước.');return;}
-    if(!GH.token||GH.token.indexOf('DAN_TOKEN')===0){alert('Chưa điền token GitHub trong app.js (biến GH.token).');return;}
-    const btn=document.getElementById('pushGit'); if(btn){btn.disabled=true;btn.textContent='⏳ Đang lưu...';}
-    const api='https://api.github.com/repos/'+GH.owner+'/'+GH.repo+'/contents/data.json';
-    const content=btoa(unescape(encodeURIComponent(JSON.stringify(buildExport(),null,2))));
-    const H={Authorization:'Bearer '+GH.token,Accept:'application/vnd.github+json'};
-    try{
-      let sha; const g=await fetch(api+'?ref='+GH.branch,{headers:H});
-      if(g.ok){sha=(await g.json()).sha;}
-      const r=await fetch(api,{method:'PUT',headers:{...H,'Content-Type':'application/json'},
-        body:JSON.stringify({message:'Cập nhật báo cáo '+MONTH+' - '+new Date().toLocaleString('vi-VN'),content,sha,branch:GH.branch})});
-      if(r.ok){alert('✅ Đã lưu lên hệ thống! Mọi máy mở lại sau ~1 phút sẽ thấy số mới + lịch sử sửa.');}
-      else{const e=await r.json().catch(()=>({}));alert('❌ Lỗi lưu: '+(e.message||r.status)+'. Kiểm tra token/quyền repo.');}
-    }catch(err){alert('❌ Lỗi mạng: '+err);}
-    if(btn){btn.disabled=false;btn.textContent='💾 Lưu lên hệ thống';}
-  }
   function resetEdits(){ if(confirm('Xóa hết chỉnh tay trên máy này?')){localStorage.removeItem(LSK());renderDetail();} }
 
   function toggleEdit(){
@@ -283,7 +261,6 @@
     document.getElementById('editToggle').onclick=toggleEdit;
     document.getElementById('addRow').onclick=addRow;
     document.getElementById('exportJSON').onclick=exportJSON;
-    const pg=document.getElementById('pushGit'); if(pg)pg.onclick=pushToGitHub;
     document.getElementById('exportExcel').onclick=exportExcel;
     document.getElementById('resetEdits').onclick=resetEdits;
     renderDetail();
