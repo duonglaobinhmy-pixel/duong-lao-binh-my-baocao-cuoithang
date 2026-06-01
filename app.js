@@ -19,7 +19,7 @@
   function hl(s,kw){if(!kw)return esc(s);const n=norm(s),k=norm(kw),i=n.indexOf(k);if(i<0)return esc(s);
     return esc(s.slice(0,i))+'<mark>'+esc(s.slice(i,i+kw.length))+'</mark>'+esc(s.slice(i+kw.length));}
 
-  let MONTH='', BASE=[], totalsRef=null, REF=null;
+  let MONTH='', BASE=[], totalsRef=null, REF=null, KPIBASE=[];
   function parseDay(s){const m=String(s||'').match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);return m?Date.UTC(+m[1],+m[2]-1,+m[3]):null;}
   function refDate(){const m=String(MONTH||'').match(/^(\d{4})-(\d{1,2})/);if(!m)return Date.now();return Date.UTC(+m[1],+m[2],0);} // ngày cuối tháng báo cáo
   function daysOf(r){ // chỉ tính cho cụ đang ở (hiện hữu / hđ mới)
@@ -29,7 +29,7 @@
   }
   const rowKey=r=>[r.ct,r.ma,r.ten,r.ngay].join('|');
   const LSK=()=>'bcare_edit_'+MONTH;
-  function loadEdits(){try{return JSON.parse(localStorage.getItem(LSK()))||{edits:{},deleted:[],added:[]};}catch(e){return{edits:{},deleted:[],added:[]};}}
+  function loadEdits(){let e;try{e=JSON.parse(localStorage.getItem(LSK()))||{};}catch(_){e={};} e.edits=e.edits||{};e.deleted=e.deleted||[];e.added=e.added||[];e.kpi=e.kpi||{};return e;}
   function saveEdits(e){localStorage.setItem(LSK(),JSON.stringify(e));}
   function merged(){
     const e=loadEdits(), del=new Set(e.deleted);
@@ -38,12 +38,33 @@
     return rows;
   }
 
-  // ---------- TAB 1: bảng KPI ----------
-  function renderKPI(kpi,totals){
+  // ---------- TAB 1: bảng KPI (sửa tay được) ----------
+  function mergedKPI(){
+    const e=loadEdits();
+    return KPIBASE.map(r=>{const o={...r}; ZCOLS.forEach(c=>{ if(c[0]==='label')return; const k=r.zone+'|'+c[0]; if(e.kpi[k]!==undefined)o[c[0]]=e.kpi[k]; }); return o;});
+  }
+  function computeTotals(arr){
+    const s=k=>arr.reduce((a,r)=>a+(Number(r[k])||0),0);
+    return {nhapMoi:s('nhapMoi'),chuyenNB:s('chuyenNB'),veLai:s('veLai'),hienHuu:s('hienHuu'),giuong:s('giuong'),
+      lapDay:s('giuong')?Math.round(s('hienHuu')/s('giuong')*1000)/10:0,
+      tongXuat:s('tongXuat'),tuVong:s('tuVong'),thanhLy:s('thanhLy'),dieuChuyen:s('dieuChuyen'),diVien:s('diVien')};
+  }
+  function renderKPI(){
+    const kpi=mergedKPI(); const totals=computeTotals(kpi);
     let h='<thead><tr>'+ZCOLS.map(c=>`<th class="${c[2]==='l'?'l':''}">${esc(c[1])}</th>`).join('')+'</tr></thead><tbody>';
-    kpi.forEach(r=>{h+='<tr>'+ZCOLS.map(c=>`<td class="${c[2]==='l'?'l':''} ${c[2]==='yellow'?'yellow':''}">${esc(r[c[0]])}</td>`).join('')+'</tr>';});
-    if(totals)h+='<tr class="tot">'+ZCOLS.map((c,i)=>`<td class="${c[2]==='l'?'l':''}">${esc(i===0?'TỔNG CỘNG':(totals[c[0]]??''))}</td>`).join('')+'</tr>';
-    h+='</tbody>';document.getElementById('kpi').innerHTML=h;
+    kpi.forEach(r=>{ h+='<tr>'+ZCOLS.map(c=>{
+        if(c[0]==='label')return `<td class="l">${esc(r.label)}</td>`;
+        const cls=(c[2]==='yellow'?'yellow ':'')+(editMode?'editcell':'');
+        const ed=editMode?`contenteditable data-zone="${esc(r.zone)}" data-field="${c[0]}"`:'';
+        return `<td class="${cls}" ${ed}>${esc(r[c[0]])}</td>`;
+      }).join('')+'</tr>'; });
+    h+='<tr class="tot">'+ZCOLS.map((c,i)=>`<td class="${c[2]==='l'?'l':''}">${esc(i===0?'TỔNG CỘNG':(totals[c[0]]??''))}</td>`).join('')+'</tr>';
+    h+='</tbody>';
+    const t=document.getElementById('kpi'); t.innerHTML=h;
+    if(editMode){ t.querySelectorAll('td[contenteditable]').forEach(td=>td.onblur=()=>{
+      const e=loadEdits(); const k=td.dataset.zone+'|'+td.dataset.field; const v=td.textContent.trim();
+      const num=v.replace(',','.'); e.kpi[k]=(num!==''&&!isNaN(num))?Number(num):v; saveEdits(e); renderKPI();
+    }); }
   }
 
   // ---------- TAB 2: danh sách ----------
@@ -56,12 +77,22 @@
     if(dayf==='ge30')rows=rows.filter(r=>{const x=daysOf(r);return x!=null&&x>=30;});
     else if(dayf==='lt30')rows=rows.filter(r=>{const x=daysOf(r);return x!=null&&x<30;});
     if(sortK)rows=rows.slice().sort((a,b)=>(norm(a[sortK])>norm(b[sortK])?1:-1)*dir);
+    const dedup=(document.getElementById('dedup')||{}).checked;
+    if(dedup){
+      const m=new Map();
+      rows.forEach(r=>{ const k=(r.ma&&String(r.ma).trim())||norm(r.ten);
+        if(!m.has(k)){ m.set(k,{...r,_cts:[r.ct]}); }
+        else { const e=m.get(k); if(!e._cts.includes(r.ct))e._cts.push(r.ct);
+          if(/^[12]\./.test(r.ct)){ e.ct=r.ct; e.ngay=r.ngay; e.cs=r.cs; e.ck=r.ck; } } // ưu tiên info dòng cư trú
+      });
+      rows=[...m.values()];
+    }
     const head='<thead><tr>'+DCOLS.map(c=>`<th data-k="${c[0]}" class="${c[2]==='l'?'l':''}">${c[1]}</th>`).join('')+(editMode?'<th>Sửa</th>':'')+'</tr></thead>';
     const body='<tbody>'+rows.map(r=>{
       const rk=rowKey(r);
       const tag=r._added?' <span class="tag add">+</span>':(r._edited?' <span class="tag edt">sửa</span>':'');
       const tds=DCOLS.map(c=>{
-        if(c[0]==='ct')return '<td><span class="badge">'+esc(r.ct)+'</span>'+tag+'</td>';
+        if(c[0]==='ct'){const cts=r._cts||[r.ct];return '<td>'+cts.map(x=>'<span class="badge">'+esc(x)+'</span>').join(' ')+tag+'</td>';}
         if(c[0]==='ck')return '<td class="'+(String(r.ck).indexOf('Có')===0?'yes':'no')+'" '+(editMode?'contenteditable data-k="ck" data-rk="'+esc(rk)+'"':'')+'>'+esc(r.ck)+'</td>';
         if(c[0]==='gc')return '<td class="gc" '+(editMode?'contenteditable data-k="gc" data-rk="'+esc(rk)+'"':'')+'>'+(editMode?esc(r.gc):hl(r.gc,kw))+'</td>';
         if(c[0]==='days'){const dd=daysOf(r);const cl=dd==null?'':(dd>=30?'ge30':'u30');return '<td class="'+cl+'">'+(dd!=null?dd:'')+'</td>';}
@@ -84,7 +115,8 @@
       });
     }
     const all=merged(); const nge=all.filter(r=>{const x=daysOf(r);return x!=null&&x>=30;}).length; const nlt=all.filter(r=>{const x=daysOf(r);return x!=null&&x<30;}).length;
-    count.textContent='Hiển thị '+rows.length+' dòng • ≥30 ngày: '+nge+' • <30 ngày: '+nlt+(editMode?' • ĐANG SỬA':'');
+    const dunit=(document.getElementById('dedup')||{}).checked?' người':' dòng';
+    count.textContent='Hiển thị '+rows.length+dunit+' • ≥30 ngày: '+nge+' • <30 ngày: '+nlt+(editMode?' • ĐANG SỬA':'');
   }
 
   function addRow(){
@@ -95,7 +127,7 @@
     const e=loadEdits(); e.added.push(r); saveEdits(e); renderDetail();
   }
   function exportJSON(){
-    const out={month:MONTH,generatedAt:(new Date()).toLocaleString('vi-VN'),kpi:window.__KPI__||[],totals:totalsRef,
+    const k=mergedKPI(); const out={month:MONTH,generatedAt:(new Date()).toLocaleString('vi-VN'),kpi:k,totals:computeTotals(k),
       detail:merged().map(({_edited,_added,...r})=>r)};
     const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
     const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='data.json';a.click();
@@ -113,19 +145,20 @@
     document.getElementById('editToggle').classList.toggle('on',editMode);
     document.getElementById('editToggle').textContent=editMode?'✎ Đang sửa (bấm để khóa)':'✎ Sửa tay';
     document.getElementById('editTools').style.display=editMode?'flex':'none';
-    renderDetail();
+    renderKPI(); renderDetail();
   }
 
   // ---------- boot ----------
   function boot(d){
-    MONTH=d.month||''; BASE=(d.detail||[]).slice(); totalsRef=d.totals||null; window.__KPI__=d.kpi||[]; REF=refDate();
+    MONTH=d.month||''; BASE=(d.detail||[]).slice(); totalsRef=d.totals||null; KPIBASE=(d.kpi||[]).slice(); window.__KPI__=KPIBASE; REF=refDate();
     document.getElementById('sub').textContent='Tháng '+MONTH+(d.generatedAt?(' • cập nhật '+d.generatedAt):'');
-    renderKPI(d.kpi||[],d.totals);
+    renderKPI();
     const f=document.getElementById('f'),z=document.getElementById('z');
     [...new Set(BASE.map(r=>r.ct))].sort().forEach(c=>{const o=document.createElement('option');o.value=o.textContent=c;f.appendChild(o);});
     [...new Set(BASE.map(r=>r.zone))].filter(Boolean).sort().forEach(zz=>{const o=document.createElement('option');o.textContent=zz;z.appendChild(o);});
     document.getElementById('q').oninput=f.onchange=z.onchange=renderDetail;
     const dayf=document.getElementById('dayf'); if(dayf)dayf.onchange=renderDetail;
+    const dd=document.getElementById('dedup'); if(dd)dd.onchange=renderDetail;
     document.getElementById('editToggle').onclick=toggleEdit;
     document.getElementById('addRow').onclick=addRow;
     document.getElementById('exportJSON').onclick=exportJSON;

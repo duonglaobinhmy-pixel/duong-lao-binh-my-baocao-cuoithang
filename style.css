@@ -34,3 +34,11 @@ mark{background:#ffe28a;padding:0}
 .tag.add{background:#d6f0d6;color:#1b6b1b}.tag.edt{background:#fff0c2;color:#7a5a00}
 button.del{padding:3px 8px;border:1px solid #e0b4b4;background:#fff;color:#b00;border-radius:6px;cursor:pointer;font-size:12px}
 td[contenteditable]{background:#fffdf2;outline:1px dashed #d8c98a}
+
+.u30{background:#ffe1c2;color:#9a4a00;font-weight:700}
+.chk{display:flex;align-items:center;gap:6px;font-size:14px;color:#33503a}
+.chk input{width:16px;height:16px}
+
+.ge30{background:#d6f0d6;color:#1b6b1b;font-weight:700}
+
+.editcell{background:#fffdf2;outline:1px dashed #d8c98a}

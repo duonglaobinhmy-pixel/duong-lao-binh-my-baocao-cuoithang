@@ -1,31 +1,32 @@
 <!DOCTYPE html><html lang="vi"><head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BCARE - Báo cáo cuối tháng</title>
-<link rel="stylesheet" href="style.css"/>
-</head><body>
-<header><h1>HỆ THỐNG DƯỠNG LÃO BÌNH MỸ — BÁO CÁO HOẠT ĐỘNG</h1>
-<div class="sub" id="sub">Đang tải dữ liệu…</div></header>
-<div class="tabs">
-  <button data-tab="report" class="active">Báo cáo tháng</button>
-  <button data-tab="detail">Danh sách chi tiết</button>
-</div>
-<div id="report" class="panel active"><div class="tablewrap"><table id="kpi"></table></div></div>
-<div id="detail" class="panel">
-  <div class="bar">
-    <input id="q" placeholder="Tìm tên, mã, ghi chú…"/>
-    <select id="f"><option value="">— Tất cả chỉ tiêu —</option></select>
-    <select id="z"><option value="">— Tất cả khu —</option></select>
-    <select id="dayf"><option value="">— Số ngày ở —</option><option value="ge30">Ở &ge; 30 ngày</option><option value="lt30">Ở &lt; 30 ngày</option></select>
-    <button id="editToggle" class="btn">✎ Sửa tay</button>
-    <span class="count" id="count"></span>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>BCARE - Báo cáo cuối tháng</title>
+  <link rel="stylesheet" href="style.css"/>
+  </head><body>
+  <header><h1>HỆ THỐNG DƯỠNG LÃO BÌNH MỸ — BÁO CÁO HOẠT ĐỘNG</h1>
+  <div class="sub" id="sub">Đang tải dữ liệu…</div></header>
+  <div class="tabs">
+    <button data-tab="report" class="active">Báo cáo tháng</button>
+    <button data-tab="detail">Danh sách chi tiết</button>
   </div>
-  <div class="bar" id="editTools" style="display:none">
-    <button id="addRow" class="btn">+ Thêm dòng</button>
-    <button id="exportJSON" class="btn green">⤓ Tải JSON đã sửa</button>
-    <button id="resetEdits" class="btn red">↺ Khôi phục</button>
-    <span class="count">Sửa lưu trên máy bạn. Tải JSON rồi đẩy lại GitHub để mọi người thấy.</span>
+  <div id="report" class="panel active"><div class="tablewrap"><table id="kpi"></table></div></div>
+  <div id="detail" class="panel">
+    <div class="bar">
+      <input id="q" placeholder="Tìm tên, mã, ghi chú…"/>
+      <select id="f"><option value="">— Tất cả chỉ tiêu —</option></select>
+      <select id="z"><option value="">— Tất cả khu —</option></select>
+      <select id="dayf"><option value="">— Số ngày ở —</option><option value="ge30">Ở &ge; 30 ngày</option><option value="lt30">Ở &lt; 30 ngày</option></select>
+      <label class="chk"><input type="checkbox" id="dedup"/> Gộp theo người</label>
+      <button id="editToggle" class="btn">✎ Sửa tay</button>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="bar" id="editTools" style="display:none">
+      <button id="addRow" class="btn">+ Thêm dòng</button>
+      <button id="exportJSON" class="btn green">⤓ Tải JSON đã sửa</button>
+      <button id="resetEdits" class="btn red">↺ Khôi phục</button>
+      <span class="count">Sửa lưu trên máy bạn. Tải JSON rồi đẩy lại GitHub để mọi người thấy.</span>
+    </div>
+    <div class="tablewrap"><table id="dt"></table></div>
   </div>
-  <div class="tablewrap"><table id="dt"></table></div>
-</div>
-<script src="app.js"></script>
-</body></html>
+  <script src="app.js"></script>
+  </body></html>
