@@ -45,3 +45,13 @@ td[contenteditable]{background:#fffdf2;outline:1px dashed #d8c98a}
 
 .actionbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:8px 14px;background:#fff;border-bottom:1px solid #eee}
 #editTools{display:inline-flex;gap:8px}
+
+.adjusted{background:#fff3cd!important;font-weight:700}
+.old{color:#a00;font-weight:400;font-size:.82em}
+.newv{color:#1b6b1b;font-weight:700}
+.kpilog{margin:10px 14px 24px}
+.kpilog-h{font-weight:700;margin:6px 0;color:#b35900}
+.logtbl{border-collapse:collapse;width:100%;font-size:.92em}
+.logtbl th,.logtbl td{border:1px solid #e3e3e3;padding:5px 8px;text-align:center}
+.logtbl th{background:#fbe6c8}
+.logtbl td.gc{background:#fffdf2}
