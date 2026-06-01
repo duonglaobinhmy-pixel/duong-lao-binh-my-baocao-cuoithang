@@ -42,3 +42,6 @@ td[contenteditable]{background:#fffdf2;outline:1px dashed #d8c98a}
 .ge30{background:#d6f0d6;color:#1b6b1b;font-weight:700}
 
 .editcell{background:#fffdf2;outline:1px dashed #d8c98a}
+
+.actionbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:8px 14px;background:#fff;border-bottom:1px solid #eee}
+#editTools{display:inline-flex;gap:8px}

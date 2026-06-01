@@ -9,6 +9,14 @@
     <button data-tab="report" class="active">Báo cáo tháng</button>
     <button data-tab="detail">Danh sách chi tiết</button>
   </div>
+  <div class="actionbar">
+    <button id="editToggle" class="btn">✎ Sửa tay</button>
+    <button id="exportExcel" class="btn">⤓ Xuất Excel</button>
+    <span id="editTools" style="display:none">
+      <button id="exportJSON" class="btn green">⤓ Tải JSON đã sửa</button>
+      <button id="resetEdits" class="btn red">↺ Khôi phục</button>
+    </span>
+  </div>
   <div id="report" class="panel active"><div class="tablewrap"><table id="kpi"></table></div></div>
   <div id="detail" class="panel">
     <div class="bar">
@@ -17,14 +25,8 @@
       <select id="z"><option value="">— Tất cả khu —</option></select>
       <select id="dayf"><option value="">— Số ngày ở —</option><option value="ge30">Ở &ge; 30 ngày</option><option value="lt30">Ở &lt; 30 ngày</option></select>
       <label class="chk"><input type="checkbox" id="dedup"/> Gộp theo người</label>
-      <button id="editToggle" class="btn">✎ Sửa tay</button>
+      <button id="addRow" class="btn" style="display:none">+ Thêm dòng</button>
       <span class="count" id="count"></span>
-    </div>
-    <div class="bar" id="editTools" style="display:none">
-      <button id="addRow" class="btn">+ Thêm dòng</button>
-      <button id="exportJSON" class="btn green">⤓ Tải JSON đã sửa</button>
-      <button id="resetEdits" class="btn red">↺ Khôi phục</button>
-      <span class="count">Sửa lưu trên máy bạn. Tải JSON rồi đẩy lại GitHub để mọi người thấy.</span>
     </div>
     <div class="tablewrap"><table id="dt"></table></div>
   </div>

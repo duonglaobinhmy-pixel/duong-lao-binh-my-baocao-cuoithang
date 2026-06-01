@@ -144,8 +144,52 @@
     editMode=!editMode;
     document.getElementById('editToggle').classList.toggle('on',editMode);
     document.getElementById('editToggle').textContent=editMode?'✎ Đang sửa (bấm để khóa)':'✎ Sửa tay';
-    document.getElementById('editTools').style.display=editMode?'flex':'none';
+    document.getElementById('editTools').style.display=editMode?'inline':'none';
+    const ar=document.getElementById('addRow'); if(ar)ar.style.display=editMode?'inline-block':'none';
     renderKPI(); renderDetail();
+  }
+
+
+  // ---------- XUẤT EXCEL (.xlsx thuần, không cần thư viện) ----------
+  function xlsxBlob(sheets){
+    const enc=new TextEncoder();
+    const CRC=(()=>{const t=[];for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?(0xEDB88320^(c>>>1)):(c>>>1);t[n]=c>>>0;}return t;})();
+    const crc32=b=>{let c=0xFFFFFFFF;for(let i=0;i<b.length;i++)c=CRC[(c^b[i])&255]^(c>>>8);return (c^0xFFFFFFFF)>>>0;};
+    const cat=arr=>{let n=arr.reduce((a,x)=>a+x.length,0),o=new Uint8Array(n),p=0;arr.forEach(a=>{o.set(a,p);p+=a.length;});return o;};
+    const L16=n=>new Uint8Array([n&255,(n>>8)&255]);
+    const L32=n=>new Uint8Array([n&255,(n>>8)&255,(n>>16)&255,(n>>>24)&255]);
+    const xesc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    const colL=n=>{let s='';while(n>0){const m=(n-1)%26;s=String.fromCharCode(65+m)+s;n=(n-m-1)/26;}return s;};
+    function sheetXml(rows){let sd='<sheetData>';rows.forEach((row,ri)=>{sd+='<row r="'+(ri+1)+'">';row.forEach((v,ci)=>{const ref=colL(ci+1)+(ri+1);
+      if(typeof v==='number'&&isFinite(v))sd+='<c r="'+ref+'"><v>'+v+'</v></c>';
+      else sd+='<c r="'+ref+'" t="inlineStr"><is><t xml:space="preserve">'+xesc(v)+'</t></is></c>';});sd+='</row>';});sd+='</sheetData>';
+      return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">'+sd+'</worksheet>';}
+    const files=[];
+    files.push({n:'[Content_Types].xml',d:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>'+sheets.map((s,i)=>'<Override PartName="/xl/worksheets/sheet'+(i+1)+'.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>').join('')+'</Types>'});
+    files.push({n:'_rels/.rels',d:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>'});
+    files.push({n:'xl/workbook.xml',d:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets>'+sheets.map((s,i)=>'<sheet name="'+xesc(s.name).slice(0,31)+'" sheetId="'+(i+1)+'" r:id="rId'+(i+1)+'"/>').join('')+'</sheets></workbook>'});
+    files.push({n:'xl/_rels/workbook.xml.rels',d:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'+sheets.map((s,i)=>'<Relationship Id="rId'+(i+1)+'" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet'+(i+1)+'.xml"/>').join('')+'</Relationships>'});
+    sheets.forEach((s,i)=>files.push({n:'xl/worksheets/sheet'+(i+1)+'.xml',d:sheetXml(s.rows)}));
+    // zip store
+    const locals=[],centrals=[];let off=0;
+    files.forEach(f=>{const nb=enc.encode(f.n),data=enc.encode(f.d),crc=crc32(data);
+      const lh=cat([L32(0x04034b50),L16(20),L16(0),L16(0),L16(0),L16(0),L32(crc),L32(data.length),L32(data.length),L16(nb.length),L16(0)]);
+      locals.push(lh,nb,data);
+      const ch=cat([L32(0x02014b50),L16(20),L16(20),L16(0),L16(0),L16(0),L16(0),L32(crc),L32(data.length),L32(data.length),L16(nb.length),L16(0),L16(0),L16(0),L16(0),L32(0),L32(off)]);
+      centrals.push(ch,nb);off+=lh.length+nb.length+data.length;});
+    const lp=cat(locals),cp=cat(centrals);
+    const eo=cat([L32(0x06054b50),L16(0),L16(0),L16(files.length),L16(files.length),L32(cp.length),L32(lp.length),L16(0)]);
+    return new Blob([cat([lp,cp,eo])],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'});
+  }
+  function exportExcel(){
+    const kpi=mergedKPI(), totals=computeTotals(kpi);
+    const h1=['Cơ sở','Nhập mới','Điều chuyển NB','Xuất viện về khu lại','Hiện hữu','Số giường','Lấp đầy (%)','Tổng xuất','Tử vong','Thanh lý HĐ','Điều chuyển nội bộ','Đi viện'];
+    const KK=['label','nhapMoi','chuyenNB','veLai','hienHuu','giuong','lapDay','tongXuat','tuVong','thanhLy','dieuChuyen','diVien'];
+    const s1=[h1, ...kpi.map(r=>KK.map(k=>r[k])), ['TỔNG CỘNG',totals.nhapMoi,totals.chuyenNB,totals.veLai,totals.hienHuu,totals.giuong,totals.lapDay,totals.tongXuat,totals.tuVong,totals.thanhLy,totals.dieuChuyen,totals.diVien]];
+    const h2=['Chỉ tiêu','Khu','Mã','Họ tên','Ngày','Số ngày ở','Cơ sở/Phòng','Còn trong khu','Ghi chú'];
+    const s2=[h2, ...merged().map(r=>[r.ct,r.zone,r.ma,r.ten,r.ngay,(daysOf(r)??''),r.cs,r.ck,r.gc])];
+    const blob=xlsxBlob([{name:'Báo cáo tháng',rows:s1},{name:'Danh sách chi tiết',rows:s2}]);
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='BCARE_BaoCao_'+(MONTH||'thang')+'.xlsx';a.click();
   }
 
   // ---------- boot ----------
@@ -162,6 +206,7 @@
     document.getElementById('editToggle').onclick=toggleEdit;
     document.getElementById('addRow').onclick=addRow;
     document.getElementById('exportJSON').onclick=exportJSON;
+    document.getElementById('exportExcel').onclick=exportExcel;
     document.getElementById('resetEdits').onclick=resetEdits;
     renderDetail();
   }
