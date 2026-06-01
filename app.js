@@ -72,24 +72,31 @@
 
   // ---------- TAB 2: danh sách ----------
   let sortK='',dir=1,editMode=false,unlocked=false;
-  function renderDetail(){
-    const q=document.getElementById('q'),f=document.getElementById('f'),z=document.getElementById('z'),count=document.getElementById('count');
+  // Lọc + sort + gộp người theo bộ điều khiển hiện tại (dùng chung cho hiển thị & xuất Excel)
+  function currentRows(){
+    const q=document.getElementById('q'),f=document.getElementById('f'),z=document.getElementById('z');
     const kw=q.value.trim(),fct=f.value,fz=z.value,nk=norm(kw);
     const dayf=(document.getElementById('dayf')||{}).value||'';
     let rows=merged().filter(r=>(!fct||r.ct===fct)&&(!fz||r.zone===fz)&&(!kw||norm([r.ten,r.ma,r.gc,r.cs].join(' ')).includes(nk)));
-    if(dayf==='ge30')rows=rows.filter(r=>{const x=daysOf(r);return x!=null&&x>=30;});
-    else if(dayf==='lt30')rows=rows.filter(r=>{const x=daysOf(r);return x!=null&&x<30;});
+    // bộ lọc số ngày chỉ áp cho nhóm CÓ số ngày (Hiện hữu/HĐ mới); nhóm khác luôn hiện
+    if(dayf==='ge30')rows=rows.filter(r=>{const x=daysOf(r);return x==null||x>=30;});
+    else if(dayf==='lt30')rows=rows.filter(r=>{const x=daysOf(r);return x==null||x<30;});
     if(sortK)rows=rows.slice().sort((a,b)=>(norm(a[sortK])>norm(b[sortK])?1:-1)*dir);
-    const dedup=(document.getElementById('dedup')||{}).checked;
-    if(dedup){
+    if((document.getElementById('dedup')||{}).checked){
       const m=new Map();
       rows.forEach(r=>{ const k=(r.ma&&String(r.ma).trim())||norm(r.ten);
         if(!m.has(k)){ m.set(k,{...r,_cts:[r.ct]}); }
         else { const e=m.get(k); if(!e._cts.includes(r.ct))e._cts.push(r.ct);
-          if(/^[12]\./.test(r.ct)){ e.ct=r.ct; e.ngay=r.ngay; e.cs=r.cs; e.ck=r.ck; } } // ưu tiên info dòng cư trú
+          if(/^[12]\./.test(r.ct)){ e.ct=r.ct; e.ngay=r.ngay; e.cs=r.cs; e.ck=r.ck; } }
       });
       rows=[...m.values()];
     }
+    return rows;
+  }
+  function renderDetail(){
+    const q=document.getElementById('q'),count=document.getElementById('count');
+    const kw=q.value.trim();
+    const rows=currentRows();
     const head='<thead><tr>'+DCOLS.map(c=>`<th data-k="${c[0]}" class="${c[2]==='l'?'l':''}">${c[1]}</th>`).join('')+(editMode?'<th>Sửa</th>':'')+'</tr></thead>';
     const body='<tbody>'+rows.map(r=>{
       const rk=rowKey(r);
@@ -189,8 +196,8 @@
     const h1=['Cơ sở','Nhập mới','Điều chuyển NB','Xuất viện về khu lại','Hiện hữu','Số giường','Lấp đầy (%)','Tổng xuất','Tử vong','Thanh lý HĐ','Điều chuyển nội bộ','Đi viện'];
     const KK=['label','nhapMoi','chuyenNB','veLai','hienHuu','giuong','lapDay','tongXuat','tuVong','thanhLy','dieuChuyen','diVien'];
     const s1=[h1, ...kpi.map(r=>KK.map(k=>r[k])), ['TỔNG CỘNG',totals.nhapMoi,totals.chuyenNB,totals.veLai,totals.hienHuu,totals.giuong,totals.lapDay,totals.tongXuat,totals.tuVong,totals.thanhLy,totals.dieuChuyen,totals.diVien]];
-    const h2=['Chỉ tiêu','Khu','Mã','Họ tên','Ngày','Số ngày ở','Cơ sở/Phòng','Còn trong khu','Ghi chú'];
-    const s2=[h2, ...merged().map(r=>[r.ct,r.zone,r.ma,r.ten,r.ngay,(daysOf(r)??''),r.cs,r.ck,r.gc])];
+    const h2=['Chỉ tiêu','Khu','Mã','Họ tên','Ngày','Số ngày ở (trong tháng)','Cơ sở/Phòng','Còn trong khu','Ghi chú'];
+    const s2=[h2, ...currentRows().map(r=>[(r._cts?r._cts.join(' + '):r.ct),r.zone,r.ma,r.ten,r.ngay,(daysOf(r)??''),r.cs,r.ck,r.gc])];
     const blob=xlsxBlob([{name:'Báo cáo tháng',rows:s1},{name:'Danh sách chi tiết',rows:s2}]);
     const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='BCARE_BaoCao_'+(MONTH||'thang')+'.xlsx';a.click();
   }
