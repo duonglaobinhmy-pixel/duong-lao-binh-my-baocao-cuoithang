@@ -11,7 +11,7 @@
   const ZCOLS=[
     ['label','Cơ sở','l'],['nhapMoi','Nhập mới'],['chuyenNB','Điều chuyển NB'],['veLai','Xuất viện về khu lại'],
     ['hienHuu','Hiện hữu'],['giuong','Số giường'],['lapDay','Lấp đầy (%)','yellow'],
-    ['tongXuat','Tổng xuất'],['tuVong','Tử vong'],['thanhLy','Thanh lý HĐ'],['dieuChuyen','Điều chuyển nội bộ'],['diVien','Đi viện'],['ge30','NCT ≥30 ngày (lương)','yellow']
+    ['tongXuat','Tổng xuất'],['tuVong','Tử vong'],['thanhLy','Thanh lý HĐ'],['dieuChuyen','Điều chuyển nội bộ'],['diVien','Đi viện']
   ];
   const DCOLS=[['ct','Chỉ tiêu'],['zone','Khu'],['ma','Mã'],['ten','Họ tên','l'],['ngay','Ngày'],['days','Số ngày ở (trong tháng)'],['cs','Cơ sở/Phòng','l'],['ck','Còn trong khu'],['gc','Ghi chú','l']];
   const esc=s=>(s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -195,9 +195,9 @@
   }
   function exportExcel(){
     const kpi=mergedKPI(), totals=computeTotals(kpi);
-    const h1=['Cơ sở','Nhập mới','Điều chuyển NB','Xuất viện về khu lại','Hiện hữu','Số giường','Lấp đầy (%)','Tổng xuất','Tử vong','Thanh lý HĐ','Điều chuyển nội bộ','Đi viện','NCT ≥30 ngày (lương)'];
-    const KK=['label','nhapMoi','chuyenNB','veLai','hienHuu','giuong','lapDay','tongXuat','tuVong','thanhLy','dieuChuyen','diVien','ge30'];
-    const s1=[h1, ...kpi.map(r=>KK.map(k=>r[k])), ['TỔNG CỘNG',totals.nhapMoi,totals.chuyenNB,totals.veLai,totals.hienHuu,totals.giuong,totals.lapDay,totals.tongXuat,totals.tuVong,totals.thanhLy,totals.dieuChuyen,totals.diVien,totals.ge30]];
+    const h1=['Cơ sở','Nhập mới','Điều chuyển NB','Xuất viện về khu lại','Hiện hữu','Số giường','Lấp đầy (%)','Tổng xuất','Tử vong','Thanh lý HĐ','Điều chuyển nội bộ','Đi viện'];
+    const KK=['label','nhapMoi','chuyenNB','veLai','hienHuu','giuong','lapDay','tongXuat','tuVong','thanhLy','dieuChuyen','diVien'];
+    const s1=[h1, ...kpi.map(r=>KK.map(k=>r[k])), ['TỔNG CỘNG',totals.nhapMoi,totals.chuyenNB,totals.veLai,totals.hienHuu,totals.giuong,totals.lapDay,totals.tongXuat,totals.tuVong,totals.thanhLy,totals.dieuChuyen,totals.diVien]];
     const h2=['Chỉ tiêu','Khu','Mã','Họ tên','Ngày','Số ngày ở (trong tháng)','Cơ sở/Phòng','Còn trong khu','Ghi chú'];
     const s2=[h2, ...currentRows().map(r=>[(r._cts?r._cts.join(' + '):r.ct),r.zone,r.ma,r.ten,r.ngay,(daysOf(r)??''),r.cs,r.ck,r.gc])];
     const blob=xlsxBlob([{name:'Báo cáo tháng',rows:s1},{name:'Danh sách chi tiết',rows:s2}]);
