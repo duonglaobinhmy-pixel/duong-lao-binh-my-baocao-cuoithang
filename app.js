@@ -7,6 +7,11 @@
 // ============================================================
 (function(){
   const EDIT_PASS='1398';   // mật khẩu mở chế độ sửa tay
+  // ====== LƯU THẲNG LÊN GITHUB (điền token để bật nút 'Lưu lên hệ thống') ======
+  // CẢNH BÁO: repo công khai -> ai xem mã nguồn trang cũng thấy token này.
+  // Nên dùng Fine-grained token chỉ quyền Contents (Read/Write) cho ĐÚNG repo này, và đổi token định kỳ.
+  const GH={ owner:'duonglaobinhmy-pixel', repo:'duong-lao-binh-my-baocao-cuoithang', branch:'main',
+             token:'DAN_TOKEN_GITHUB_VAO_DAY' };
 
   const ZCOLS=[
     ['label','Cơ sở','l'],['nhapMoi','Nhập mới'],['chuyenNB','Điều chuyển NB'],['veLai','Xuất viện về khu lại'],
@@ -43,6 +48,7 @@
   }
 
   // ---------- TAB 1: bảng KPI (sửa tay được) ----------
+  const AUTO=['tongXuat','lapDay']; // tự tính, không sửa tay
   const ZLABEL=c=>{const x=ZCOLS.find(z=>z[0]===c);return x?x[1]:c;};
   function origVal(zone,field){const r=KPIBASE.find(x=>x.zone===zone);return r?r[field]:undefined;}
   // gộp chỉnh tay: từ data.json (adjust) + máy hiện tại (localStorage). key = 'zone|field' -> {new, note}
@@ -50,12 +56,15 @@
     const e=loadEdits(); const m={};
     (DADJUST||[]).forEach(a=>{m[a.zone+'|'+a.field]={new:a.new,note:a.note||''};});
     Object.entries(e.kpiAdj||{}).forEach(([k,v])=>{m[k]={new:v.v,note:v.note||''};});
-    Object.keys(m).forEach(k=>{const[z,f]=k.split('|');if(m[k].new===undefined||String(m[k].new)===String(origVal(z,f)))delete m[k];});
+    Object.keys(m).forEach(k=>{const[z,f]=k.split('|');if(AUTO.includes(f)||m[k].new===undefined||String(m[k].new)===String(origVal(z,f)))delete m[k];});
     return m;
   }
   function mergedKPI(){
     const m=adjustMap();
-    return KPIBASE.map(r=>{const o={...r}; ZCOLS.forEach(c=>{ if(c[0]==='label')return; const k=r.zone+'|'+c[0]; if(m[k]&&m[k].new!==''&&m[k].new!=null)o[c[0]]=m[k].new; }); return o;});
+    return KPIBASE.map(r=>{const o={...r}; ZCOLS.forEach(c=>{ if(c[0]==='label'||AUTO.includes(c[0]))return; const k=r.zone+'|'+c[0]; if(m[k]&&m[k].new!==''&&m[k].new!=null)o[c[0]]=m[k].new; });
+      o.tongXuat=(Number(o.tuVong)||0)+(Number(o.thanhLy)||0)+(Number(o.dieuChuyen)||0)+(Number(o.diVien)||0); // tự cộng
+      o.lapDay=Number(o.giuong)?Math.round((Number(o.hienHuu)||0)/Number(o.giuong)*1000)/10:0;                 // tự tính %
+      return o;});
   }
   function computeTotals(arr){
     const s=k=>arr.reduce((a,r)=>a+(Number(r[k])||0),0);
@@ -64,6 +73,7 @@
       tongXuat:s('tongXuat'),tuVong:s('tuVong'),thanhLy:s('thanhLy'),dieuChuyen:s('dieuChuyen'),diVien:s('diVien'),ge30:s('ge30')};
   }
   function setKpiAdj(zone,field,val){
+    if(AUTO.includes(field))return; // Tổng xuất & Lấp đầy tự tính, không sửa tay
     const e=loadEdits(); e.kpiAdj=e.kpiAdj||{}; const k=zone+'|'+field;
     const num=String(val).replace(',','.'); const v=(num!==''&&!isNaN(num))?Number(num):val;
     if(String(v)===String(origVal(zone,field))){ if(e.kpiAdj[k]){delete e.kpiAdj[k].v; if(!e.kpiAdj[k].note)delete e.kpiAdj[k];} }
@@ -77,8 +87,9 @@
     kpi.forEach(r=>{ h+='<tr>'+ZCOLS.map(c=>{
         if(c[0]==='label')return `<td class="l">${esc(r.label)}</td>`;
         const k=r.zone+'|'+c[0]; const adj=m[k]; const ov=origVal(r.zone,c[0]);
-        const cls=(c[2]==='yellow'?'yellow ':'')+(adj?'adjusted ':'')+(editMode?'editcell':'');
-        const ed=editMode?`contenteditable data-zone="${esc(r.zone)}" data-field="${c[0]}"`:'';
+        const isAuto=AUTO.includes(c[0]);
+        const cls=(c[2]==='yellow'?'yellow ':'')+(adj?'adjusted ':'')+((editMode&&!isAuto)?'editcell':'')+(isAuto?'autocell':'');
+        const ed=(editMode&&!isAuto)?`contenteditable data-zone="${esc(r.zone)}" data-field="${c[0]}"`:'';
         const extra=(adj&&!editMode)?` <small class="old">(cũ ${esc(ov)})</small>`:'';
         return `<td class="${cls}" ${ed}>${esc(r[c[0]])}${extra}</td>`;
       }).join('')+'</tr>'; });
@@ -171,13 +182,32 @@
       ck:prompt('Còn trong khu? (Có/Không)')||'',gc:prompt('Ghi chú?')||''};
     const e=loadEdits(); e.added.push(r); saveEdits(e); renderDetail();
   }
-  function exportJSON(){
+  function buildExport(){
     const m=adjustMap();
     const adjust=Object.keys(m).map(key=>{const[zone,field]=key.split('|');return {zone,field,old:origVal(zone,field),new:m[key].new,note:m[key].note||''};});
-    const out={month:MONTH,generatedAt:(new Date()).toLocaleString('vi-VN'),kpi:KPIBASE,adjust,totals:computeTotals(mergedKPI()),
+    return {month:MONTH,generatedAt:(new Date()).toLocaleString('vi-VN'),kpi:KPIBASE,adjust,totals:computeTotals(mergedKPI()),
       detail:merged().map(({_edited,_added,...r})=>r)};
-    const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
+  }
+  function exportJSON(){
+    const blob=new Blob([JSON.stringify(buildExport(),null,2)],{type:'application/json'});
     const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='data.json';a.click();
+  }
+  async function pushToGitHub(){
+    if(!unlocked){alert('Bấm ✎ Sửa tay và nhập mật khẩu trước.');return;}
+    if(!GH.token||GH.token.indexOf('DAN_TOKEN')===0){alert('Chưa điền token GitHub trong app.js (biến GH.token).');return;}
+    const btn=document.getElementById('pushGit'); if(btn){btn.disabled=true;btn.textContent='⏳ Đang lưu...';}
+    const api='https://api.github.com/repos/'+GH.owner+'/'+GH.repo+'/contents/data.json';
+    const content=btoa(unescape(encodeURIComponent(JSON.stringify(buildExport(),null,2))));
+    const H={Authorization:'Bearer '+GH.token,Accept:'application/vnd.github+json'};
+    try{
+      let sha; const g=await fetch(api+'?ref='+GH.branch,{headers:H});
+      if(g.ok){sha=(await g.json()).sha;}
+      const r=await fetch(api,{method:'PUT',headers:{...H,'Content-Type':'application/json'},
+        body:JSON.stringify({message:'Cập nhật báo cáo '+MONTH+' - '+new Date().toLocaleString('vi-VN'),content,sha,branch:GH.branch})});
+      if(r.ok){alert('✅ Đã lưu lên hệ thống! Mọi máy mở lại sau ~1 phút sẽ thấy số mới + lịch sử sửa.');}
+      else{const e=await r.json().catch(()=>({}));alert('❌ Lỗi lưu: '+(e.message||r.status)+'. Kiểm tra token/quyền repo.');}
+    }catch(err){alert('❌ Lỗi mạng: '+err);}
+    if(btn){btn.disabled=false;btn.textContent='💾 Lưu lên hệ thống';}
   }
   function resetEdits(){ if(confirm('Xóa hết chỉnh tay trên máy này?')){localStorage.removeItem(LSK());renderDetail();} }
 
@@ -253,6 +283,7 @@
     document.getElementById('editToggle').onclick=toggleEdit;
     document.getElementById('addRow').onclick=addRow;
     document.getElementById('exportJSON').onclick=exportJSON;
+    const pg=document.getElementById('pushGit'); if(pg)pg.onclick=pushToGitHub;
     document.getElementById('exportExcel').onclick=exportExcel;
     document.getElementById('resetEdits').onclick=resetEdits;
     renderDetail();
