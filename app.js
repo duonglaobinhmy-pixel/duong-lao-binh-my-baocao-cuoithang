@@ -19,7 +19,7 @@
   function hl(s,kw){if(!kw)return esc(s);const n=norm(s),k=norm(kw),i=n.indexOf(k);if(i<0)return esc(s);
     return esc(s.slice(0,i))+'<mark>'+esc(s.slice(i,i+kw.length))+'</mark>'+esc(s.slice(i+kw.length));}
 
-  let MONTH='', BASE=[], totalsRef=null, REF=null, REFSTART=null, KPIBASE=[];
+  let MONTH='', BASE=[], totalsRef=null, REF=null, REFSTART=null, KPIBASE=[], DADJUST=[];
   function parseDay(s){const m=String(s||'').match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);return m?Date.UTC(+m[1],+m[2]-1,+m[3]):null;}
   function refDate(){const m=String(MONTH||'').match(/^(\d{4})-(\d{1,2})/);if(!m)return Date.now();return Date.UTC(+m[1],+m[2],0);} // ngày cuối tháng báo cáo
   function refStart(){const m=String(MONTH||'').match(/^(\d{4})-(\d{1,2})/);if(!m)return 0;return Date.UTC(+m[1],+m[2]-1,1);} // ngày đầu tháng báo cáo
@@ -43,9 +43,19 @@
   }
 
   // ---------- TAB 1: bảng KPI (sửa tay được) ----------
+  const ZLABEL=c=>{const x=ZCOLS.find(z=>z[0]===c);return x?x[1]:c;};
+  function origVal(zone,field){const r=KPIBASE.find(x=>x.zone===zone);return r?r[field]:undefined;}
+  // gộp chỉnh tay: từ data.json (adjust) + máy hiện tại (localStorage). key = 'zone|field' -> {new, note}
+  function adjustMap(){
+    const e=loadEdits(); const m={};
+    (DADJUST||[]).forEach(a=>{m[a.zone+'|'+a.field]={new:a.new,note:a.note||''};});
+    Object.entries(e.kpiAdj||{}).forEach(([k,v])=>{m[k]={new:v.v,note:v.note||''};});
+    Object.keys(m).forEach(k=>{const[z,f]=k.split('|');if(m[k].new===undefined||String(m[k].new)===String(origVal(z,f)))delete m[k];});
+    return m;
+  }
   function mergedKPI(){
-    const e=loadEdits();
-    return KPIBASE.map(r=>{const o={...r}; ZCOLS.forEach(c=>{ if(c[0]==='label')return; const k=r.zone+'|'+c[0]; if(e.kpi[k]!==undefined)o[c[0]]=e.kpi[k]; }); return o;});
+    const m=adjustMap();
+    return KPIBASE.map(r=>{const o={...r}; ZCOLS.forEach(c=>{ if(c[0]==='label')return; const k=r.zone+'|'+c[0]; if(m[k]&&m[k].new!==''&&m[k].new!=null)o[c[0]]=m[k].new; }); return o;});
   }
   function computeTotals(arr){
     const s=k=>arr.reduce((a,r)=>a+(Number(r[k])||0),0);
@@ -53,22 +63,43 @@
       lapDay:s('giuong')?Math.round(s('hienHuu')/s('giuong')*1000)/10:0,
       tongXuat:s('tongXuat'),tuVong:s('tuVong'),thanhLy:s('thanhLy'),dieuChuyen:s('dieuChuyen'),diVien:s('diVien'),ge30:s('ge30')};
   }
+  function setKpiAdj(zone,field,val){
+    const e=loadEdits(); e.kpiAdj=e.kpiAdj||{}; const k=zone+'|'+field;
+    const num=String(val).replace(',','.'); const v=(num!==''&&!isNaN(num))?Number(num):val;
+    if(String(v)===String(origVal(zone,field))){ if(e.kpiAdj[k]){delete e.kpiAdj[k].v; if(!e.kpiAdj[k].note)delete e.kpiAdj[k];} }
+    else { e.kpiAdj[k]=e.kpiAdj[k]||{}; e.kpiAdj[k].v=v; }
+    saveEdits(e); renderKPI();
+  }
+  function setKpiNote(key,note){const e=loadEdits();e.kpiAdj=e.kpiAdj||{};e.kpiAdj[key]=e.kpiAdj[key]||{};e.kpiAdj[key].note=note;saveEdits(e);}
   function renderKPI(){
-    const kpi=mergedKPI(); const totals=computeTotals(kpi);
+    const kpi=mergedKPI(); const totals=computeTotals(kpi); const m=adjustMap();
     let h='<thead><tr>'+ZCOLS.map(c=>`<th class="${c[2]==='l'?'l':''}">${esc(c[1])}</th>`).join('')+'</tr></thead><tbody>';
     kpi.forEach(r=>{ h+='<tr>'+ZCOLS.map(c=>{
         if(c[0]==='label')return `<td class="l">${esc(r.label)}</td>`;
-        const cls=(c[2]==='yellow'?'yellow ':'')+(editMode?'editcell':'');
+        const k=r.zone+'|'+c[0]; const adj=m[k]; const ov=origVal(r.zone,c[0]);
+        const cls=(c[2]==='yellow'?'yellow ':'')+(adj?'adjusted ':'')+(editMode?'editcell':'');
         const ed=editMode?`contenteditable data-zone="${esc(r.zone)}" data-field="${c[0]}"`:'';
-        return `<td class="${cls}" ${ed}>${esc(r[c[0]])}</td>`;
+        const extra=(adj&&!editMode)?` <small class="old">(cũ ${esc(ov)})</small>`:'';
+        return `<td class="${cls}" ${ed}>${esc(r[c[0]])}${extra}</td>`;
       }).join('')+'</tr>'; });
     h+='<tr class="tot">'+ZCOLS.map((c,i)=>`<td class="${c[2]==='l'?'l':''}">${esc(i===0?'TỔNG CỘNG':(totals[c[0]]??''))}</td>`).join('')+'</tr>';
     h+='</tbody>';
-    const t=document.getElementById('kpi'); t.innerHTML=h;
-    if(editMode){ t.querySelectorAll('td[contenteditable]').forEach(td=>td.onblur=()=>{
-      const e=loadEdits(); const k=td.dataset.zone+'|'+td.dataset.field; const v=td.textContent.trim();
-      const num=v.replace(',','.'); e.kpi[k]=(num!==''&&!isNaN(num))?Number(num):v; saveEdits(e); renderKPI();
-    }); }
+    document.getElementById('kpi').innerHTML=h;
+    const t=document.getElementById('kpi');
+    if(editMode){ t.querySelectorAll('td[contenteditable]').forEach(td=>td.onblur=()=>{ setKpiAdj(td.dataset.zone,td.dataset.field,td.textContent.trim()); }); }
+    // nhật ký chỉnh tay dưới bảng (ai cũng thấy)
+    const log=document.getElementById('kpilog'); if(log){
+      const items=Object.keys(m).map(k=>{const[z,f]=k.split('|');return {k,z,f,old:origVal(z,f),nw:m[k].new,note:m[k].note};});
+      if(!items.length){ log.innerHTML=''; }
+      else{
+        const zlb=z=>{const r=KPIBASE.find(x=>x.zone===z);return r?r.label:z;};
+        log.innerHTML='<div class="kpilog-h">📝 Số đã chỉnh tay (cũ → mới)'+(editMode?' — bấm ô trong bảng để sửa số, gõ lý do bên dưới':'')+'</div>'+
+          '<table class="logtbl"><thead><tr><th class="l">Cơ sở</th><th class="l">Chỉ tiêu</th><th>Cũ (node)</th><th>Mới (sửa tay)</th><th class="l">Lý do</th></tr></thead><tbody>'+
+          items.map(it=>'<tr><td class="l">'+esc(zlb(it.z))+'</td><td class="l">'+esc(ZLABEL(it.f))+'</td><td class="old">'+esc(it.old)+'</td><td class="newv">'+esc(it.nw)+'</td>'+
+            '<td class="l gc" '+(editMode?'contenteditable data-logk="'+esc(it.k)+'"':'')+'>'+esc(it.note||'')+'</td></tr>').join('')+'</tbody></table>';
+        if(editMode){ log.querySelectorAll('td[contenteditable]').forEach(td=>td.onblur=()=>{ setKpiNote(td.dataset.logk, td.textContent.trim()); }); }
+      }
+    }
   }
 
   // ---------- TAB 2: danh sách ----------
@@ -141,7 +172,9 @@
     const e=loadEdits(); e.added.push(r); saveEdits(e); renderDetail();
   }
   function exportJSON(){
-    const k=mergedKPI(); const out={month:MONTH,generatedAt:(new Date()).toLocaleString('vi-VN'),kpi:k,totals:computeTotals(k),
+    const m=adjustMap();
+    const adjust=Object.keys(m).map(key=>{const[zone,field]=key.split('|');return {zone,field,old:origVal(zone,field),new:m[key].new,note:m[key].note||''};});
+    const out={month:MONTH,generatedAt:(new Date()).toLocaleString('vi-VN'),kpi:KPIBASE,adjust,totals:computeTotals(mergedKPI()),
       detail:merged().map(({_edited,_added,...r})=>r)};
     const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
     const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='data.json';a.click();
@@ -208,7 +241,7 @@
 
   // ---------- boot ----------
   function boot(d){
-    MONTH=d.month||''; BASE=(d.detail||[]).slice(); totalsRef=d.totals||null; KPIBASE=(d.kpi||[]).slice(); window.__KPI__=KPIBASE; REF=refDate(); REFSTART=refStart();
+    MONTH=d.month||''; BASE=(d.detail||[]).slice(); totalsRef=d.totals||null; KPIBASE=(d.kpi||[]).slice(); DADJUST=(d.adjust||[]); window.__KPI__=KPIBASE; REF=refDate(); REFSTART=refStart();
     document.getElementById('sub').textContent='Tháng '+MONTH+(d.generatedAt?(' • cập nhật '+d.generatedAt):'');
     renderKPI();
     const f=document.getElementById('f'),z=document.getElementById('z');
