@@ -13,13 +13,20 @@
     ['hienHuu','Hiện hữu'],['giuong','Số giường'],['lapDay','Lấp đầy (%)','yellow'],
     ['tongXuat','Tổng xuất'],['tuVong','Tử vong'],['thanhLy','Thanh lý HĐ'],['dieuChuyen','Điều chuyển nội bộ'],['diVien','Đi viện']
   ];
-  const DCOLS=[['ct','Chỉ tiêu'],['zone','Khu'],['ma','Mã'],['ten','Họ tên','l'],['ngay','Ngày'],['cs','Cơ sở/Phòng','l'],['ck','Còn trong khu'],['gc','Ghi chú','l']];
+  const DCOLS=[['ct','Chỉ tiêu'],['zone','Khu'],['ma','Mã'],['ten','Họ tên','l'],['ngay','Ngày'],['days','Số ngày ở'],['cs','Cơ sở/Phòng','l'],['ck','Còn trong khu'],['gc','Ghi chú','l']];
   const esc=s=>(s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   const norm=s=>(s||'').toString().normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   function hl(s,kw){if(!kw)return esc(s);const n=norm(s),k=norm(kw),i=n.indexOf(k);if(i<0)return esc(s);
     return esc(s.slice(0,i))+'<mark>'+esc(s.slice(i,i+kw.length))+'</mark>'+esc(s.slice(i+kw.length));}
 
-  let MONTH='', BASE=[], totalsRef=null;
+  let MONTH='', BASE=[], totalsRef=null, REF=null;
+  function parseDay(s){const m=String(s||'').match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);return m?Date.UTC(+m[1],+m[2]-1,+m[3]):null;}
+  function refDate(){const m=String(MONTH||'').match(/^(\d{4})-(\d{1,2})/);if(!m)return Date.now();return Date.UTC(+m[1],+m[2],0);} // ngày cuối tháng báo cáo
+  function daysOf(r){ // chỉ tính cho cụ đang ở (hiện hữu / hđ mới)
+    if(!/^[12]\./.test(r.ct))return null;
+    const d=parseDay(r.ngay); if(d==null)return null;
+    return Math.max(0,Math.floor((REF-d)/86400000));
+  }
   const rowKey=r=>[r.ct,r.ma,r.ten,r.ngay].join('|');
   const LSK=()=>'bcare_edit_'+MONTH;
   function loadEdits(){try{return JSON.parse(localStorage.getItem(LSK()))||{edits:{},deleted:[],added:[]};}catch(e){return{edits:{},deleted:[],added:[]};}}
@@ -44,7 +51,10 @@
   function renderDetail(){
     const q=document.getElementById('q'),f=document.getElementById('f'),z=document.getElementById('z'),count=document.getElementById('count');
     const kw=q.value.trim(),fct=f.value,fz=z.value,nk=norm(kw);
+    const dayf=(document.getElementById('dayf')||{}).value||'';
     let rows=merged().filter(r=>(!fct||r.ct===fct)&&(!fz||r.zone===fz)&&(!kw||norm([r.ten,r.ma,r.gc,r.cs].join(' ')).includes(nk)));
+    if(dayf==='ge30')rows=rows.filter(r=>{const x=daysOf(r);return x!=null&&x>=30;});
+    else if(dayf==='lt30')rows=rows.filter(r=>{const x=daysOf(r);return x!=null&&x<30;});
     if(sortK)rows=rows.slice().sort((a,b)=>(norm(a[sortK])>norm(b[sortK])?1:-1)*dir);
     const head='<thead><tr>'+DCOLS.map(c=>`<th data-k="${c[0]}" class="${c[2]==='l'?'l':''}">${c[1]}</th>`).join('')+(editMode?'<th>Sửa</th>':'')+'</tr></thead>';
     const body='<tbody>'+rows.map(r=>{
@@ -54,6 +64,7 @@
         if(c[0]==='ct')return '<td><span class="badge">'+esc(r.ct)+'</span>'+tag+'</td>';
         if(c[0]==='ck')return '<td class="'+(String(r.ck).indexOf('Có')===0?'yes':'no')+'" '+(editMode?'contenteditable data-k="ck" data-rk="'+esc(rk)+'"':'')+'>'+esc(r.ck)+'</td>';
         if(c[0]==='gc')return '<td class="gc" '+(editMode?'contenteditable data-k="gc" data-rk="'+esc(rk)+'"':'')+'>'+(editMode?esc(r.gc):hl(r.gc,kw))+'</td>';
+        if(c[0]==='days'){const dd=daysOf(r);const cl=dd==null?'':(dd>=30?'ge30':'u30');return '<td class="'+cl+'">'+(dd!=null?dd:'')+'</td>';}
         const v=(c[0]==='ten'||c[0]==='ma')?hl(r[c[0]],kw):esc(r[c[0]]);
         return '<td class="'+(c[2]==='l'?'l':'')+'">'+v+'</td>';
       }).join('');
@@ -72,7 +83,8 @@
         const e=loadEdits(); if(!e.deleted.includes(b.dataset.rk))e.deleted.push(b.dataset.rk); saveEdits(e); renderDetail();
       });
     }
-    count.textContent='Hiển thị '+rows.length+' dòng'+(editMode?' • ĐANG SỬA (lưu trên máy)':'');
+    const all=merged(); const nge=all.filter(r=>{const x=daysOf(r);return x!=null&&x>=30;}).length; const nlt=all.filter(r=>{const x=daysOf(r);return x!=null&&x<30;}).length;
+    count.textContent='Hiển thị '+rows.length+' dòng • ≥30 ngày: '+nge+' • <30 ngày: '+nlt+(editMode?' • ĐANG SỬA':'');
   }
 
   function addRow(){
@@ -106,13 +118,14 @@
 
   // ---------- boot ----------
   function boot(d){
-    MONTH=d.month||''; BASE=(d.detail||[]).slice(); totalsRef=d.totals||null; window.__KPI__=d.kpi||[];
+    MONTH=d.month||''; BASE=(d.detail||[]).slice(); totalsRef=d.totals||null; window.__KPI__=d.kpi||[]; REF=refDate();
     document.getElementById('sub').textContent='Tháng '+MONTH+(d.generatedAt?(' • cập nhật '+d.generatedAt):'');
     renderKPI(d.kpi||[],d.totals);
     const f=document.getElementById('f'),z=document.getElementById('z');
     [...new Set(BASE.map(r=>r.ct))].sort().forEach(c=>{const o=document.createElement('option');o.value=o.textContent=c;f.appendChild(o);});
     [...new Set(BASE.map(r=>r.zone))].filter(Boolean).sort().forEach(zz=>{const o=document.createElement('option');o.textContent=zz;z.appendChild(o);});
     document.getElementById('q').oninput=f.onchange=z.onchange=renderDetail;
+    const dayf=document.getElementById('dayf'); if(dayf)dayf.onchange=renderDetail;
     document.getElementById('editToggle').onclick=toggleEdit;
     document.getElementById('addRow').onclick=addRow;
     document.getElementById('exportJSON').onclick=exportJSON;
