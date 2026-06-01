@@ -11,7 +11,7 @@
   const ZCOLS=[
     ['label','Cơ sở','l'],['nhapMoi','Nhập mới'],['chuyenNB','Điều chuyển NB'],['veLai','Xuất viện về khu lại'],
     ['hienHuu','Hiện hữu'],['giuong','Số giường'],['lapDay','Lấp đầy (%)','yellow'],
-    ['tongXuat','Tổng xuất'],['tuVong','Tử vong'],['thanhLy','Thanh lý HĐ'],['dieuChuyen','Điều chuyển nội bộ'],['diVien','Đi viện']
+    ['tongXuat','Tổng xuất'],['tuVong','Tử vong'],['thanhLy','Thanh lý HĐ'],['dieuChuyen','Điều chuyển nội bộ'],['diVien','Đi viện'],['ge30','NCT ≥30 ngày (lương)','yellow']
   ];
   const DCOLS=[['ct','Chỉ tiêu'],['zone','Khu'],['ma','Mã'],['ten','Họ tên','l'],['ngay','Ngày'],['days','Số ngày ở (trong tháng)'],['cs','Cơ sở/Phòng','l'],['ck','Còn trong khu'],['gc','Ghi chú','l']];
   const esc=s=>(s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -23,12 +23,13 @@
   function parseDay(s){const m=String(s||'').match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);return m?Date.UTC(+m[1],+m[2]-1,+m[3]):null;}
   function refDate(){const m=String(MONTH||'').match(/^(\d{4})-(\d{1,2})/);if(!m)return Date.now();return Date.UTC(+m[1],+m[2],0);} // ngày cuối tháng báo cáo
   function refStart(){const m=String(MONTH||'').match(/^(\d{4})-(\d{1,2})/);if(!m)return 0;return Date.UTC(+m[1],+m[2]-1,1);} // ngày đầu tháng báo cáo
-  function daysOf(r){ // SỐ NGÀY Ở TRONG THÁNG BÁO CÁO (vào trước tháng -> tính từ đầu tháng; tối đa = số ngày của tháng)
+  function daysOf(r){ // SỐ NGÀY THỰC Ở trong tháng (đã trừ đi viện + về nhà). Ưu tiên số tính sẵn từ node.
+    if(r.songay!=null&&r.songay!=='')return Number(r.songay);
     if(!/^[12]\./.test(r.ct))return null;
     const d=parseDay(r.ngay); if(d==null)return null;
     const start=Math.max(d,REFSTART);
     if(start>REF)return 0;
-    return Math.floor((REF-start)/86400000)+1; // kể cả ngày đầu và cuối
+    return Math.floor((REF-start)/86400000)+1;
   }
   const rowKey=r=>[r.ct,r.ma,r.ten,r.ngay].join('|');
   const LSK=()=>'bcare_edit_'+MONTH;
@@ -50,7 +51,7 @@
     const s=k=>arr.reduce((a,r)=>a+(Number(r[k])||0),0);
     return {nhapMoi:s('nhapMoi'),chuyenNB:s('chuyenNB'),veLai:s('veLai'),hienHuu:s('hienHuu'),giuong:s('giuong'),
       lapDay:s('giuong')?Math.round(s('hienHuu')/s('giuong')*1000)/10:0,
-      tongXuat:s('tongXuat'),tuVong:s('tuVong'),thanhLy:s('thanhLy'),dieuChuyen:s('dieuChuyen'),diVien:s('diVien')};
+      tongXuat:s('tongXuat'),tuVong:s('tuVong'),thanhLy:s('thanhLy'),dieuChuyen:s('dieuChuyen'),diVien:s('diVien'),ge30:s('ge30')};
   }
   function renderKPI(){
     const kpi=mergedKPI(); const totals=computeTotals(kpi);
@@ -124,9 +125,10 @@
         const e=loadEdits(); if(!e.deleted.includes(b.dataset.rk))e.deleted.push(b.dataset.rk); saveEdits(e); renderDetail();
       });
     }
-    const all=merged(); const nge=all.filter(r=>{const x=daysOf(r);return x!=null&&x>=30;}).length; const nlt=all.filter(r=>{const x=daysOf(r);return x!=null&&x<30;}).length;
+    const hh=merged().filter(r=>/^1\./.test(r.ct)); // mỗi cụ hiện hữu 1 dòng -> đếm chuẩn cho lương
+    const nge=hh.filter(r=>{const x=daysOf(r);return x!=null&&x>=30;}).length; const nlt=hh.filter(r=>{const x=daysOf(r);return x!=null&&x<30;}).length;
     const dunit=(document.getElementById('dedup')||{}).checked?' người':' dòng';
-    count.textContent='Hiển thị '+rows.length+dunit+' • ≥30 ngày: '+nge+' • <30 ngày: '+nlt+(editMode?' • ĐANG SỬA':'');
+    count.textContent='Hiển thị '+rows.length+dunit+' • NCT ≥30 ngày (lương): '+nge+' • <30 ngày: '+nlt+(editMode?' • ĐANG SỬA':'');
   }
 
   function addRow(){
@@ -193,9 +195,9 @@
   }
   function exportExcel(){
     const kpi=mergedKPI(), totals=computeTotals(kpi);
-    const h1=['Cơ sở','Nhập mới','Điều chuyển NB','Xuất viện về khu lại','Hiện hữu','Số giường','Lấp đầy (%)','Tổng xuất','Tử vong','Thanh lý HĐ','Điều chuyển nội bộ','Đi viện'];
-    const KK=['label','nhapMoi','chuyenNB','veLai','hienHuu','giuong','lapDay','tongXuat','tuVong','thanhLy','dieuChuyen','diVien'];
-    const s1=[h1, ...kpi.map(r=>KK.map(k=>r[k])), ['TỔNG CỘNG',totals.nhapMoi,totals.chuyenNB,totals.veLai,totals.hienHuu,totals.giuong,totals.lapDay,totals.tongXuat,totals.tuVong,totals.thanhLy,totals.dieuChuyen,totals.diVien]];
+    const h1=['Cơ sở','Nhập mới','Điều chuyển NB','Xuất viện về khu lại','Hiện hữu','Số giường','Lấp đầy (%)','Tổng xuất','Tử vong','Thanh lý HĐ','Điều chuyển nội bộ','Đi viện','NCT ≥30 ngày (lương)'];
+    const KK=['label','nhapMoi','chuyenNB','veLai','hienHuu','giuong','lapDay','tongXuat','tuVong','thanhLy','dieuChuyen','diVien','ge30'];
+    const s1=[h1, ...kpi.map(r=>KK.map(k=>r[k])), ['TỔNG CỘNG',totals.nhapMoi,totals.chuyenNB,totals.veLai,totals.hienHuu,totals.giuong,totals.lapDay,totals.tongXuat,totals.tuVong,totals.thanhLy,totals.dieuChuyen,totals.diVien,totals.ge30]];
     const h2=['Chỉ tiêu','Khu','Mã','Họ tên','Ngày','Số ngày ở (trong tháng)','Cơ sở/Phòng','Còn trong khu','Ghi chú'];
     const s2=[h2, ...currentRows().map(r=>[(r._cts?r._cts.join(' + '):r.ct),r.zone,r.ma,r.ten,r.ngay,(daysOf(r)??''),r.cs,r.ck,r.gc])];
     const blob=xlsxBlob([{name:'Báo cáo tháng',rows:s1},{name:'Danh sách chi tiết',rows:s2}]);
