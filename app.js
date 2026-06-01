@@ -80,8 +80,8 @@
     const dayf=(document.getElementById('dayf')||{}).value||'';
     let rows=merged().filter(r=>(!fct||r.ct===fct)&&(!fz||r.zone===fz)&&(!kw||norm([r.ten,r.ma,r.gc,r.cs].join(' ')).includes(nk)));
     // bộ lọc số ngày chỉ áp cho nhóm CÓ số ngày (Hiện hữu/HĐ mới); nhóm khác luôn hiện
-    if(dayf==='ge30')rows=rows.filter(r=>{const x=daysOf(r);return x==null||x>=30;});
-    else if(dayf==='lt30')rows=rows.filter(r=>{const x=daysOf(r);return x==null||x<30;});
+    if(dayf==='ge30')rows=rows.filter(r=>{const x=daysOf(r);return x!=null&&x>=30;});
+    else if(dayf==='lt30')rows=rows.filter(r=>{const x=daysOf(r);return x!=null&&x<30;});
     if(sortK)rows=rows.slice().sort((a,b)=>(norm(a[sortK])>norm(b[sortK])?1:-1)*dir);
     if((document.getElementById('dedup')||{}).checked){
       const m=new Map();
@@ -125,10 +125,12 @@
         const e=loadEdits(); if(!e.deleted.includes(b.dataset.rk))e.deleted.push(b.dataset.rk); saveEdits(e); renderDetail();
       });
     }
-    const hh=merged().filter(r=>/^1\./.test(r.ct)); // mỗi cụ hiện hữu 1 dòng -> đếm chuẩn cho lương
+    const fz=(document.getElementById('z')||{}).value||'';
+    const hh=merged().filter(r=>/^1\./.test(r.ct)&&(!fz||r.zone===fz)); // cụ hiện hữu theo khu đang chọn
     const nge=hh.filter(r=>{const x=daysOf(r);return x!=null&&x>=30;}).length; const nlt=hh.filter(r=>{const x=daysOf(r);return x!=null&&x<30;}).length;
     const dunit=(document.getElementById('dedup')||{}).checked?' người':' dòng';
-    count.textContent='Hiển thị '+rows.length+dunit+' • NCT ≥30 ngày (lương): '+nge+' • <30 ngày: '+nlt+(editMode?' • ĐANG SỬA':'');
+    const kLabel=fz?('['+fz+'] '):'';
+    count.textContent='Hiển thị '+rows.length+dunit+' • '+kLabel+'NCT ≥30 ngày (lương): '+nge+' • <30 ngày: '+nlt+(editMode?' • ĐANG SỬA':'');
   }
 
   function addRow(){
