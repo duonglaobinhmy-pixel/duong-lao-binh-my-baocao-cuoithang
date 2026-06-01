@@ -13,19 +13,22 @@
     ['hienHuu','Hiện hữu'],['giuong','Số giường'],['lapDay','Lấp đầy (%)','yellow'],
     ['tongXuat','Tổng xuất'],['tuVong','Tử vong'],['thanhLy','Thanh lý HĐ'],['dieuChuyen','Điều chuyển nội bộ'],['diVien','Đi viện']
   ];
-  const DCOLS=[['ct','Chỉ tiêu'],['zone','Khu'],['ma','Mã'],['ten','Họ tên','l'],['ngay','Ngày'],['days','Số ngày ở'],['cs','Cơ sở/Phòng','l'],['ck','Còn trong khu'],['gc','Ghi chú','l']];
+  const DCOLS=[['ct','Chỉ tiêu'],['zone','Khu'],['ma','Mã'],['ten','Họ tên','l'],['ngay','Ngày'],['days','Số ngày ở (trong tháng)'],['cs','Cơ sở/Phòng','l'],['ck','Còn trong khu'],['gc','Ghi chú','l']];
   const esc=s=>(s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   const norm=s=>(s||'').toString().normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   function hl(s,kw){if(!kw)return esc(s);const n=norm(s),k=norm(kw),i=n.indexOf(k);if(i<0)return esc(s);
     return esc(s.slice(0,i))+'<mark>'+esc(s.slice(i,i+kw.length))+'</mark>'+esc(s.slice(i+kw.length));}
 
-  let MONTH='', BASE=[], totalsRef=null, REF=null, KPIBASE=[];
+  let MONTH='', BASE=[], totalsRef=null, REF=null, REFSTART=null, KPIBASE=[];
   function parseDay(s){const m=String(s||'').match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);return m?Date.UTC(+m[1],+m[2]-1,+m[3]):null;}
   function refDate(){const m=String(MONTH||'').match(/^(\d{4})-(\d{1,2})/);if(!m)return Date.now();return Date.UTC(+m[1],+m[2],0);} // ngày cuối tháng báo cáo
-  function daysOf(r){ // chỉ tính cho cụ đang ở (hiện hữu / hđ mới)
+  function refStart(){const m=String(MONTH||'').match(/^(\d{4})-(\d{1,2})/);if(!m)return 0;return Date.UTC(+m[1],+m[2]-1,1);} // ngày đầu tháng báo cáo
+  function daysOf(r){ // SỐ NGÀY Ở TRONG THÁNG BÁO CÁO (vào trước tháng -> tính từ đầu tháng; tối đa = số ngày của tháng)
     if(!/^[12]\./.test(r.ct))return null;
     const d=parseDay(r.ngay); if(d==null)return null;
-    return Math.max(0,Math.floor((REF-d)/86400000));
+    const start=Math.max(d,REFSTART);
+    if(start>REF)return 0;
+    return Math.floor((REF-start)/86400000)+1; // kể cả ngày đầu và cuối
   }
   const rowKey=r=>[r.ct,r.ma,r.ten,r.ngay].join('|');
   const LSK=()=>'bcare_edit_'+MONTH;
@@ -194,7 +197,7 @@
 
   // ---------- boot ----------
   function boot(d){
-    MONTH=d.month||''; BASE=(d.detail||[]).slice(); totalsRef=d.totals||null; KPIBASE=(d.kpi||[]).slice(); window.__KPI__=KPIBASE; REF=refDate();
+    MONTH=d.month||''; BASE=(d.detail||[]).slice(); totalsRef=d.totals||null; KPIBASE=(d.kpi||[]).slice(); window.__KPI__=KPIBASE; REF=refDate(); REFSTART=refStart();
     document.getElementById('sub').textContent='Tháng '+MONTH+(d.generatedAt?(' • cập nhật '+d.generatedAt):'');
     renderKPI();
     const f=document.getElementById('f'),z=document.getElementById('z');
