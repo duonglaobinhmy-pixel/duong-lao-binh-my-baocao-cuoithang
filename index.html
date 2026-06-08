@@ -23,7 +23,19 @@
       <input id="q" placeholder="Tìm tên, mã, ghi chú…"/>
       <select id="f"><option value="">— Tất cả chỉ tiêu —</option></select>
       <select id="z"><option value="">— Tất cả khu —</option></select>
-      <select id="dayf"><option value="">— Số ngày ở —</option><option value="ge30">Ở &ge; 30 ngày</option><option value="lt30">Ở &lt; 30 ngày</option></select>
+    
+      <select id="dayf">
+        <option value="">— Số ngày ở —</option>
+        <option value="ge30">Ở &ge; 30 ngày</option>
+        <option value="lt30">Ở &lt; 30 ngày</option>
+      </select>
+    
+      <select id="day15f">
+        <option value="">— Đi viện / về nhà —</option>
+        <option value="ge15">> 15 ngày</option>
+        <option value="lt15">< 15 ngày</option>
+      </select>
+    
       <label class="chk"><input type="checkbox" id="dedup"/> Gộp theo người</label>
       <button id="addRow" class="btn" style="display:none">+ Thêm dòng</button>
       <span class="count" id="count"></span>

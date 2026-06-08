@@ -31,6 +31,23 @@
     if(start>REF)return 0;
     return Math.floor((REF-start)/86400000)+1;
   }
+  function awayDays(r){
+    const direct = Number(
+      r.soNgayDiVien ??
+      r.diVienDays ??
+      r.hospitalDays ??
+      r.soNgayVeNha ??
+      r.veNhaDays ??
+      r.homeDays ??
+      0
+    );
+  
+    if(direct) return direct;
+  
+    const text = String(r.gc || '');
+    const m = text.match(/(\d+)\s*n/i);
+    return m ? Number(m[1]) : 0;
+  }
   const rowKey=r=>[r.ct,r.ma,r.ten,r.ngay].join('|');
   const LSK=()=>'bcare_edit_'+MONTH;
   function loadEdits(){let e;try{e=JSON.parse(localStorage.getItem(LSK()))||{};}catch(_){e={};} e.edits=e.edits||{};e.deleted=e.deleted||[];e.added=e.added||[];e.kpi=e.kpi||{};return e;}
@@ -115,10 +132,20 @@
     const q=document.getElementById('q'),f=document.getElementById('f'),z=document.getElementById('z');
     const kw=q.value.trim(),fct=f.value,fz=z.value,nk=norm(kw);
     const dayf=(document.getElementById('dayf')||{}).value||'';
+    const day15f=(document.getElementById('day15f')||{}).value||'';
     let rows=merged().filter(r=>(!fct||r.ct===fct)&&(!fz||r.zone===fz)&&(!kw||norm([r.ten,r.ma,r.gc,r.cs].join(' ')).includes(nk)));
     // bộ lọc số ngày chỉ áp cho nhóm CÓ số ngày (Hiện hữu/HĐ mới); nhóm khác luôn hiện
     if(dayf==='ge30')rows=rows.filter(r=>{const x=daysOf(r);return x!=null&&x>=30;});
     else if(dayf==='lt30')rows=rows.filter(r=>{const x=daysOf(r);return x!=null&&x<30;});
+    if(day15f==='ge15'){
+      rows = rows.filter(r => awayDays(r) > 15);
+    }
+    else if(day15f==='lt15'){
+      rows = rows.filter(r => {
+        const d = awayDays(r);
+        return d > 0 && d < 15;
+      });
+    }
     if(sortK)rows=rows.slice().sort((a,b)=>(norm(a[sortK])>norm(b[sortK])?1:-1)*dir);
     if((document.getElementById('dedup')||{}).checked){
       const m=new Map();
@@ -257,6 +284,8 @@
     [...new Set(BASE.map(r=>r.zone))].filter(Boolean).sort().forEach(zz=>{const o=document.createElement('option');o.textContent=zz;z.appendChild(o);});
     document.getElementById('q').oninput=f.onchange=z.onchange=renderDetail;
     const dayf=document.getElementById('dayf'); if(dayf)dayf.onchange=renderDetail;
+    const day15f=document.getElementById('day15f');
+if(day15f)day15f.onchange=renderDetail;
     const dd=document.getElementById('dedup'); if(dd)dd.onchange=renderDetail;
     document.getElementById('editToggle').onclick=toggleEdit;
     document.getElementById('addRow').onclick=addRow;
