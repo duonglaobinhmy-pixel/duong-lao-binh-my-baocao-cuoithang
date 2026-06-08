@@ -154,14 +154,14 @@
     }
     else if(dayf==='gt15'){
       rows=rows.filter(r=>{
-        const d = awayDays(r);
-        return d > 15;
+        const x=daysOf(r);
+        return x!=null && x>15;
       });
     }
     else if(dayf==='lt15'){
       rows=rows.filter(r=>{
-        const d = awayDays(r);
-        return d > 0 && d < 15;
+        const x=daysOf(r);
+        return x!=null && x<15;
       });
     }
     if(sortK)rows=rows.slice().sort((a,b)=>(norm(a[sortK])>norm(b[sortK])?1:-1)*dir);
