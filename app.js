@@ -152,10 +152,10 @@
         return x!=null && x<30;
       });
     }
-    else if(dayf==='gt15'){
+    else if(dayf==='ge15'){
       rows=rows.filter(r=>{
         const x=daysOf(r);
-        return x!=null && x>15;
+        return x!=null && x>=15;
       });
     }
     else if(dayf==='lt15'){
