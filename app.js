@@ -10,7 +10,7 @@
 
   const ZCOLS=[
     ['label','Cơ sở','l'],['nhapMoi','Nhập mới'],['chuyenNB','Điều chuyển NB'],['veLai','Xuất viện về khu lại'],
-    ['hienHuu','Hiện hữu'],['giuong','Số giường'],['lapDay','Lấp đầy (%)','yellow'],
+    ['hienHuu','Hiện hữu'],['tamVang','Tạm vắng'],['thuocKhu','Thuộc khu (KT)'],['giuong','Số giường'],['lapDay','Lấp đầy (%)','yellow'],
     ['tongXuat','Tổng xuất'],['tuVong','Tử vong'],['thanhLy','Thanh lý HĐ'],['dieuChuyen','Điều chuyển nội bộ'],['diVien','Đi viện']
   ];
   const DCOLS=[['ct','Chỉ tiêu'],['zone','Khu'],['ma','Mã'],['ten','Họ tên','l'],['ngay','Ngày'],['days','Số ngày ở (trong tháng)'],['cs','Cơ sở/Phòng','l'],['ck','Còn trong khu'],['gc','Ghi chú','l']];
@@ -20,16 +20,24 @@
     return esc(s.slice(0,i))+'<mark>'+esc(s.slice(i,i+kw.length))+'</mark>'+esc(s.slice(i+kw.length));}
 
   let MONTH='', BASE=[], totalsRef=null, REF=null, REFSTART=null, KPIBASE=[], DADJUST=[];
+  let HHDAYS=new Map(); // mã (chỉ số) -> số ngày ở, lấy từ dòng HIỆN HỮU của chính người đó
+  const digOnly=x=>{const m=String(x==null?'':x).match(/\d+/g);return m?m.join(''):'';};
   function parseDay(s){const m=String(s||'').match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);return m?Date.UTC(+m[1],+m[2]-1,+m[3]):null;}
   function refDate(){const m=String(MONTH||'').match(/^(\d{4})-(\d{1,2})/);if(!m)return Date.now();return Date.UTC(+m[1],+m[2],0);} // ngày cuối tháng báo cáo
   function refStart(){const m=String(MONTH||'').match(/^(\d{4})-(\d{1,2})/);if(!m)return 0;return Date.UTC(+m[1],+m[2]-1,1);} // ngày đầu tháng báo cáo
   function daysOf(r){ // SỐ NGÀY THỰC Ở trong tháng (đã trừ đi viện + về nhà). Ưu tiên số tính sẵn từ node.
     if(r.songay!=null&&r.songay!=='')return Number(r.songay);
-    if(!/^[12]\./.test(r.ct))return null;
-    const d=parseDay(r.ngay); if(d==null)return null;
-    const start=Math.max(d,REFSTART);
-    if(start>REF)return 0;
-    return Math.floor((REF-start)/86400000)+1;
+    if(/^[12]\./.test(r.ct)){ // HIỆN HỮU / HĐ MỚI: tính theo ngày vào -> cuối tháng
+      const d=parseDay(r.ngay); if(d==null)return null;
+      const start=Math.max(d,REFSTART);
+      if(start>REF)return 0;
+      return Math.floor((REF-start)/86400000)+1;
+    }
+    // RULE: bất kỳ dòng nào của người ĐANG HIỆN HỮU (mã có trong HHDAYS) -> mượn số ngày ở của họ.
+    // (xuất viện về khu lại, đi viện đã về, khách hàng phát sinh...). Người đã rời khu -> để trống.
+    const k=digOnly(r.ma);
+    if(k && HHDAYS.has(k))return HHDAYS.get(k);
+    return null;
   }
   function awayDays(r){
 
@@ -66,7 +74,20 @@
   }
 
   // ---------- TAB 1: bảng KPI (sửa tay được) ----------
-  const AUTO=['tongXuat','lapDay']; // tự tính, không sửa tay
+  const AUTO=['tongXuat','lapDay','tamVang','thuocKhu']; // tự tính, không sửa tay
+  // RULE: "Tạm vắng" = NCT đi viện/về nhà CHƯA VỀ (Còn trong khu=Không), nhận diện tự động từ danh sách chi tiết.
+  // "Thuộc khu (KT)" = Hiện hữu + Tạm vắng = cách đếm của kế toán (tính cả người tạm vắng vẫn giữ giường).
+  function tamVangByZone(){
+    const hh=new Set((BASE||[]).filter(r=>/^1\./.test(r.ct)).map(r=>digOnly(r.ma)));
+    const seen=new Set(); const cnt={};
+    (BASE||[]).forEach(r=>{
+      if(!/ĐI VIỆN|VỀ THĂM NHÀ/.test(r.ct))return;       // chỉ nhóm đi viện / về nhà
+      if(String(r.ck||'').indexOf('Có')===0)return;       // đã về khu -> không phải tạm vắng
+      const m=digOnly(r.ma); if(!m||hh.has(m)||seen.has(m))return; // đang hiện hữu hoặc đã đếm -> bỏ
+      seen.add(m); cnt[r.zone]=(cnt[r.zone]||0)+1;
+    });
+    return cnt;
+  }
   const ZLABEL=c=>{const x=ZCOLS.find(z=>z[0]===c);return x?x[1]:c;};
   function origVal(zone,field){const r=KPIBASE.find(x=>x.zone===zone);return r?r[field]:undefined;}
   // gộp chỉnh tay: từ data.json (adjust) + máy hiện tại (localStorage). key = 'zone|field' -> {new, note}
@@ -78,15 +99,17 @@
     return m;
   }
   function mergedKPI(){
-    const m=adjustMap();
+    const m=adjustMap(); const tv=tamVangByZone();
     return KPIBASE.map(r=>{const o={...r}; ZCOLS.forEach(c=>{ if(c[0]==='label'||AUTO.includes(c[0]))return; const k=r.zone+'|'+c[0]; if(m[k]&&m[k].new!==''&&m[k].new!=null)o[c[0]]=m[k].new; });
       o.tongXuat=(Number(o.tuVong)||0)+(Number(o.thanhLy)||0)+(Number(o.dieuChuyen)||0)+(Number(o.diVien)||0); // tự cộng
       o.lapDay=Number(o.giuong)?Math.round((Number(o.hienHuu)||0)/Number(o.giuong)*1000)/10:0;                 // tự tính %
+      o.tamVang=tv[r.zone]||0;                                   // RULE: đi viện/về nhà chưa về
+      o.thuocKhu=(Number(o.hienHuu)||0)+o.tamVang;               // RULE: hiện hữu + tạm vắng (kế toán)
       return o;});
   }
   function computeTotals(arr){
     const s=k=>arr.reduce((a,r)=>a+(Number(r[k])||0),0);
-    return {nhapMoi:s('nhapMoi'),chuyenNB:s('chuyenNB'),veLai:s('veLai'),hienHuu:s('hienHuu'),giuong:s('giuong'),
+    return {nhapMoi:s('nhapMoi'),chuyenNB:s('chuyenNB'),veLai:s('veLai'),hienHuu:s('hienHuu'),tamVang:s('tamVang'),thuocKhu:s('thuocKhu'),giuong:s('giuong'),
       lapDay:s('giuong')?Math.round(s('hienHuu')/s('giuong')*1000)/10:0,
       tongXuat:s('tongXuat'),tuVong:s('tuVong'),thanhLy:s('thanhLy'),dieuChuyen:s('dieuChuyen'),diVien:s('diVien'),ge30:s('ge30')};
   }
@@ -139,30 +162,10 @@
     const kw=q.value.trim(),fct=f.value,fz=z.value,nk=norm(kw);
     const dayf=(document.getElementById('dayf')||{}).value||'';
     let rows=merged().filter(r=>(!fct||r.ct===fct)&&(!fz||r.zone===fz)&&(!kw||norm([r.ten,r.ma,r.gc,r.cs].join(' ')).includes(nk)));
-    // bộ lọc số ngày chỉ áp cho nhóm CÓ số ngày (Hiện hữu/HĐ mới); nhóm khác luôn hiện
-    if(dayf==='ge30'){
-      rows=rows.filter(r=>{
-        const x=daysOf(r);
-        return x!=null && x>=30;
-      });
-    }
-    else if(dayf==='lt30'){
-      rows=rows.filter(r=>{
-        const x=daysOf(r);
-        return x!=null && x<30;
-      });
-    }
-    else if(dayf==='ge15'){
-      rows=rows.filter(r=>{
-        const x=daysOf(r);
-        return x!=null && x>=15;
-      });
-    }
-    else if(dayf==='lt15'){
-      rows=rows.filter(r=>{
-        const x=daysOf(r);
-        return x!=null && x<15;
-      });
+    // bộ lọc số ngày: chỉ lọc trên dòng HIỆN HỮU (1 người 1 dòng) -> ra đúng danh sách như tính lương
+    if(dayf){
+      const test = dayf==='ge30'?(x=>x>=30) : dayf==='lt30'?(x=>x<30) : dayf==='ge15'?(x=>x>=15) : dayf==='lt15'?(x=>x<15) : null;
+      if(test) rows=rows.filter(r=>{ if(!/^1\./.test(r.ct))return false; const x=daysOf(r); return x!=null && test(x); });
     }
     if(sortK)rows=rows.slice().sort((a,b)=>(norm(a[sortK])>norm(b[sortK])?1:-1)*dir);
     if((document.getElementById('dedup')||{}).checked){
@@ -295,6 +298,8 @@
   // ---------- boot ----------
   function boot(d){
     MONTH=d.month||''; BASE=(d.detail||[]).slice(); totalsRef=d.totals||null; KPIBASE=(d.kpi||[]).slice(); DADJUST=(d.adjust||[]); window.__KPI__=KPIBASE; REF=refDate(); REFSTART=refStart();
+    HHDAYS=new Map(); // số ngày ở của từng người đang hiện hữu (để dòng "xuất viện về/đi viện đã về" mượn lại)
+    BASE.forEach(r=>{ if(/^1\./.test(r.ct)){ const v=daysOf(r); const k=digOnly(r.ma); if(v!=null&&k)HHDAYS.set(k,v); } });
     document.getElementById('sub').textContent='Tháng '+MONTH+(d.generatedAt?(' • cập nhật '+d.generatedAt):'');
     renderKPI();
     const f=document.getElementById('f'),z=document.getElementById('z');
