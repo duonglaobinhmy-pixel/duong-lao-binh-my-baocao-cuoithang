@@ -1,6 +1,6 @@
 {
   "month": "2026-06",
-  "generatedAt": "02/07/2026 10:06:02",
+  "generatedAt": "04/07/2026 02:59:05",
   "kpi": [
     {
       "zone": "HH",
@@ -116,7 +116,6 @@
     }
   ],
   "totals": {
-    "nhapMoi": 41.0,
     "chuyenNB": 3.0,
     "veLai": 31.0,
     "hienHuu": 600.0,
@@ -125,6 +124,7 @@
     "thanhLy": 19.0,
     "dieuChuyen": 3.0,
     "diVien": 0.0,
+    "nhapMoi": 42,
     "tongXuat": 26.0,
     "lapDay": 86.6
   },
@@ -8279,6 +8279,128 @@
       "cs": "Hoa lan",
       "ck": "Không",
       "gc": "Ông về nhà chơi | Chưa quay lại tính đến 30/06/2026"
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "TCDB1",
+      "ma": "HD2600177",
+      "ten": "Nguyễn Văn Nửa",
+      "ngay": "2026-06-13",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Có",
+      "gc": "HĐ mới, đã thanh lý 30/06 (mất mong tại nhà)"
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "TCDB1",
+      "ma": "HD2600189",
+      "ten": "Lê Văn Khâm",
+      "ngay": "2026-06-21",
+      "cs": "Chăm sóc Đặc biệt 1",
+      "ck": "Có",
+      "gc": "HĐ mới, gia đình đón về 24/06"
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "TCDB1",
+      "ma": "HD2600182",
+      "ten": "Nguyễn Ngọc Đa",
+      "ngay": "2026-06-17",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Có",
+      "gc": "HĐ mới, nhập viện cấp cứu rồi thanh lý 24/06"
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "DQH",
+      "ma": "HD2600162",
+      "ten": "Nguyễn Thị Thanh Bình",
+      "ngay": "2026-06-03",
+      "cs": "Tầng 1-DQH-CSTYC",
+      "ck": "Có",
+      "gc": "HĐ mới, thanh lý 25/06 (gửi ngắn hạn)"
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "HHG",
+      "ma": "HD2600172",
+      "ten": "Hoàng Thị Thư",
+      "ngay": "2026-06-10",
+      "cs": "khuA",
+      "ck": "Có",
+      "gc": "HĐ mới, thanh lý 16/06"
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "HHG",
+      "ma": "HD2600166",
+      "ten": "HUỲNH VĂN KIM",
+      "ngay": "2026-06-06",
+      "cs": "khuA",
+      "ck": "Có",
+      "gc": "HĐ mới, thanh lý cùng ngày 06/06"
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "HHG",
+      "ma": "HD2600199",
+      "ten": "Bùi Thiên Tạo",
+      "ngay": "2026-06-27",
+      "cs": "khuA",
+      "ck": "Có",
+      "gc": "HĐ mới, đang đi viện chưa về (tính đến 30/06)"
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "HHG",
+      "ma": "HD2600178",
+      "ten": "Huỳnh Văn Kim",
+      "ngay": "2026-06-15",
+      "cs": "khuA",
+      "ck": "Có",
+      "gc": "HĐ mới, đang đi viện chưa về (tính đến 30/06)"
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "TCDB1",
+      "ma": "HD2600161",
+      "ten": "Trần Công Danh",
+      "ngay": "2026-06-02",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Có",
+      "gc": "HĐ mới, đang đi viện chưa về (tính đến 30/06)"
+    }
+  ],
+  "adjust": [
+    {
+      "zone": "HH",
+      "field": "nhapMoi",
+      "new": 7,
+      "note": "Cộng thêm 1 cụ (Bùi Quang Minh) ký HĐ mới tại Hoa Hồng, sau đó điều chuyển nội bộ sang Hà Huy Giáp trong tháng — tính Nhập mới cho nơi ký ban đầu."
+    },
+    {
+      "zone": "TCDB1",
+      "field": "nhapMoi",
+      "new": 6,
+      "note": "Đối chiếu danh sách Quản lý khách hàng (42 mã KH mới tháng 6): loại các hợp đồng gia hạn của khách cũ (Nguyễn Văn Nửa, Lê Văn Khâm, Nguyễn Ngọc Đa — không có mã KH mới); vẫn tính cụ Trần Công Danh (KH2600168, đang đi viện chưa về)."
+    },
+    {
+      "zone": "NT",
+      "field": "nhapMoi",
+      "new": 2,
+      "note": "2 cụ (Đặng Phi Long, Lương Kinh) có mã KH gắn Nguyễn Tuân nhưng thực chất ký HĐ mới tại Dương Quảng Hàm rồi mới điều chuyển nội bộ sang Nguyễn Tuân trong cùng tháng — chuyển ghi nhận Nhập mới về Dương Quảng Hàm."
+    },
+    {
+      "zone": "DQH",
+      "field": "nhapMoi",
+      "new": 12,
+      "note": "Cộng thêm 2 cụ (Đặng Phi Long, Lương Kinh) ký HĐ mới tại đây trước khi điều chuyển nội bộ sang Nguyễn Tuân trong tháng."
+    },
+    {
+      "zone": "HHG",
+      "field": "nhapMoi",
+      "new": 9,
+      "note": "Loại các hợp đồng gia hạn của khách cũ, không có mã KH mới (Hoàng Thị Thư, Huỳnh Văn Kim, Nguyễn Văn Nửa...); đối chiếu còn 9 mã KH mới thật sự (kể cả Bùi Thiên Tạo đang đi viện chưa về)."
     }
   ]
 }
