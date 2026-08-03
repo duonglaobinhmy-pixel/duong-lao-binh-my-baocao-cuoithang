@@ -211,11 +211,19 @@
       });
     }
     const fz=(document.getElementById('z')||{}).value||'';
-    const hh=merged().filter(r=>/^1\./.test(r.ct)&&(!fz||r.zone===fz)); // cụ hiện hữu theo khu đang chọn
+    // RULE: 1 người có thể nằm ở NHIỀU chỉ tiêu (vd cụ HĐ MỚI cũng có dòng HIỆN HỮU)
+    //       => "dòng" KHÁC "người". Trước đây chỉ in số dòng nên [HH] hiện 104 > hiện hữu 101.
+    const dedupOn=!!(document.getElementById('dedup')||{}).checked;
+    const uniq=new Set(rows.map(r=>digOnly(r.ma)||norm(r.ten))).size;
+    // Hiện hữu cuối tháng + phân nhóm số ngày ở: LUÔN tính trên toàn khu đang chọn,
+    // vì đây là số dùng để tính lương. Không phụ thuộc ô tìm kiếm / lọc chỉ tiêu / lọc số ngày.
+    const hh=merged().filter(r=>/^1\./.test(r.ct)&&(!fz||r.zone===fz));
     const nge=hh.filter(r=>{const x=daysOf(r);return x!=null&&x>=30;}).length; const nlt=hh.filter(r=>{const x=daysOf(r);return x!=null&&x<30;}).length;
-    const dunit=(document.getElementById('dedup')||{}).checked?' người':' dòng';
-    const kLabel=fz?('['+fz+'] '):'';
-    count.textContent='Hiển thị '+rows.length+dunit+' • '+kLabel+'NCT ≥30 ngày (lương): '+nge+' • <30 ngày: '+nlt+(editMode?' • ĐANG SỬA':'');
+    const narrowed=!!(kw||(document.getElementById('f')||{}).value||((document.getElementById('dayf')||{}).value||''));
+    const view='Hiển thị '+rows.length+(dedupOn?' người':' dòng'+(uniq!==rows.length?' ('+uniq+' người)':''));
+    const kLabel=fz?('['+fz+'] '):'[Tất cả khu] ';
+    count.textContent=view+' • '+kLabel+'Hiện hữu cuối tháng: '+hh.length+' = ≥30 ngày (lương) '+nge+' + <30 ngày '+nlt
+      +(narrowed?' — số toàn khu, không theo bộ lọc':'')+(editMode?' • ĐANG SỬA':'');
   }
 
   function addRow(){
