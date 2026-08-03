@@ -7,6 +7,8 @@
 // ============================================================
 (function(){
   const EDIT_PASS='1398';   // mật khẩu mở chế độ sửa tay
+  const LUONG_MIN=15;       // RULE: NCT ở >= 15 ngày trong tháng thì được tính lương/tính đủ tháng.
+                            // Đổi 1 chỗ này là đổi hết: nhãn đếm, màu ô "Số ngày ở", cột xuất Excel.
 
   const ZCOLS=[
     ['label','Cơ sở','l'],['nhapMoi','Nhập mới'],['chuyenNB','Điều chuyển NB'],['veLai','Xuất viện về khu lại'],
@@ -111,7 +113,7 @@
     const s=k=>arr.reduce((a,r)=>a+(Number(r[k])||0),0);
     return {nhapMoi:s('nhapMoi'),chuyenNB:s('chuyenNB'),veLai:s('veLai'),hienHuu:s('hienHuu'),tamVang:s('tamVang'),thuocKhu:s('thuocKhu'),giuong:s('giuong'),
       lapDay:s('giuong')?Math.round(s('hienHuu')/s('giuong')*1000)/10:0,
-      tongXuat:s('tongXuat'),tuVong:s('tuVong'),thanhLy:s('thanhLy'),dieuChuyen:s('dieuChuyen'),diVien:s('diVien'),ge30:s('ge30')};
+      tongXuat:s('tongXuat'),tuVong:s('tuVong'),thanhLy:s('thanhLy'),dieuChuyen:s('dieuChuyen'),diVien:s('diVien'),ge15:s('ge15'),ge30:s('ge30')};
   }
   function setKpiAdj(zone,field,val){
     if(AUTO.includes(field))return; // Tổng xuất & Lấp đầy tự tính, không sửa tay
@@ -191,7 +193,7 @@
         if(c[0]==='ct'){const cts=r._cts||[r.ct];return '<td>'+cts.map(x=>'<span class="badge">'+esc(x)+'</span>').join(' ')+tag+'</td>';}
         if(c[0]==='ck')return '<td class="'+(String(r.ck).indexOf('Có')===0?'yes':'no')+'" '+(editMode?'contenteditable data-k="ck" data-rk="'+esc(rk)+'"':'')+'>'+esc(r.ck)+'</td>';
         if(c[0]==='gc')return '<td class="gc" '+(editMode?'contenteditable data-k="gc" data-rk="'+esc(rk)+'"':'')+'>'+(editMode?esc(r.gc):hl(r.gc,kw))+'</td>';
-        if(c[0]==='days'){const dd=daysOf(r);const cl=dd==null?'':(dd>=30?'ge30':'u30');return '<td class="'+cl+'">'+(dd!=null?dd:'')+'</td>';}
+        if(c[0]==='days'){const dd=daysOf(r);const cl=dd==null?'':(dd>=LUONG_MIN?'ge30':'u30');return '<td class="'+cl+'">'+(dd!=null?dd:'')+'</td>';} // class ge30/u30 = xanh/cam trong style.css
         const v=(c[0]==='ten'||c[0]==='ma')?hl(r[c[0]],kw):esc(r[c[0]]);
         return '<td class="'+(c[2]==='l'?'l':'')+'">'+v+'</td>';
       }).join('');
@@ -218,11 +220,11 @@
     // Hiện hữu cuối tháng + phân nhóm số ngày ở: LUÔN tính trên toàn khu đang chọn,
     // vì đây là số dùng để tính lương. Không phụ thuộc ô tìm kiếm / lọc chỉ tiêu / lọc số ngày.
     const hh=merged().filter(r=>/^1\./.test(r.ct)&&(!fz||r.zone===fz));
-    const nge=hh.filter(r=>{const x=daysOf(r);return x!=null&&x>=30;}).length; const nlt=hh.filter(r=>{const x=daysOf(r);return x!=null&&x<30;}).length;
+    const nge=hh.filter(r=>{const x=daysOf(r);return x!=null&&x>=LUONG_MIN;}).length; const nlt=hh.filter(r=>{const x=daysOf(r);return x!=null&&x<LUONG_MIN;}).length;
     const narrowed=!!(kw||(document.getElementById('f')||{}).value||((document.getElementById('dayf')||{}).value||''));
     const view='Hiển thị '+rows.length+(dedupOn?' người':' dòng'+(uniq!==rows.length?' ('+uniq+' người)':''));
     const kLabel=fz?('['+fz+'] '):'[Tất cả khu] ';
-    count.textContent=view+' • '+kLabel+'Hiện hữu cuối tháng: '+hh.length+' = ≥30 ngày (lương) '+nge+' + <30 ngày '+nlt
+    count.textContent=view+' • '+kLabel+'Hiện hữu cuối tháng: '+hh.length+' = ≥'+LUONG_MIN+' ngày (lương) '+nge+' + <'+LUONG_MIN+' ngày '+nlt
       +(narrowed?' — số toàn khu, không theo bộ lọc':'')+(editMode?' • ĐANG SỬA':'');
   }
 

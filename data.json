@@ -1,6 +1,6 @@
 {
   "month": "2026-07",
-  "generatedAt": "03/08/2026 (bổ sung số xuất khu thủ công)",
+  "generatedAt": "03/08/2026 (bổ sung số xuất khu thủ công + ngưỡng lương 15 ngày)",
   "kpi": [
     {
       "zone": "HH",
@@ -16,6 +16,7 @@
       "thanhLy": 0,
       "dieuChuyen": 0,
       "diVien": 0,
+      "ge15": 100,
       "ge30": 98
     },
     {
@@ -32,6 +33,7 @@
       "thanhLy": 0,
       "dieuChuyen": 0,
       "diVien": 0,
+      "ge15": 93,
       "ge30": 93
     },
     {
@@ -48,6 +50,7 @@
       "thanhLy": 0,
       "dieuChuyen": 0,
       "diVien": 0,
+      "ge15": 97,
       "ge30": 97
     },
     {
@@ -64,6 +67,7 @@
       "thanhLy": 0,
       "dieuChuyen": 0,
       "diVien": 0,
+      "ge15": 62,
       "ge30": 62
     },
     {
@@ -80,6 +84,7 @@
       "thanhLy": 0,
       "dieuChuyen": 0,
       "diVien": 0,
+      "ge15": 69,
       "ge30": 68
     },
     {
@@ -96,6 +101,7 @@
       "thanhLy": 0,
       "dieuChuyen": 0,
       "diVien": 0,
+      "ge15": 119,
       "ge30": 118
     },
     {
@@ -112,6 +118,7 @@
       "thanhLy": 0,
       "dieuChuyen": 0,
       "diVien": 0,
+      "ge15": 44,
       "ge30": 42
     }
   ],
@@ -292,6 +299,7 @@
     "thanhLy": 26,
     "dieuChuyen": 0,
     "diVien": 28,
+    "ge15": 584,
     "ge30": 578
   },
   "detail": [
