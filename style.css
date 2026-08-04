@@ -55,3 +55,9 @@ td[contenteditable]{background:#fffdf2;outline:1px dashed #d8c98a}
 .logtbl th,.logtbl td{border:1px solid #e3e3e3;padding:5px 8px;text-align:center}
 .logtbl th{background:#fbe6c8}
 .logtbl td.gc{background:#fffdf2}
+/* drill-down: ô số bấm được trong bảng KPI */
+td.drill{cursor:pointer;position:relative}
+td.drill:hover{box-shadow:inset 0 0 0 2px #2e7d32;background:#eaf6ea}
+.tot td.drill:hover{box-shadow:inset 0 0 0 2px #7a3d00;background:#f2a05a}
+.drillmsg{margin:0 0 10px;padding:10px 12px;border-left:4px solid #e08a00;background:#fff7e6;
+  color:#7a4a00;font-size:13px;line-height:1.55;border-radius:4px}

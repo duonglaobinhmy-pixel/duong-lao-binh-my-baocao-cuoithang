@@ -90,6 +90,50 @@
     });
     return cnt;
   }
+  // ---------- DRILL-DOWN: bấm số trong bảng KPI -> mở đúng danh sách chi tiết ----------
+  // Map chỉ tiêu KPI -> mẫu nhận dạng tên "Chỉ tiêu" (ct) trong danh sách chi tiết.
+  // KHÔNG hardcode tên ct: dò trong dữ liệu thật lúc chạy. Nhờ vậy khi nào bổ sung dòng
+  // TỬ VONG / THANH LÝ / ĐI VIỆN vào data.json là bấm ra danh sách được ngay, không sửa code.
+  const DRILL={
+    nhapMoi:/HĐ MỚI|HD MOI|NHẬP MỚI|PHÁT SINH/i,
+    hienHuu:/HIỆN HỮU/i,
+    thuocKhu:/HIỆN HỮU/i,
+    veLai:/VỀ KHU LẠI|XUẤT VIỆN VỀ/i,
+    tamVang:/ĐI VIỆN|VỀ THĂM NHÀ/i,
+    chuyenNB:/ĐIỀU CHUYỂN NB|CHUYỂN NỘI BỘ ĐẾN/i,
+    tuVong:/TỬ VONG/i,
+    thanhLy:/THANH LÝ/i,
+    dieuChuyen:/ĐIỀU CHUYỂN NỘI BỘ/i,
+    diVien:/ĐI VIỆN/i
+  };
+  const NODRILL=['label','giuong','lapDay','tongXuat']; // không phải danh sách người -> không bấm
+  function ctFor(field){
+    const re=DRILL[field]; if(!re)return null;
+    const hit=[...new Set(BASE.map(r=>r.ct))].filter(c=>re.test(c));
+    return hit.length===1?hit[0]:null; // khớp đúng 1 nhóm mới lọc thẳng được
+  }
+  function showTab(name){
+    document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('active',x.dataset.tab===name));
+    document.querySelectorAll('.panel').forEach(x=>x.classList.toggle('active',x.id===name));
+  }
+  let drillMsg='', drillNone=false;
+  function drill(zone,field){
+    const ct=ctFor(field);
+    const z=document.getElementById('z'),f=document.getElementById('f'),q=document.getElementById('q'),dayf=document.getElementById('dayf');
+    q.value=''; if(dayf)dayf.value='';
+    z.value=[...z.options].some(o=>o.value===zone)?zone:'';
+    const zTxt=zone?('khu '+zone):'toàn hệ thống';
+    if(ct){ f.value=ct; drillMsg=''; drillNone=false; }
+    else {  // chưa có dòng chi tiết cho chỉ tiêu này -> trả về RỖNG + nói rõ lý do,
+            // không được để lọt cả danh sách khu ra làm người đọc tưởng đó là danh sách đúng
+      f.value=''; drillNone=true;
+      drillMsg='⚠ Chỉ tiêu “'+ZLABEL(field)+'” ('+zTxt+') chỉ có SỐ TỔNG, chưa có danh sách tên trong data.json. '
+        +'Lý do: 3 API customers / term / exit trả HTTP 400 ngày 31/07 nên số này được nhập tay từ báo cáo cơ sở. '
+        +'Khi bổ sung dòng chi tiết cho chỉ tiêu này vào data.json thì bấm là ra danh sách ngay, không cần sửa code.';
+    }
+    showTab('detail'); renderDetail();
+  }
+
   const ZLABEL=c=>{const x=ZCOLS.find(z=>z[0]===c);return x?x[1]:c;};
   function origVal(zone,field){const r=KPIBASE.find(x=>x.zone===zone);return r?r[field]:undefined;}
   // gộp chỉnh tay: từ data.json (adjust) + máy hiện tại (localStorage). key = 'zone|field' -> {new, note}
@@ -131,15 +175,22 @@
         if(c[0]==='label')return `<td class="l">${esc(r.label)}</td>`;
         const k=r.zone+'|'+c[0]; const adj=m[k]; const ov=origVal(r.zone,c[0]);
         const isAuto=AUTO.includes(c[0]);
-        const cls=(c[2]==='yellow'?'yellow ':'')+(adj?'adjusted ':'')+((editMode&&!isAuto)?'editcell':'')+(isAuto?'autocell':'');
+        const canDrill=!editMode&&!NODRILL.includes(c[0]);
+        const cls=(c[2]==='yellow'?'yellow ':'')+(adj?'adjusted ':'')+((editMode&&!isAuto)?'editcell':'')+(isAuto?'autocell':'')+(canDrill?' drill':'');
         const ed=(editMode&&!isAuto)?`contenteditable data-zone="${esc(r.zone)}" data-field="${c[0]}"`:'';
+        const dr=canDrill?` data-dz="${esc(r.zone)}" data-df="${esc(c[0])}" title="Bấm để xem danh sách chi tiết"`:'';
         const extra=(adj&&!editMode)?` <small class="old">(cũ ${esc(ov)})</small>`:'';
-        return `<td class="${cls}" ${ed}>${esc(r[c[0]])}${extra}</td>`;
+        return `<td class="${cls}"${dr} ${ed}>${esc(r[c[0]])}${extra}</td>`;
       }).join('')+'</tr>'; });
-    h+='<tr class="tot">'+ZCOLS.map((c,i)=>`<td class="${c[2]==='l'?'l':''}">${esc(i===0?'TỔNG CỘNG':(totals[c[0]]??''))}</td>`).join('')+'</tr>';
+    h+='<tr class="tot">'+ZCOLS.map((c,i)=>{
+      if(i===0)return '<td class="l">TỔNG CỘNG</td>';
+      const canDrill=!editMode&&!NODRILL.includes(c[0]);
+      return '<td'+(canDrill?' class="drill" data-dz="" data-df="'+esc(c[0])+'" title="Bấm để xem danh sách toàn hệ thống"':'')+'>'+esc(totals[c[0]]??'')+'</td>';
+    }).join('')+'</tr>';
     h+='</tbody>';
     document.getElementById('kpi').innerHTML=h;
     const t=document.getElementById('kpi');
+    t.querySelectorAll('td.drill').forEach(td=>td.onclick=()=>drill(td.dataset.dz,td.dataset.df));
     if(editMode){ t.querySelectorAll('td[contenteditable]').forEach(td=>td.onblur=()=>{ setKpiAdj(td.dataset.zone,td.dataset.field,td.textContent.trim()); }); }
     // nhật ký chỉnh tay dưới bảng (ai cũng thấy)
     const log=document.getElementById('kpilog'); if(log){
@@ -160,6 +211,7 @@
   let sortK='',dir=1,editMode=false,unlocked=false;
   // Lọc + sort + gộp người theo bộ điều khiển hiện tại (dùng chung cho hiển thị & xuất Excel)
   function currentRows(){
+    if(drillNone)return []; // đang drill vào chỉ tiêu chưa có dòng chi tiết -> đúng là rỗng
     const q=document.getElementById('q'),f=document.getElementById('f'),z=document.getElementById('z');
     const kw=q.value.trim(),fct=f.value,fz=z.value,nk=norm(kw);
     const dayf=(document.getElementById('dayf')||{}).value||'';
@@ -185,6 +237,11 @@
     const q=document.getElementById('q'),count=document.getElementById('count');
     const kw=q.value.trim();
     const rows=currentRows();
+    // banner: chỉ hiện khi drill vào chỉ tiêu chưa có dòng chi tiết, để bảng không trống trơn không lời giải thích
+    let bn=document.getElementById('drillmsg');
+    if(!bn){ bn=document.createElement('div'); bn.id='drillmsg'; bn.className='drillmsg';
+      const p=document.getElementById('detail'); p.insertBefore(bn,p.querySelector('.tablewrap')); }
+    bn.style.display=drillMsg?'block':'none'; bn.textContent=drillMsg;
     const head='<thead><tr>'+DCOLS.map(c=>`<th data-k="${c[0]}" class="${c[2]==='l'?'l':''}">${c[1]}</th>`).join('')+(editMode?'<th>Sửa</th>':'')+'</tr></thead>';
     const body='<tbody>'+rows.map(r=>{
       const rk=rowKey(r);
@@ -221,7 +278,8 @@
     // vì đây là số dùng để tính lương. Không phụ thuộc ô tìm kiếm / lọc chỉ tiêu / lọc số ngày.
     const hh=merged().filter(r=>/^1\./.test(r.ct)&&(!fz||r.zone===fz));
     const nge=hh.filter(r=>{const x=daysOf(r);return x!=null&&x>=LUONG_MIN;}).length; const nlt=hh.filter(r=>{const x=daysOf(r);return x!=null&&x<LUONG_MIN;}).length;
-    const narrowed=!!(kw||(document.getElementById('f')||{}).value||((document.getElementById('dayf')||{}).value||''));
+    const isHH=r=>(r._cts||[r.ct]).some(x=>/^1\./.test(x));
+    const narrowed=hh.length!==rows.filter(isHH).length; // chỉ nhắc khi tập đang xem thật sự ít hiện hữu hơn toàn khu
     const view='Hiển thị '+rows.length+(dedupOn?' người':' dòng'+(uniq!==rows.length?' ('+uniq+' người)':''));
     const kLabel=fz?('['+fz+'] '):'[Tất cả khu] ';
     count.textContent=view+' • '+kLabel+'Hiện hữu cuối tháng: '+hh.length+' = ≥'+LUONG_MIN+' ngày (lương) '+nge+' + <'+LUONG_MIN+' ngày '+nlt
@@ -315,8 +373,9 @@
     const f=document.getElementById('f'),z=document.getElementById('z');
     [...new Set(BASE.map(r=>r.ct))].sort().forEach(c=>{const o=document.createElement('option');o.value=o.textContent=c;f.appendChild(o);});
     [...new Set(BASE.map(r=>r.zone))].filter(Boolean).sort().forEach(zz=>{const o=document.createElement('option');o.textContent=zz;z.appendChild(o);});
-    document.getElementById('q').oninput=f.onchange=z.onchange=renderDetail;
-    const dayf=document.getElementById('dayf'); if(dayf)dayf.onchange=renderDetail;
+    const rerender=()=>{drillMsg='';drillNone=false;renderDetail();}; // người dùng tự đổi lọc -> bỏ trạng thái drill
+    document.getElementById('q').oninput=f.onchange=z.onchange=rerender;
+    const dayf=document.getElementById('dayf'); if(dayf)dayf.onchange=rerender;
     const dd=document.getElementById('dedup'); if(dd)dd.onchange=renderDetail;
     document.getElementById('editToggle').onclick=toggleEdit;
     document.getElementById('addRow').onclick=addRow;
@@ -325,11 +384,7 @@
     document.getElementById('resetEdits').onclick=resetEdits;
     renderDetail();
   }
-  document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
-    document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));
-    document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
-    b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active');
-  });
+  document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
   if(window.__DATA__)boot(window.__DATA__);
   else fetch('data.json?_='+Date.now()).then(r=>r.json()).then(boot).catch(e=>{document.getElementById('sub').textContent='Lỗi tải data.json: '+e;});
 })();
