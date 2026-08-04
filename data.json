@@ -1,6 +1,6 @@
 {
   "month": "2026-07",
-  "generatedAt": "03/08/2026 (bổ sung số xuất khu thủ công + ngưỡng lương 15 ngày)",
+  "generatedAt": "04/08/2026 (đã đối chiếu đủ 31 hồ sơ thanh lý hợp đồng từ Bcare, thay số báo tay 26)",
   "kpi": [
     {
       "zone": "HH",
@@ -132,157 +132,213 @@
     },
     {
       "zone": "HH",
-      "field": "thanhLy",
+      "field": "diVien",
+      "old": 0,
+      "new": 5,
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+    },
+    {
+      "zone": "TCDB1",
+      "field": "veLai",
+      "old": 0,
+      "new": 1,
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+    },
+    {
+      "zone": "TCDB1",
+      "field": "tuVong",
+      "old": 0,
+      "new": 2,
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+    },
+    {
+      "zone": "TCDB1",
+      "field": "diVien",
       "old": 0,
       "new": 6,
-      "note": "API term/liquidatecontract trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+    },
+    {
+      "zone": "HLDB2",
+      "field": "veLai",
+      "old": 0,
+      "new": 3,
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+    },
+    {
+      "zone": "HLDB2",
+      "field": "diVien",
+      "old": 0,
+      "new": 4,
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+    },
+    {
+      "zone": "AH",
+      "field": "veLai",
+      "old": 0,
+      "new": 2,
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+    },
+    {
+      "zone": "AH",
+      "field": "diVien",
+      "old": 0,
+      "new": 2,
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+    },
+    {
+      "zone": "NT",
+      "field": "veLai",
+      "old": 0,
+      "new": 3,
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+    },
+    {
+      "zone": "NT",
+      "field": "tuVong",
+      "old": 0,
+      "new": 1,
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+    },
+    {
+      "zone": "NT",
+      "field": "diVien",
+      "old": 0,
+      "new": 3,
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+    },
+    {
+      "zone": "DQH",
+      "field": "veLai",
+      "old": 0,
+      "new": 3,
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+    },
+    {
+      "zone": "DQH",
+      "field": "tuVong",
+      "old": 0,
+      "new": 1,
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+    },
+    {
+      "zone": "DQH",
+      "field": "diVien",
+      "old": 0,
+      "new": 4,
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+    },
+    {
+      "zone": "HHG",
+      "field": "veLai",
+      "old": 0,
+      "new": 2,
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+    },
+    {
+      "zone": "HHG",
+      "field": "diVien",
+      "old": 0,
+      "new": 4,
+      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
     },
     {
       "zone": "HH",
-      "field": "diVien",
-      "old": 0,
-      "new": 5,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "TCDB1",
-      "field": "veLai",
-      "old": 0,
-      "new": 1,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "TCDB1",
-      "field": "tuVong",
-      "old": 0,
-      "new": 2,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "TCDB1",
       "field": "thanhLy",
-      "old": 0,
-      "new": 3,
-      "note": "API term/liquidatecontract trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "TCDB1",
-      "field": "diVien",
       "old": 0,
       "new": 6,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+      "note": "API term/liquidatecontract lỗi 400 (31/07) -> đối chiếu Excel hợp đồng thanh lý xuất từ Bcare (04/08/2026), số thật = 6"
     },
     {
-      "zone": "HLDB2",
-      "field": "veLai",
-      "old": 0,
-      "new": 3,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "HLDB2",
+      "zone": "TCDB1",
       "field": "thanhLy",
       "old": 0,
       "new": 5,
-      "note": "API term/liquidatecontract trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+      "note": "API term/liquidatecontract lỗi 400 (31/07) -> đối chiếu Excel hợp đồng thanh lý xuất từ Bcare (04/08/2026), số thật = 5"
     },
     {
       "zone": "HLDB2",
-      "field": "diVien",
+      "field": "thanhLy",
+      "old": 0,
+      "new": 6,
+      "note": "API term/liquidatecontract lỗi 400 (31/07) -> đối chiếu Excel hợp đồng thanh lý xuất từ Bcare (04/08/2026), số thật = 6"
+    },
+    {
+      "zone": "AH",
+      "field": "thanhLy",
+      "old": 0,
+      "new": 3,
+      "note": "API term/liquidatecontract lỗi 400 (31/07) -> đối chiếu Excel hợp đồng thanh lý xuất từ Bcare (04/08/2026), số thật = 3"
+    },
+    {
+      "zone": "NT",
+      "field": "thanhLy",
+      "old": 0,
+      "new": 1,
+      "note": "API term/liquidatecontract lỗi 400 (31/07) -> đối chiếu Excel hợp đồng thanh lý xuất từ Bcare (04/08/2026), số thật = 1"
+    },
+    {
+      "zone": "DQH",
+      "field": "thanhLy",
+      "old": 0,
+      "new": 6,
+      "note": "API term/liquidatecontract lỗi 400 (31/07) -> đối chiếu Excel hợp đồng thanh lý xuất từ Bcare (04/08/2026), số thật = 6"
+    },
+    {
+      "zone": "HHG",
+      "field": "thanhLy",
       "old": 0,
       "new": 4,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+      "note": "API term/liquidatecontract lỗi 400 (31/07) -> đối chiếu Excel hợp đồng thanh lý xuất từ Bcare (04/08/2026), số thật = 4"
+    },
+    {
+      "zone": "HH",
+      "field": "tongXuat",
+      "old": 0,
+      "new": 11,
+      "note": "Tính lại = tử vong + thanh lý (đã đối chiếu Bcare) + điều chuyển nội bộ + đi viện"
+    },
+    {
+      "zone": "TCDB1",
+      "field": "tongXuat",
+      "old": 0,
+      "new": 13,
+      "note": "Tính lại = tử vong + thanh lý (đã đối chiếu Bcare) + điều chuyển nội bộ + đi viện"
+    },
+    {
+      "zone": "HLDB2",
+      "field": "tongXuat",
+      "old": 0,
+      "new": 10,
+      "note": "Tính lại = tử vong + thanh lý (đã đối chiếu Bcare) + điều chuyển nội bộ + đi viện"
     },
     {
       "zone": "AH",
-      "field": "veLai",
-      "old": 0,
-      "new": 2,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "AH",
-      "field": "thanhLy",
-      "old": 0,
-      "new": 3,
-      "note": "API term/liquidatecontract trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "AH",
-      "field": "diVien",
-      "old": 0,
-      "new": 2,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "NT",
-      "field": "veLai",
-      "old": 0,
-      "new": 3,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "NT",
-      "field": "tuVong",
-      "old": 0,
-      "new": 1,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "NT",
-      "field": "diVien",
-      "old": 0,
-      "new": 3,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "DQH",
-      "field": "veLai",
-      "old": 0,
-      "new": 3,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "DQH",
-      "field": "tuVong",
-      "old": 0,
-      "new": 1,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "DQH",
-      "field": "thanhLy",
+      "field": "tongXuat",
       "old": 0,
       "new": 5,
-      "note": "API term/liquidatecontract trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+      "note": "Tính lại = tử vong + thanh lý (đã đối chiếu Bcare) + điều chuyển nội bộ + đi viện"
+    },
+    {
+      "zone": "NT",
+      "field": "tongXuat",
+      "old": 0,
+      "new": 5,
+      "note": "Tính lại = tử vong + thanh lý (đã đối chiếu Bcare) + điều chuyển nội bộ + đi viện"
     },
     {
       "zone": "DQH",
-      "field": "diVien",
+      "field": "tongXuat",
       "old": 0,
-      "new": 4,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+      "new": 11,
+      "note": "Tính lại = tử vong + thanh lý (đã đối chiếu Bcare) + điều chuyển nội bộ + đi viện"
     },
     {
       "zone": "HHG",
-      "field": "veLai",
+      "field": "tongXuat",
       "old": 0,
-      "new": 2,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "HHG",
-      "field": "thanhLy",
-      "old": 0,
-      "new": 4,
-      "note": "API term/liquidatecontract trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "HHG",
-      "field": "diVien",
-      "old": 0,
-      "new": 4,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
+      "new": 8,
+      "note": "Tính lại = tử vong + thanh lý (đã đối chiếu Bcare) + điều chuyển nội bộ + đi viện"
     }
   ],
   "totals": {
@@ -294,9 +350,9 @@
     "thuocKhu": 592,
     "giuong": 693,
     "lapDay": 85.4,
-    "tongXuat": 58,
+    "tongXuat": 63,
     "tuVong": 4,
-    "thanhLy": 26,
+    "thanhLy": 31,
     "dieuChuyen": 0,
     "diVien": 28,
     "ge15": 584,
@@ -7000,6 +7056,347 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 6",
       "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HH",
+      "ma": "KH2600209",
+      "ten": "Nguyễn Văn Thành",
+      "ngay": "2026-07-30",
+      "songay": 29,
+      "cs": "Hoa Hồng",
+      "ck": "Không",
+      "gc": "Cơ sở báo 30/07; HĐ thanh lý KH2600209 ghi hiệu lực 30/07/2026. Gia đình đưa ông về chuẩn bị định cư nước ngoài. LƯU Ý: hệ thống có 2 người tên 'Nguyễn Văn Thành' — mã này KHÁC mã KH2600114 (khu HHG, vẫn còn trong khu)."
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HLDB2",
+      "ma": "2400308",
+      "ten": "Quách Chấn Nguyên",
+      "ngay": "2026-07-31",
+      "songay": 30,
+      "cs": "Hoa lan",
+      "ck": "Không",
+      "gc": "Cơ sở báo 30/07; HĐ thanh lý ghi ngày ký/hiệu lực chính thức là 31/07/2026 (lệch 1 ngày so với cơ sở báo, có thể do nhớ theo ngày làm thủ tục). Gia đình khó khăn tài chính, đưa cụ về nhà."
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "TCDB1",
+      "ma": "2300400",
+      "ten": "Trần Văn Hậu",
+      "ngay": "2026-07-06",
+      "songay": 5,
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Không",
+      "gc": "Thanh lý HĐ cũ 2300400 ngày 06/07/2026 (ông hôn mê sâu, điều trị ICU BV Gia Định). Ông sau đó ký HĐ MỚI 2600217 hiệu lực 17/07/2026 — case riêng, đang chờ sếp chốt quy tắc tính lương (đi viện 29/07, về khu tối 31/07 sau giờ chốt báo cáo)."
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HH",
+      "ma": "KH2600227",
+      "ten": "Nguyễn Mạnh Hưng",
+      "ngay": "2026-07-28",
+      "songay": 27,
+      "cs": "Hoa Hồng Ông",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HH",
+      "ma": "KH2600057",
+      "ten": "Nguyễn Minh Thông",
+      "ngay": "2026-07-15",
+      "songay": 14,
+      "cs": "Hoa Hồng Ông",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HH",
+      "ma": "KH2600180",
+      "ten": "Trần Thị Bé",
+      "ngay": "2026-07-09",
+      "songay": 8,
+      "cs": "Hoa Hồng Bà",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HH",
+      "ma": "2400425",
+      "ten": "Phạm Văn Long",
+      "ngay": "2026-07-03",
+      "songay": 2,
+      "cs": "Hoa Hồng Ông",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HH",
+      "ma": "KH2600093",
+      "ten": "Đặng Thị Lệ Thy",
+      "ngay": "2026-07-01",
+      "songay": 0,
+      "cs": "Hoa Hồng Bà",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "AH",
+      "ma": "KH2600035",
+      "ten": "Nguyễn Phương Nam",
+      "ngay": "2026-07-27",
+      "songay": 26,
+      "cs": "Tầng 4 - AH",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "AH",
+      "ma": "HD2600070",
+      "ten": "Nguyễn Thị Thu Hồng",
+      "ngay": "2026-07-06",
+      "songay": 5,
+      "cs": "Tầng 2 - AH",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "AH",
+      "ma": "HD2600083",
+      "ten": "Đậu Minh Cường",
+      "ngay": "2026-07-01",
+      "songay": 0,
+      "cs": "Tầng 4 - AH",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HHG",
+      "ma": "KH2600214",
+      "ten": "Nguyễn Thị Hoa",
+      "ngay": "2026-07-30",
+      "songay": 29,
+      "cs": "khuA",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HHG",
+      "ma": "KH2600223",
+      "ten": "Võ Thị Minh Hương",
+      "ngay": "2026-07-11",
+      "songay": 10,
+      "cs": "khuA",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HHG",
+      "ma": "HD2600157",
+      "ten": "Hoàng Thị Anh",
+      "ngay": "2026-07-03",
+      "songay": 2,
+      "cs": "khuA",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HHG",
+      "ma": "KH2600210",
+      "ten": "Bùi Thiên Tạo",
+      "ngay": "2026-07-01",
+      "songay": 0,
+      "cs": "khuA",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HLDB2",
+      "ma": "KH2600170",
+      "ten": "Nguyễn Thị Châu Yến",
+      "ngay": "2026-07-31",
+      "songay": 30,
+      "cs": "Chăm sóc Đặc biệt 2",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "DQH",
+      "ma": "HD2600220",
+      "ten": "Phạm Đắc Thắng",
+      "ngay": "2026-07-31",
+      "songay": 30,
+      "cs": "Tầng 1-DQH-CSTYC",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "TCDB1",
+      "ma": "19000156",
+      "ten": "Nguyễn Thị Hoa",
+      "ngay": "2026-07-30",
+      "songay": 29,
+      "cs": "Chăm sóc Đặc biệt 1",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "TCDB1",
+      "ma": "KH2600228",
+      "ten": "Nguyễn Ngọc Trâm",
+      "ngay": "2026-07-29",
+      "songay": 28,
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "DQH",
+      "ma": "2500281",
+      "ten": "Nguyễn Thị Ngọc Mai",
+      "ngay": "2026-07-28",
+      "songay": 27,
+      "cs": "Tầng 1 - DQH",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HLDB2",
+      "ma": "KH2600177",
+      "ten": "Nguyễn Tấn Quốc",
+      "ngay": "2026-07-27",
+      "songay": 26,
+      "cs": "Chăm sóc Đặc biệt 2",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "TCDB1",
+      "ma": "KH2600172",
+      "ten": "Mai Thành Bá",
+      "ngay": "2026-07-27",
+      "songay": 26,
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "DQH",
+      "ma": "2500212",
+      "ten": "Phạm Thành Chương",
+      "ngay": "2026-07-20",
+      "songay": 19,
+      "cs": "Tầng Trệt-DQH-CSTYC",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HLDB2",
+      "ma": "2500551",
+      "ten": "Phạm Văn Thoại",
+      "ngay": "2026-07-16",
+      "songay": 15,
+      "cs": "Hoa lan",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "DQH",
+      "ma": "2500571",
+      "ten": "Nguyễn Đức Hinh",
+      "ngay": "2026-07-14",
+      "songay": 13,
+      "cs": "Tầng 1 - DQH",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HLDB2",
+      "ma": "2500401",
+      "ten": "Trần Dũng",
+      "ngay": "2026-07-11",
+      "songay": 10,
+      "cs": "Chăm sóc Đặc biệt 2",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "NT",
+      "ma": "KH2600084",
+      "ten": "Nguyễn Thị Tùng",
+      "ngay": "2026-07-06",
+      "songay": 5,
+      "cs": "Tầng trệt",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "TCDB1",
+      "ma": "18000090",
+      "ten": "Văn Thiên Long",
+      "ngay": "2026-07-06",
+      "songay": 5,
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HLDB2",
+      "ma": "HD2600058",
+      "ten": "Đặng Quốc Hùng",
+      "ngay": "2026-07-04",
+      "songay": 3,
+      "cs": "Hoa lan",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "DQH",
+      "ma": "2500221",
+      "ten": "Trương Ánh Lang",
+      "ngay": "2026-07-03",
+      "songay": 2,
+      "cs": "Tầng trệt - DQH",
+      "ck": "Không",
+      "gc": ""
+    },
+    {
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "DQH",
+      "ma": "KH2600213",
+      "ten": "Nguyễn Trọng Dần",
+      "ngay": "2026-07-03",
+      "songay": 2,
+      "cs": "Tầng trệt - DQH",
+      "ck": "Không",
       "gc": ""
     }
   ]

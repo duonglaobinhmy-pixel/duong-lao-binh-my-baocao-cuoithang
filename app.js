@@ -106,6 +106,10 @@
     dieuChuyen:/ĐIỀU CHUYỂN NỘI BỘ/i,
     diVien:/ĐI VIỆN/i
   };
+  function fieldForCt(ct){ // ngược lại với ctFor: có sẵn 1 chuỗi ct -> field KPI tương ứng
+    for(const f in DRILL){ if(DRILL[f].test(ct)) return f; }
+    return null;
+  }
   const NODRILL=['label','giuong','lapDay','tongXuat']; // không phải danh sách người -> không bấm
   function ctFor(field){
     const re=DRILL[field]; if(!re)return null;
@@ -117,13 +121,20 @@
     document.querySelectorAll('.panel').forEach(x=>x.classList.toggle('active',x.id===name));
   }
   let drillMsg='', drillNone=false;
+  function expectedKpiVal(zone,field){
+    // Lấy đúng số đã chốt trên bảng KPI (đã gộp chỉnh tay) cho 1 khu hoặc toàn hệ thống,
+    // để so với số dòng chi tiết thật -> phát hiện "còn thiếu tên" mà không cần đụng vào số KPI.
+    const kpi=mergedKPI(), totals=computeTotals(kpi);
+    if(!zone) return totals[field];
+    const r=kpi.find(x=>x.zone===zone); return r?r[field]:undefined;
+  }
   function drill(zone,field){
     const ct=ctFor(field);
     const z=document.getElementById('z'),f=document.getElementById('f'),q=document.getElementById('q'),dayf=document.getElementById('dayf');
     q.value=''; if(dayf)dayf.value='';
     z.value=[...z.options].some(o=>o.value===zone)?zone:'';
     const zTxt=zone?('khu '+zone):'toàn hệ thống';
-    if(ct){ f.value=ct; drillMsg=''; drillNone=false; }
+    if(ct){ f.value=ct; drillNone=false; }
     else {  // chưa có dòng chi tiết cho chỉ tiêu này -> trả về RỖNG + nói rõ lý do,
             // không được để lọt cả danh sách khu ra làm người đọc tưởng đó là danh sách đúng
       f.value=''; drillNone=true;
@@ -237,11 +248,30 @@
     const q=document.getElementById('q'),count=document.getElementById('count');
     const kw=q.value.trim();
     const rows=currentRows();
-    // banner: chỉ hiện khi drill vào chỉ tiêu chưa có dòng chi tiết, để bảng không trống trơn không lời giải thích
+    // banner: 2 trường hợp cần nói rõ, áp dụng NGANG NHAU cho dù người dùng bấm số trong bảng
+    // hay tự chọn tay ở dropdown "Chỉ tiêu" — tránh đúng lỗi cũ: chọn tay thì không có banner, gây hiểu lầm.
+    // (1) chỉ tiêu chưa có dòng chi tiết nào (drillNone, chỉ xảy ra qua bấm số vì dropdown không có option đó)
+    // (2) chỉ tiêu có dòng chi tiết nhưng ÍT hơn số đã chốt trên KPI -> "đã xác minh X/Y"
+    let banner=drillMsg;
+    if(!drillNone){
+      const fctNow=f.value, fzNow=z.value;
+      if(fctNow){
+        const field=fieldForCt(fctNow);
+        if(field){
+          const expect=expectedKpiVal(fzNow,field);
+          const actual=BASE.filter(r=>r.ct===fctNow&&(!fzNow||r.zone===fzNow)).length;
+          if(typeof expect==='number'&&expect>actual){
+            banner='⚠ Đã xác minh có tên/mã cho '+actual+'/'+expect+' người thuộc “'+ZLABEL(field)+'” ('+(fzNow?('khu '+fzNow):'toàn hệ thống')+'). '
+              +(expect-actual)+' người còn lại vẫn là SỐ TỔNG cơ sở báo tay, chưa tra được tên trong Bcare — '
+              +'không phải danh sách dưới đây bị thiếu, mà là chưa có đủ dữ liệu để liệt kê hết.';
+          } else banner='';
+        } else banner='';
+      } else banner='';
+    }
     let bn=document.getElementById('drillmsg');
     if(!bn){ bn=document.createElement('div'); bn.id='drillmsg'; bn.className='drillmsg';
       const p=document.getElementById('detail'); p.insertBefore(bn,p.querySelector('.tablewrap')); }
-    bn.style.display=drillMsg?'block':'none'; bn.textContent=drillMsg;
+    bn.style.display=banner?'block':'none'; bn.textContent=banner;
     const head='<thead><tr>'+DCOLS.map(c=>`<th data-k="${c[0]}" class="${c[2]==='l'?'l':''}">${c[1]}</th>`).join('')+(editMode?'<th>Sửa</th>':'')+'</tr></thead>';
     const body='<tbody>'+rows.map(r=>{
       const rk=rowKey(r);
