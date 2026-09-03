@@ -1,57 +1,57 @@
 {
-  "month": "2026-07",
-  "generatedAt": "04/08/2026 (đã đối chiếu đủ 31 hồ sơ thanh lý hợp đồng từ Bcare, thay số báo tay 26)",
+  "month": "2026-08",
+  "generatedAt": "03/09/2026 (số liệu tự động tổng hợp từ 5 file Excel Bcare — snapshot cuối tháng 08/2026)",
   "kpi": [
     {
       "zone": "HH",
       "label": "Khu chăm sóc Hoa Hồng",
-      "nhapMoi": 3,
+      "nhapMoi": 7,
       "chuyenNB": 0,
-      "veLai": 0,
-      "hienHuu": 101,
+      "veLai": 3,
+      "hienHuu": 107,
       "giuong": 120,
-      "lapDay": 84.2,
-      "tongXuat": 0,
+      "lapDay": 89.2,
+      "tongXuat": 5,
       "tuVong": 0,
-      "thanhLy": 0,
+      "thanhLy": 2,
       "dieuChuyen": 0,
-      "diVien": 0,
-      "ge15": 100,
-      "ge30": 98
+      "diVien": 3,
+      "ge15": 105,
+      "ge30": 101
     },
     {
       "zone": "TCDB1",
       "label": "Khu chăm sóc tích cực + Đặc biệt 1",
       "nhapMoi": 0,
       "chuyenNB": 0,
-      "veLai": 0,
-      "hienHuu": 93,
+      "veLai": 7,
+      "hienHuu": 92,
       "giuong": 115,
-      "lapDay": 80.9,
-      "tongXuat": 0,
-      "tuVong": 0,
-      "thanhLy": 0,
+      "lapDay": 80.0,
+      "tongXuat": 16,
+      "tuVong": 1,
+      "thanhLy": 2,
       "dieuChuyen": 0,
-      "diVien": 0,
-      "ge15": 93,
-      "ge30": 93
+      "diVien": 13,
+      "ge15": 92,
+      "ge30": 92
     },
     {
       "zone": "HLDB2",
       "label": "Khu chăm sóc hoa lan + Đặc biệt 2",
-      "nhapMoi": 0,
+      "nhapMoi": 2,
       "chuyenNB": 0,
-      "veLai": 0,
-      "hienHuu": 97,
+      "veLai": 3,
+      "hienHuu": 93,
       "giuong": 110,
-      "lapDay": 88.2,
-      "tongXuat": 0,
+      "lapDay": 84.5,
+      "tongXuat": 6,
       "tuVong": 0,
-      "thanhLy": 0,
+      "thanhLy": 3,
       "dieuChuyen": 0,
-      "diVien": 0,
-      "ge15": 97,
-      "ge30": 97
+      "diVien": 3,
+      "ge15": 92,
+      "ge30": 92
     },
     {
       "zone": "AH",
@@ -62,310 +62,334 @@
       "hienHuu": 65,
       "giuong": 74,
       "lapDay": 87.8,
-      "tongXuat": 0,
+      "tongXuat": 3,
       "tuVong": 0,
-      "thanhLy": 0,
+      "thanhLy": 3,
       "dieuChuyen": 0,
       "diVien": 0,
-      "ge15": 62,
-      "ge30": 62
+      "ge15": 64,
+      "ge30": 63
     },
     {
       "zone": "NT",
       "label": "Cơ sở Nguyễn Tuân",
       "nhapMoi": 2,
       "chuyenNB": 0,
-      "veLai": 0,
-      "hienHuu": 70,
+      "veLai": 2,
+      "hienHuu": 69,
       "giuong": 86,
-      "lapDay": 81.4,
-      "tongXuat": 0,
-      "tuVong": 0,
-      "thanhLy": 0,
+      "lapDay": 80.2,
+      "tongXuat": 6,
+      "tuVong": 2,
+      "thanhLy": 2,
       "dieuChuyen": 0,
-      "diVien": 0,
+      "diVien": 2,
       "ge15": 69,
-      "ge30": 68
+      "ge30": 67
     },
     {
       "zone": "DQH",
       "label": "Cơ sở Dương Quảng Hàm",
-      "nhapMoi": 5,
+      "nhapMoi": 3,
       "chuyenNB": 0,
-      "veLai": 0,
-      "hienHuu": 122,
+      "veLai": 6,
+      "hienHuu": 121,
       "giuong": 134,
-      "lapDay": 91,
-      "tongXuat": 0,
+      "lapDay": 90.3,
+      "tongXuat": 10,
       "tuVong": 0,
-      "thanhLy": 0,
+      "thanhLy": 2,
       "dieuChuyen": 0,
-      "diVien": 0,
-      "ge15": 119,
-      "ge30": 118
+      "diVien": 8,
+      "ge15": 120,
+      "ge30": 119
     },
     {
       "zone": "HHG",
       "label": "Cơ sở Hà Huy Giáp",
-      "nhapMoi": 4,
+      "nhapMoi": 10,
       "chuyenNB": 0,
-      "veLai": 0,
-      "hienHuu": 44,
+      "veLai": 5,
+      "hienHuu": 51,
       "giuong": 54,
-      "lapDay": 81.5,
-      "tongXuat": 0,
+      "lapDay": 94.4,
+      "tongXuat": 10,
       "tuVong": 0,
-      "thanhLy": 0,
+      "thanhLy": 5,
       "dieuChuyen": 0,
-      "diVien": 0,
-      "ge15": 44,
-      "ge30": 42
+      "diVien": 5,
+      "ge15": 48,
+      "ge30": 44
     }
   ],
-  "adjust": [
-    {
-      "zone": "HH",
-      "field": "veLai",
-      "old": 0,
-      "new": 3,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "HH",
-      "field": "diVien",
-      "old": 0,
-      "new": 5,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "TCDB1",
-      "field": "veLai",
-      "old": 0,
-      "new": 1,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "TCDB1",
-      "field": "tuVong",
-      "old": 0,
-      "new": 2,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "TCDB1",
-      "field": "diVien",
-      "old": 0,
-      "new": 6,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "HLDB2",
-      "field": "veLai",
-      "old": 0,
-      "new": 3,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "HLDB2",
-      "field": "diVien",
-      "old": 0,
-      "new": 4,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "AH",
-      "field": "veLai",
-      "old": 0,
-      "new": 2,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "AH",
-      "field": "diVien",
-      "old": 0,
-      "new": 2,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "NT",
-      "field": "veLai",
-      "old": 0,
-      "new": 3,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "NT",
-      "field": "tuVong",
-      "old": 0,
-      "new": 1,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "NT",
-      "field": "diVien",
-      "old": 0,
-      "new": 3,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "DQH",
-      "field": "veLai",
-      "old": 0,
-      "new": 3,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "DQH",
-      "field": "tuVong",
-      "old": 0,
-      "new": 1,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "DQH",
-      "field": "diVien",
-      "old": 0,
-      "new": 4,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "HHG",
-      "field": "veLai",
-      "old": 0,
-      "new": 2,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "HHG",
-      "field": "diVien",
-      "old": 0,
-      "new": 4,
-      "note": "API exit/elderlyOutHistory trả 400 (31/07) -> nhập tay từ báo cáo cơ sở"
-    },
-    {
-      "zone": "HH",
-      "field": "thanhLy",
-      "old": 0,
-      "new": 6,
-      "note": "API term/liquidatecontract lỗi 400 (31/07) -> đối chiếu Excel hợp đồng thanh lý xuất từ Bcare (04/08/2026), số thật = 6"
-    },
-    {
-      "zone": "TCDB1",
-      "field": "thanhLy",
-      "old": 0,
-      "new": 5,
-      "note": "API term/liquidatecontract lỗi 400 (31/07) -> đối chiếu Excel hợp đồng thanh lý xuất từ Bcare (04/08/2026), số thật = 5"
-    },
-    {
-      "zone": "HLDB2",
-      "field": "thanhLy",
-      "old": 0,
-      "new": 6,
-      "note": "API term/liquidatecontract lỗi 400 (31/07) -> đối chiếu Excel hợp đồng thanh lý xuất từ Bcare (04/08/2026), số thật = 6"
-    },
-    {
-      "zone": "AH",
-      "field": "thanhLy",
-      "old": 0,
-      "new": 3,
-      "note": "API term/liquidatecontract lỗi 400 (31/07) -> đối chiếu Excel hợp đồng thanh lý xuất từ Bcare (04/08/2026), số thật = 3"
-    },
-    {
-      "zone": "NT",
-      "field": "thanhLy",
-      "old": 0,
-      "new": 1,
-      "note": "API term/liquidatecontract lỗi 400 (31/07) -> đối chiếu Excel hợp đồng thanh lý xuất từ Bcare (04/08/2026), số thật = 1"
-    },
-    {
-      "zone": "DQH",
-      "field": "thanhLy",
-      "old": 0,
-      "new": 6,
-      "note": "API term/liquidatecontract lỗi 400 (31/07) -> đối chiếu Excel hợp đồng thanh lý xuất từ Bcare (04/08/2026), số thật = 6"
-    },
-    {
-      "zone": "HHG",
-      "field": "thanhLy",
-      "old": 0,
-      "new": 4,
-      "note": "API term/liquidatecontract lỗi 400 (31/07) -> đối chiếu Excel hợp đồng thanh lý xuất từ Bcare (04/08/2026), số thật = 4"
-    },
-    {
-      "zone": "HH",
-      "field": "tongXuat",
-      "old": 0,
-      "new": 11,
-      "note": "Tính lại = tử vong + thanh lý (đã đối chiếu Bcare) + điều chuyển nội bộ + đi viện"
-    },
-    {
-      "zone": "TCDB1",
-      "field": "tongXuat",
-      "old": 0,
-      "new": 13,
-      "note": "Tính lại = tử vong + thanh lý (đã đối chiếu Bcare) + điều chuyển nội bộ + đi viện"
-    },
-    {
-      "zone": "HLDB2",
-      "field": "tongXuat",
-      "old": 0,
-      "new": 10,
-      "note": "Tính lại = tử vong + thanh lý (đã đối chiếu Bcare) + điều chuyển nội bộ + đi viện"
-    },
-    {
-      "zone": "AH",
-      "field": "tongXuat",
-      "old": 0,
-      "new": 5,
-      "note": "Tính lại = tử vong + thanh lý (đã đối chiếu Bcare) + điều chuyển nội bộ + đi viện"
-    },
-    {
-      "zone": "NT",
-      "field": "tongXuat",
-      "old": 0,
-      "new": 5,
-      "note": "Tính lại = tử vong + thanh lý (đã đối chiếu Bcare) + điều chuyển nội bộ + đi viện"
-    },
-    {
-      "zone": "DQH",
-      "field": "tongXuat",
-      "old": 0,
-      "new": 11,
-      "note": "Tính lại = tử vong + thanh lý (đã đối chiếu Bcare) + điều chuyển nội bộ + đi viện"
-    },
-    {
-      "zone": "HHG",
-      "field": "tongXuat",
-      "old": 0,
-      "new": 8,
-      "note": "Tính lại = tử vong + thanh lý (đã đối chiếu Bcare) + điều chuyển nội bộ + đi viện"
-    }
-  ],
+  "adjust": [],
   "totals": {
-    "nhapMoi": 17,
+    "nhapMoi": 27,
     "chuyenNB": 0,
-    "veLai": 17,
-    "hienHuu": 592,
-    "tamVang": 0,
-    "thuocKhu": 592,
+    "veLai": 26,
+    "hienHuu": 598,
+    "tamVang": 15,
+    "thuocKhu": 613,
     "giuong": 693,
-    "lapDay": 85.4,
-    "tongXuat": 63,
-    "tuVong": 4,
-    "thanhLy": 31,
+    "lapDay": 86.3,
+    "tongXuat": 56,
+    "tuVong": 3,
+    "thanhLy": 19,
     "dieuChuyen": 0,
-    "diVien": 28,
-    "ge15": 584,
+    "diVien": 34,
+    "ge15": 590,
     "ge30": 578
   },
   "detail": [
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "AH",
+      "ma": "KH2600273",
+      "ten": "Trần Thị Minh",
+      "ngay": "2026-08-31",
+      "songay": 1,
+      "cs": "Tầng 4 - AH/Phòng 3/Giường 3",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HHG",
+      "ma": "KH2600271",
+      "ten": "PARRET ép. TRAN",
+      "ngay": "2026-08-30",
+      "songay": 2,
+      "cs": "khuA/VIP04/G4P04",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HHG",
+      "ma": "KH2600270",
+      "ten": "Trần Thế Hiệp",
+      "ngay": "2026-08-30",
+      "songay": 2,
+      "cs": "khuA/VIP08/G3P08",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HH",
+      "ma": "KH2600269",
+      "ten": "Vũ Đình Định",
+      "ngay": "2026-08-26",
+      "songay": 6,
+      "cs": "Hoa Hồng Ông/Phòng 20/Giường 8",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HH",
+      "ma": "KH2600268",
+      "ten": "Trà Văn Hai",
+      "ngay": "2026-08-26",
+      "songay": 6,
+      "cs": "Hoa Hồng Ông/Phòng 14/Giường 8",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HLDB2",
+      "ma": "KH2600267",
+      "ten": "Phan Thị Nhân",
+      "ngay": "2026-08-19",
+      "songay": 13,
+      "cs": "Hoa lan/Phòng 3/Giường 9",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HHG",
+      "ma": "KH2600266",
+      "ten": "Vũ Ngọc Lan",
+      "ngay": "2026-08-18",
+      "songay": 14,
+      "cs": "Khu B/VIP09/G6P09",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HH",
+      "ma": "KH2600265",
+      "ten": "Phạm Thị Hải",
+      "ngay": "2026-08-17",
+      "songay": 15,
+      "cs": "Hoa Hồng Bà/Phòng 10/Giường 4",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "NT",
+      "ma": "KH2600264",
+      "ten": "Phạm Văn Khôi",
+      "ngay": "2026-08-17",
+      "songay": 15,
+      "cs": "Tầng 2/Phòng 2/Giường 3",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HH",
+      "ma": "KH2600263",
+      "ten": "Huỳnh Thị Chinh",
+      "ngay": "2026-08-17",
+      "songay": 15,
+      "cs": "Hoa Hồng Bà/Phòng 7/Giường 9",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HHG",
+      "ma": "KH2600261",
+      "ten": "Nguyễn Văn Minh",
+      "ngay": "2026-08-15",
+      "songay": 17,
+      "cs": "khuA/VIP01/G1P01",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "NT",
+      "ma": "KH2600260",
+      "ten": "Đặng Thị Dung Hợp",
+      "ngay": "2026-08-13",
+      "songay": 19,
+      "cs": "Tầng trệt/Phòng 4/Giường 1",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HH",
+      "ma": "KH2600257",
+      "ten": "Nguyễn Cẩm Yến Hương",
+      "ngay": "2026-08-12",
+      "songay": 20,
+      "cs": "Hoa Hồng Bà/Phòng 8/Giường 9",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HHG",
+      "ma": "KH2600256",
+      "ten": "Nguyễn Thị Hoa",
+      "ngay": "2026-08-15",
+      "songay": 17,
+      "cs": "khuA/VIP02/G2P02",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HHG",
+      "ma": "KH2600255",
+      "ten": "Đoàn Thị Cảnh",
+      "ngay": "2026-08-15",
+      "songay": 17,
+      "cs": "khuA/VIP05/G2P05",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "DQH",
+      "ma": "KH2600254",
+      "ten": "Lương Thị Thu",
+      "ngay": "2026-08-24",
+      "songay": 8,
+      "cs": "Tầng 1 - DQH/Phòng 12 Bis/GIƯỜNG 2",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HH",
+      "ma": "KH2600249",
+      "ten": "Nguyễn Huyền Hùng",
+      "ngay": "2026-08-04",
+      "songay": 28,
+      "cs": "Hoa Hồng Ông/Phòng 22/Giường 4",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HHG",
+      "ma": "KH2600248",
+      "ten": "La Kim Hà",
+      "ngay": "2026-08-10",
+      "songay": 22,
+      "cs": "khuA/VIP04/G3P04",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "AH",
+      "ma": "KH2600247",
+      "ten": "Ngô Muội",
+      "ngay": "2026-08-03",
+      "songay": 29,
+      "cs": "Tầng 2 - AH/Phòng 3/Giường 2",
+      "ck": "Có",
+      "gc": "Chế độ ăn: Ăn cơm thường. Dị ứng thịt gà; thịt bò ăn được nhưng chỉ nên ăn với lượng ít.\nBà thường ngứa rải rác toàn thân, đặc biệt về đêm hay gãi nhiều → hỗ trợ thoa thuốc theo chỉ định và theo dõi tình trạng da.\nHỗ trợ bà tham gia các bài tập vận động, phục hồi chức năng phù hợp nhằm duy trì sức cơ và cải thiện khả năng vận động."
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HHG",
+      "ma": "KH2600246",
+      "ten": "Nguyễn Thị Hạnh",
+      "ngay": "2026-08-02",
+      "songay": 30,
+      "cs": "Khu B/VIP09/G1P09",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "AH",
+      "ma": "KH2600245",
+      "ten": "Phan Doãn Thích",
+      "ngay": "2026-08-02",
+      "songay": 30,
+      "cs": "Tầng 3 - AH/Phòng 4/Giường 3",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HHG",
+      "ma": "KH2600243",
+      "ten": "Huỳnh Thanh Phong",
+      "ngay": "2026-08-01",
+      "songay": 31,
+      "cs": "khuA/VIP01/G2P02",
+      "ck": "Có",
+      "gc": ""
+    },
     {
       "ct": "1. HIỆN HỮU",
       "zone": "HH",
       "ma": "KH2600242",
       "ten": "Lê Thị Hai",
       "ngay": "2026-07-30",
-      "songay": 2,
+      "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 22/Giường 1",
       "ck": "Có",
       "gc": ""
@@ -376,7 +400,7 @@
       "ma": "KH2600241",
       "ten": "Nguyễn Thị Ngọc Mai",
       "ngay": "2026-07-28",
-      "songay": 4,
+      "songay": 31,
       "cs": "Tầng trệt/Phòng 3/Giường 4",
       "ck": "Có",
       "gc": ""
@@ -387,7 +411,7 @@
       "ma": "KH2600240",
       "ten": "Thái Hoàng Minh",
       "ngay": "2026-07-28",
-      "songay": 4,
+      "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 14/GIƯỜNG 5",
       "ck": "Có",
       "gc": ""
@@ -398,7 +422,7 @@
       "ma": "KH2600239",
       "ten": "Nguyễn Thị Đâu",
       "ngay": "2026-07-31",
-      "songay": 1,
+      "songay": 31,
       "cs": "Tầng trệt - DQH/PHÒNG CHỜ/GIƯỜNG 2",
       "ck": "Có",
       "gc": ""
@@ -409,8 +433,8 @@
       "ma": "KH2600238",
       "ten": "Trần Thị Xuân",
       "ngay": "2026-07-27",
-      "songay": 5,
-      "cs": "Tầng 5 - AH/Phòng 3/Giường 5",
+      "songay": 31,
+      "cs": "Tầng 4 - AH/Phòng 3/Giường 5",
       "ck": "Có",
       "gc": ""
     },
@@ -420,8 +444,19 @@
       "ma": "KH2600236",
       "ten": "Hồ Duy Trinh",
       "ngay": "2026-07-26",
-      "songay": 6,
+      "songay": 31,
       "cs": "Tầng 3 - AH/Phòng 4/Giường 5",
+      "ck": "Có",
+      "gc": "Ông có bệnh nền cao huyết áp, trực tràng, đi vệ sinh không tự chủ. Gia đình ít người, con cái đều đi làm nên không thể chăm sóc ông chu đáo, muốn gửi ông tại VDL chăm sóc ông tốt hơn."
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HH",
+      "ma": "KH2600235",
+      "ten": "Cao Văn Kháng",
+      "ngay": "2026-08-02",
+      "songay": 30,
+      "cs": "Hoa Hồng Ông/Phòng 26/Giường 4",
       "ck": "Có",
       "gc": ""
     },
@@ -431,7 +466,7 @@
       "ma": "KH2600231",
       "ten": "Nguyễn Minh Chánh",
       "ngay": "2026-07-22",
-      "songay": 10,
+      "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 14/GIƯỜNG 3",
       "ck": "Có",
       "gc": ""
@@ -442,8 +477,19 @@
       "ma": "KH2600230",
       "ten": "Trần Thị Tuyết",
       "ngay": "2026-07-20",
-      "songay": 12,
+      "songay": 31,
       "cs": "Tầng 4 - AH/Phòng 4/Giường 1",
+      "ck": "Có",
+      "gc": "Bà không có chồng con, ở trọ một mình tại: 274 Dương Quảng Hàm, Gò Vấp. Cháu ruột bà ở nước ngoài ko thể chăm sóc bà, hiện tại có người cháu họ hàng xa là Cô Oanh giúp bà tìm hiểu VDL bà quyết định gửi bà vào viện. Con trai cô Oanh là anh Duy đứng hợp đồng cho bà."
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "DQH",
+      "ma": "KH2600226",
+      "ten": "Thái Ngọc Hoàng",
+      "ngay": "2026-08-11",
+      "songay": 21,
+      "cs": "Tầng 1 - DQH/Phòng 6/GIƯỜNG 1",
       "ck": "Có",
       "gc": ""
     },
@@ -453,7 +499,7 @@
       "ma": "KH2600225",
       "ten": "Trần Dũng",
       "ngay": "2026-07-11",
-      "songay": 21,
+      "songay": 31,
       "cs": "khuA/VIP01/G3P01",
       "ck": "Có",
       "gc": ""
@@ -464,7 +510,7 @@
       "ma": "KH2600224",
       "ten": "Trần Chí Thanh",
       "ngay": "2026-07-10",
-      "songay": 22,
+      "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 20/Giường 10",
       "ck": "Có",
       "gc": ""
@@ -475,7 +521,7 @@
       "ma": "KH2600222",
       "ten": "Trần Thị Bích",
       "ngay": "2026-07-06",
-      "songay": 26,
+      "songay": 31,
       "cs": "Tầng trệt/ICU/Giường 5",
       "ck": "Có",
       "gc": ""
@@ -486,7 +532,7 @@
       "ma": "KH2600221",
       "ten": "Hoàng Văn So",
       "ngay": "2026-07-05",
-      "songay": 27,
+      "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 22/Giường 2",
       "ck": "Có",
       "gc": ""
@@ -497,19 +543,8 @@
       "ma": "KH2600220",
       "ten": "Nguyễn Thị Hương",
       "ngay": "2026-07-04",
-      "songay": 28,
+      "songay": 31,
       "cs": "khuA/VIP01/G4P01",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "DQH",
-      "ma": "KH2600218",
-      "ten": "Trần Thị Phấn",
-      "ngay": "2026-07-05",
-      "songay": 27,
-      "cs": "Tầng trệt - DQH/Phòng 2/GIƯỜNG 4",
       "ck": "Có",
       "gc": ""
     },
@@ -548,6 +583,17 @@
     },
     {
       "ct": "1. HIỆN HỮU",
+      "zone": "TCDB1",
+      "ma": "KH2600212",
+      "ten": "Nguyễn Anh Kiệt",
+      "ngay": "2026-06-27",
+      "songay": 31,
+      "cs": "Chăm sóc Đặc biệt 1/Phòng 5/Giường 9",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
       "zone": "DQH",
       "ma": "KH2600208",
       "ten": "Đinh Thị Mật",
@@ -565,17 +611,6 @@
       "ngay": "2026-06-24",
       "songay": 31,
       "cs": "Tầng Trệt-DQH-CSTYC/Phòng 3/Giường 2",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "NT",
-      "ma": "KH2600206",
-      "ten": "Đặng Phi Long",
-      "ngay": "2026-06-23",
-      "songay": 31,
-      "cs": "Tầng trệt/ICU 2/Giường 6",
       "ck": "Có",
       "gc": ""
     },
@@ -603,12 +638,12 @@
     },
     {
       "ct": "1. HIỆN HỮU",
-      "zone": "HLDB2",
+      "zone": "TCDB1",
       "ma": "KH2600203",
       "ten": "Vũ Ích Thinh",
       "ngay": "2026-06-21",
       "songay": 31,
-      "cs": "Chăm sóc Đặc biệt 2/Phòng 2/Giường 9",
+      "cs": "Chăm sóc Tích cực/Phòng 2/Giường 12",
       "ck": "Có",
       "gc": ""
     },
@@ -636,34 +671,12 @@
     },
     {
       "ct": "1. HIỆN HỮU",
-      "zone": "NT",
-      "ma": "KH2600199",
-      "ten": "Lương Kinh",
-      "ngay": "2026-06-22",
-      "songay": 31,
-      "cs": "Tầng trệt/ICU/Giường 8",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
       "zone": "HH",
       "ma": "KH2600197",
       "ten": "Vũ Thị Khương",
       "ngay": "2026-06-20",
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 4 /Giường 7",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "TCDB1",
-      "ma": "KH2600196",
-      "ten": "Trần Lâm Hải",
-      "ngay": "2026-06-19",
-      "songay": 31,
-      "cs": "Chăm sóc Tích cực/Phòng 2/Giường 15",
       "ck": "Có",
       "gc": ""
     },
@@ -742,7 +755,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 8/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình khó khăn về kinh phí ( anh chị em góp lại )\nGiấy tờ, CCCD và BHYT gia đình giữ hết để đi lấy thuốc cho bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -773,9 +786,9 @@
       "ten": "Nguyễn Thị Ngôi",
       "ngay": "2026-06-12",
       "songay": 31,
-      "cs": "Tầng 5 - AH/Phòng 4/Giường 4",
+      "cs": "Tầng 2 - AH/Phòng 1/Giường 9",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ đông con cháu, rất quan tâm đến vấn đề sức khoẻ, sinh hoạt của bà. Lúc trc GĐ tự chăm bà tại nhà nhưng từ khi bà mới nằm viện về sức khoẻ suy giảm nhiều, bà loãng xương nặng nên GĐ không thể chăm sóc bà tại nhà, quyết định gửi vào VDL theo dõi về y tế và hỗ trợ bà các vấn đề sinh hoạt."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -851,17 +864,6 @@
       "ngay": "2026-06-02",
       "songay": 31,
       "cs": "khuA/VIP07/G1P07",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "HLDB2",
-      "ma": "KH2600170",
-      "ten": "Nguyễn Thị Châu Yến",
-      "ngay": "2026-06-02",
-      "songay": 31,
-      "cs": "Chăm sóc Đặc biệt 2/Phòng 11/Giường 9",
       "ck": "Có",
       "gc": ""
     },
@@ -966,17 +968,6 @@
     },
     {
       "ct": "1. HIỆN HỮU",
-      "zone": "DQH",
-      "ma": "KH2600155",
-      "ten": "Đỗ Thị Tơ",
-      "ngay": "2026-05-24",
-      "songay": 31,
-      "cs": "Tầng trệt - DQH/Phòng 3/GIƯỜNG 3",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
       "zone": "TCDB1",
       "ma": "KH2600154",
       "ten": "Nguyễn Văn Ba",
@@ -1005,17 +996,6 @@
       "ngay": "2026-05-12",
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 8/Giường 10",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "AH",
-      "ma": "KH2600149",
-      "ten": "Nguyễn Thị Tuý Loan",
-      "ngay": "2026-05-11",
-      "songay": 31,
-      "cs": "Tầng 4 - AH/Phòng 4/Giường 3",
       "ck": "Có",
       "gc": ""
     },
@@ -1050,7 +1030,7 @@
       "songay": 31,
       "cs": "Tầng 4 - AH/Phòng 1/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ kỹ tính, thường hỏi thăm rất nhiều. GĐ quan tâm đến vấn đề sinh hoạt, ngủ nghỉ của ông."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -1158,7 +1138,7 @@
       "ten": "Hà Phước Thạch",
       "ngay": "2026-04-21",
       "songay": 31,
-      "cs": "Tầng Trệt-DQH-CSTYC/Phòng 3/Giường 1",
+      "cs": "Tầng Trệt-DQH-CSTYC/Phòng 2/Giường 1",
       "ck": "Có",
       "gc": ""
     },
@@ -1169,9 +1149,9 @@
       "ten": "Nguyễn Thị Hai",
       "ngay": "2026-04-18",
       "songay": 31,
-      "cs": "Tầng 2 - AH/Phòng 2/Giường 2",
+      "cs": "Tầng 2 - AH/Phòng 3/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Bà ở Mỹ Tho với con trai. Chú mấy tháng gần đây bệnh nặng nên gia đình quyết định cho bà lên TP. HCM vào VDL để tiện chăm nom. GĐ quan tâm, kỹ tính, đăng ký phòng đôi cho bà mong muốn bà có không gian thoải mái, tiện nghi."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -1219,17 +1199,6 @@
     },
     {
       "ct": "1. HIỆN HỮU",
-      "zone": "HHG",
-      "ma": "KH2600114",
-      "ten": "Nguyễn Văn Thành",
-      "ngay": "2026-04-12",
-      "songay": 31,
-      "cs": "khuA/VIP03/G3P03",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
       "zone": "AH",
       "ma": "KH2600113",
       "ten": "Phùng Muối",
@@ -1237,7 +1206,7 @@
       "songay": 31,
       "cs": "Tầng 3 - AH/Phòng 3/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Bà 66 tuổi, người Hoa, bà không có chồng con, ở với em gái. Hiện em gái bà cũng lớn tuổi, việc chăm sóc bà khó khăn nên quyết định gửi bà vào VDL. GĐ dễ chịu, quan tâm tới sức khoẻ và sinh hoạt của bà."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -1308,17 +1277,6 @@
     {
       "ct": "1. HIỆN HỮU",
       "zone": "NT",
-      "ma": "KH2600104",
-      "ten": "Nguyễn Thị Nữ",
-      "ngay": "2026-04-01",
-      "songay": 31,
-      "cs": "Tầng 2/Phòng 2/Giường 2",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "NT",
       "ma": "KH2600103",
       "ten": "Nguyễn Hồng Hạnh",
       "ngay": "2026-04-01",
@@ -1357,17 +1315,6 @@
       "ngay": "2026-04-05",
       "songay": 31,
       "cs": "Khu B/VIP10/G1P10",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "AH",
-      "ma": "KH2600098",
-      "ten": "Lê Bác Ái",
-      "ngay": "2026-04-01",
-      "songay": 31,
-      "cs": "Tầng 3 - AH/Phòng 4/Giường 3",
       "ck": "Có",
       "gc": ""
     },
@@ -1424,7 +1371,7 @@
       "songay": 31,
       "cs": "Tầng 3 - AH/Phòng 1/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Bà bị Parkinson hạn chế về khả năng vận động và nói chuyện, bà cũng có vấn đề về xương khớp. GĐ rất quan tâm đến sức khoẻ, sinh hoạt và mong muốn viện tập PHCN cho bà cải thiện khả năng vận động."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -1462,24 +1409,13 @@
     {
       "ct": "1. HIỆN HỮU",
       "zone": "AH",
-      "ma": "KH2600079",
-      "ten": "Vũ Thị Phấn",
-      "ngay": "2026-03-16",
-      "songay": 31,
-      "cs": "Tầng 4 - AH/Phòng 1/Giường 4",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "AH",
       "ma": "KH2600078",
       "ten": "Nguyễn Thị Phi Nga",
       "ngay": "2026-03-15",
       "songay": 31,
-      "cs": "Tầng 4 - AH/Phòng 3/Giường 3",
+      "cs": "Tầng 2 - AH/Phòng 1/Giường 12",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ neo người, hiện chỉ có một người con gái sống tại Bình Dương. Bà ở một mình với người giúp việc. Bà gặp một số biến cố nên bị trầm cảm, tâm lý bất ổn, hay lo lắng, kêu gọi người thân liên tục. GĐ muốn đưa bà vào VDL chăm sóc và theo dõi sức khoẻ bà tốt hơn."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -1594,17 +1530,6 @@
     {
       "ct": "1. HIỆN HỮU",
       "zone": "DQH",
-      "ma": "KH2600059",
-      "ten": "Trần Thị Mộng Thúy",
-      "ngay": "2026-03-02",
-      "songay": 31,
-      "cs": "Tầng trệt - DQH/Phòng 7/GIƯỜNG 5",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "DQH",
       "ma": "KH2600058",
       "ten": "Bùi Văn Bồi",
       "ngay": "2026-03-02",
@@ -1676,17 +1601,6 @@
       "ngay": "2026-03-01",
       "songay": 31,
       "cs": "khuA/VIP03/G1P03",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "HHG",
-      "ma": "KH2600048",
-      "ten": "Nguyễn Văn Thân",
-      "ngay": "2026-03-01",
-      "songay": 31,
-      "cs": "khuA/VIP08/G3P08",
       "ck": "Có",
       "gc": ""
     },
@@ -1930,7 +1844,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 12/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Chuyển nặng đưa ông ra ĐH Y Dược"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2022,17 +1936,6 @@
     },
     {
       "ct": "1. HIỆN HỮU",
-      "zone": "HLDB2",
-      "ma": "2500569",
-      "ten": "Trần Mỹ Hoa",
-      "ngay": "2025-12-17",
-      "songay": 31,
-      "cs": "Chăm sóc Đặc biệt 2/Phòng 11/Giường 2",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
       "zone": "DQH",
       "ma": "2500566",
       "ten": "Trần Thị Năm",
@@ -2050,17 +1953,6 @@
       "ngay": "2025-12-10",
       "songay": 31,
       "cs": "Tầng 1/PHÒNG LỚN/Giường 7",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "DQH",
-      "ma": "2500563",
-      "ten": "Nguyễn Thị Vệ",
-      "ngay": "2025-12-10",
-      "songay": 31,
-      "cs": "Tầng 1 - DQH/Phòng 8/GIƯỜNG 5",
       "ck": "Có",
       "gc": ""
     },
@@ -2110,6 +2002,17 @@
     },
     {
       "ct": "1. HIỆN HỮU",
+      "zone": "DQH",
+      "ma": "2500553",
+      "ten": "Trần Thị Hai",
+      "ngay": "2025-12-01",
+      "songay": 31,
+      "cs": "Tầng trệt - DQH/Phòng 7/GIƯỜNG 3",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
       "zone": "HLDB2",
       "ma": "2500550",
       "ten": "Nguyễn Đức Thịnh",
@@ -2127,17 +2030,6 @@
       "ngay": "2025-11-22",
       "songay": 31,
       "cs": "Hoa lan/Phòng 3/Giường 2",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "DQH",
-      "ma": "2500548",
-      "ten": "Quách Đại Phương",
-      "ngay": "2025-11-27",
-      "songay": 31,
-      "cs": "Tầng trệt - DQH/Phòng 11/GIƯỜNG 3",
       "ck": "Có",
       "gc": ""
     },
@@ -2183,18 +2075,7 @@
       "songay": 31,
       "cs": "Tầng 2 - AH/Phòng 1/Giường 4",
       "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "HH",
-      "ma": "2500541",
-      "ten": "Nguyễn Thành Phụng",
-      "ngay": "2025-11-12",
-      "songay": 31,
-      "cs": "Hoa Hồng Ông/Phòng 14/Giường 3",
-      "ck": "Có",
-      "gc": ""
+      "gc": "GĐ bà đông con cái nhưng bà khó tính, khó chăm không ai chăm sóc bà được. GĐ cũng từng thuê nhiều người giúp việc nhưng bà không chịu. GĐ quan tâm tới ăn uống, sinh hoạt ngủ nghỉ của bà tại VDL."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2204,6 +2085,17 @@
       "ngay": "2025-11-07",
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 11/Giường 6",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HH",
+      "ma": "2500533",
+      "ten": "Nguyễn Thị Lụa",
+      "ngay": "2025-10-31",
+      "songay": 31,
+      "cs": "Hoa Hồng Bà/Phòng 12/Giường 1",
       "ck": "Có",
       "gc": ""
     },
@@ -2238,7 +2130,7 @@
       "songay": 31,
       "cs": "Tầng 2 - AH/Phòng 1/Giường 11",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ quan tâm về sinh hoạt, sức khoẻ bà. Con cái bà các chú đều lớn tuổi nên không còn khả năng chăm sóc bà, gửi bà vào VDL"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2249,7 +2141,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 12/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD không đồng ý đưa hình ảnh NCT lên truyền thông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2392,7 +2284,7 @@
       "songay": 31,
       "cs": "Tầng 1 - AH/Phòng 2/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Ông sống ở Đức thời gian dài mới về VN tầm 1 năm nay. GĐ neo người, hiện tại chỉ có 1 người con gái chăm sóc ông nhung chị có công việc đi lại nhiều và sức khoẻ yếu nên GĐ quyết định gửi ông vào VDL chăm sóc. GĐ rất kỹ tính, chi tiết, nhắn tin, gọi hỏi thăm ông hàng ngày."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2414,7 +2306,7 @@
       "songay": 31,
       "cs": "Tầng 1 - AH/Phòng 1/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Bà không có chồng con. Các cháu cùng gom góp lo cho bà. Gia đình dễ tính, quan tâm đến sức khoẻ và sinh hoạt của bà tại viện."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2436,7 +2328,7 @@
       "songay": 31,
       "cs": "Tầng 5 - AH/Phòng 1/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ neo người, con cái bà đi làm cả ngày. Ông lớn tuổi ở nhà bà. Hiện tại sức khoẻ ông cũng yếu nên GĐ đưa bà vào VDL chăm sóc"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2480,6 +2372,17 @@
       "songay": 31,
       "cs": "Tầng 1 - AH/Phòng 1/Giường 5",
       "ck": "Có",
+      "gc": "GĐ quan tâm tình hình sức khoẻ, sinh hoạt của ông. Do GĐ ít người, con cái đều đi làm hết nên thuê người chăm riêng cho ông trước đây."
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HLDB2",
+      "ma": "2500458",
+      "ten": "Hồ Vũ Duệ",
+      "ngay": "2025-08-12",
+      "songay": 31,
+      "cs": "Chăm sóc Đặc biệt 2/Phòng 6/Giường 10",
+      "ck": "Có",
       "gc": ""
     },
     {
@@ -2491,7 +2394,7 @@
       "songay": 31,
       "cs": "Tầng 4 - AH/Phòng 4/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Ông không có vợ con, các cháu gom góp cho ông vào VDL. GĐ có kinh tế thấp."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2502,7 +2405,7 @@
       "songay": 31,
       "cs": "Tầng 4 - AH/Phòng 3/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ ít người, quan tâm thường hay hỏi thăm sức khoẻ bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2546,7 +2449,7 @@
       "songay": 31,
       "cs": "Tầng 4 - AH/Phòng 3/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ quan tâm, các cháu là người lo cho bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2557,7 +2460,7 @@
       "songay": 31,
       "cs": "Tầng 4 - AH/Phòng 1/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ quan tâm, GĐ ở xa không thăm thường xuyên chỉ hay gửi đồ cho bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2568,7 +2471,7 @@
       "songay": 31,
       "cs": "Tầng 3 - AH/Phòng 4/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ neo người, ít tương tác trên nhóm Zalo, thỉnh thoảng ghé thăm ông."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2579,7 +2482,7 @@
       "songay": 31,
       "cs": "Tầng 4 - AH/Phòng 4/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ quan tâm, thường xuyên hỏi thăm. Vợ ông ở xa, người đại diện là em ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2612,7 +2515,7 @@
       "songay": 31,
       "cs": "Tầng 4 - AH/Phòng 3/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ quan tâm, hay hỏi thăm sức khoẻ bà. GĐ ở nước ngoài"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2689,7 +2592,7 @@
       "songay": 31,
       "cs": "Tầng 2 - AH/Phòng 4/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ dễ tính thường xuyên nhắn tin hỏi thăm ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2744,7 +2647,7 @@
       "songay": 31,
       "cs": "Tầng 3 - AH/Phòng 4/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ neo người, vợ và con gái định cư nước ngoài. Con trai ông còn ở VN, quan tâm, thường xuyên hỏi thăm và tới thăm ông."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2755,7 +2658,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 9/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Bệnh Viện quân Y 175 ( Gò Vấp)\nĐi lại yếu, ngồi xe lăn, chưa có HSSK\nYêu cầu xét nghiệm tổng quát ( XN máu, SÂ tim, Bụng, điện tim, CT não).\nNơi đăng ký KCBBĐ: BV quân y 7A.\nGD Bình Thường, GD và cụ không hòa thuận lắm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2766,7 +2669,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 9/GIƯỜNG 6",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD Bình Thường, cụ không chịu ở VDL đòi về nên GD không dám lên thăm bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2810,7 +2713,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 7/GIƯỜNG 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Bà có chồng nhưng chồng mất. Các cháu lo cho bà vào VDL sẽ sắp xếp đưa bà 6 tháng đi làm visa 1 lần. Cháu bà bên nước ngoài, anh Tuấn đại diện ở VN lo cho bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2836,6 +2739,28 @@
     },
     {
       "ct": "1. HIỆN HỮU",
+      "zone": "DQH",
+      "ma": "2500390",
+      "ten": "Huỳnh Muối",
+      "ngay": "2025-06-10",
+      "songay": 31,
+      "cs": "Tầng trệt - DQH/Phòng 6/GIƯỜNG 1",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "DQH",
+      "ma": "2500387",
+      "ten": "Nguyễn Thị Tuyết Loan",
+      "ngay": "2025-06-02",
+      "songay": 31,
+      "cs": "Tầng trệt - DQH/Phòng 4/GIƯỜNG 1",
+      "ck": "Có",
+      "gc": "GD neo đơn có mình anh Tuấn ở bên Úc. GD tài chính ổn định. Quan tâm đến sức khỏe và phục hồi chức năng chế độ ăn uống lành mạnh"
+    },
+    {
+      "ct": "1. HIỆN HỮU",
       "zone": "AH",
       "ma": "2500383",
       "ten": "Huỳnh Thị Thương",
@@ -2843,7 +2768,7 @@
       "songay": 31,
       "cs": "Tầng 5 - AH/Phòng 2/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Bà chuyển từ CS DQH sang AH. Gia đình cô Hà (em gái bà) rất quan tâm, thường xuyên hỏi thăm về tình hình sức khoẻ, sinh hoạt ngủ nghỉ của bà. GĐ tự đưa bà đi tái khám."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2854,7 +2779,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 1/GIƯỜNG 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Ông bị trầm cảm sau nghỉ hưu. GD neo người không ai chăm cô Thoa là vợ ông đóng tiền cho ông mong muốn ông có bạn tập vật lí trị liệu"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2865,7 +2790,7 @@
       "songay": 31,
       "cs": "Tầng 4 - AH/Phòng 4/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Ông không có vợ con, ở với em gái. Hiện tại cô chân yếu, đi lại cũng khó khăn nên muốn gửi ông ở VDL chăm sóc. Cô rất kỹ tính, hỏi thăm và nhắc nhở rất nhiều những vấn đề về chăm sóc, thuốc uống, thói quen sinh hoạt của ông."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2929,9 +2854,9 @@
       "ten": "Lưu Bí",
       "ngay": "2025-05-02",
       "songay": 31,
-      "cs": "Tầng 2 - AH/Phòng 1/Giường 6",
+      "cs": "Tầng 5 - AH/Phòng 3/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Bà ngồi xe lăn, lẫn nhẹ, ăn uống bình thường, mặc tã. Bà không con cái, cháu trai ở nước ngoài gửi tiền về lo chi phí cho bà ở VN. Cháu trai bà uỷ quyền cho chị Yến Phương (em vợ) là người đại diện hợp đồng cho bà."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2942,7 +2867,7 @@
       "songay": 31,
       "cs": "Tầng 1 - AH/Phòng 1/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "Bà không có chồng con. GĐ đông anh em, các cháu chăm lo cho bà. Bà bị sa sút trí tuệ, đi lại yếu, ăn uống, uống thuốc, vệ sinh cần người hỗ trợ, nhắc nhở."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -2997,7 +2922,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 4/GIƯỜNG 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD dễ tính chị con gái thường quan tâm chế độ ăn uống nhiều rau xanh"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3008,7 +2933,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 3/GIƯỜNG 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD thường đưa đồ ăn cho ông ăn thêm khi gần đến hết giờ thăm. Nhưng cũng vui vẻ hợp tác khi đúng việc. Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3019,7 +2944,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 7/GIƯỜNG 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD ở xa có chị đại diện cần thông tin gì liên lạc cùng chị. Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3030,7 +2955,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 9/GIƯỜNG 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD ít lên thăm bà.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3041,7 +2966,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 14/GIƯỜNG 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD con gái kĩ tính, thường đặt đồ để phát cho ông. Chi phí phát sinh phải báo trước. Gia đình khó tính"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3052,7 +2977,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 6/ GIƯỜNG 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gd ít lên thăm bà nhưng trong gia đình nói chuyện hiểu chuyện  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3063,7 +2988,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 12Bis/GIƯỜNG 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD rất hay góp ý và áp đặt. Nhưng thích nói để có người lắng nghe.  Gia đình bình thường. Phát sinh và lời nói phaỉ thận trọng. Gia đình khó tính"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3074,7 +2999,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 12Bis/GIƯỜNG 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gd con gái ít lên thăm.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3085,7 +3010,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 6/GIƯỜNG 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình ở bên nước ngoại khó liên lạc liền khi cần. GD k có người thăm lâu lâu có anh của chú đến thăm."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3096,7 +3021,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 7/GIƯỜNG 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD ít thăm cô. Nhưng nói chuyện dễ. Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3107,7 +3032,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 9/GIƯỜNG 6",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình ít lên thăm bà nhung dễ  nói chuyện.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3118,7 +3043,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 17/GIƯỜNG 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD ở xa không lên thăm bà đc. Nhờ người quen thăm bà.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3129,7 +3054,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 17/GIƯỜNG 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD quan tâm đến sức khỏe của bà và ông muốn cho bà và ông ở cùng nhau dù có cảnh báo rủi ro.  Gia đình bình thường nhưng phải nói nhiều lần mới quyết định"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3140,7 +3065,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 12 Bis/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD hạn chế người thăm khi có cô Lan vợ anh Hoàng đến thăm phait thông báo cho anh Trọng. Khó khăn về thuốc uống và hạn chế chụp hình."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3151,7 +3076,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 10/GIƯỜNG 6",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3162,7 +3087,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 9/GIƯỜNG 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD ở xa quan tâm tới sức khỏe và  tâm trạng của bà. Thường nhờ người trong họ hàng, bạn bè đi thăm.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3173,7 +3098,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 4/GIƯỜNG 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD con gái ở xa ít lên thăm bà.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3184,7 +3109,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 11/GIƯỜNG 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD ít lên thăm bà.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3195,7 +3120,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 5/GIƯỜNG 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD thường đến thăm. Chị vợ kĩ tính. Nên cẩn trọng lời nói.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3206,7 +3131,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 2/GIƯỜNG 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD con gái ở xa có chị Thu Hảo lâu lâu đến thăm và đặt đồ ăn cho bà giao tới để bà ăn"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3217,7 +3142,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 12/GIƯỜNG 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD quan tâm đến tình trạng sức khỏe của ông. GD cũng vui vẻ nhưng cũng kĩ về giấy tờ của ông.  Gia đình khó tính"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3228,7 +3153,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 10/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD vui vẻ bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3239,7 +3164,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 10/GIƯỜNG 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD ít đến thăm ông. Nói chuyện vui vẻ.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3250,7 +3175,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 12 Bis/GIƯỜNG 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD ở xa ít thăm bà có người bà con đến thăm bà lâu lâu hay nói chuyện chia rẽ VDL.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3261,7 +3186,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 5/GIƯỜNG 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD bình thường."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3272,7 +3197,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/PHÒNG CHỜ/GIƯỜNG 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD ít thăm bà nhưng thường gửi đồ ăn qua grab vào cho bà ăn.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3283,7 +3208,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 9/GIƯỜNG 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD vui vẻ hợp tác. Ít lên thăm bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3294,7 +3219,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 5/GIƯỜNG 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình ít thăm, gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3305,7 +3230,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 7/GIƯỜNG 6",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình con gái quan tâm hay lên thăm và đặt đồ ăn cho bà. Dẫn bà ra ngoài chơi.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3316,7 +3241,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 11/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD thường đến thăm bà, quan tâm nhiều vè sức khỏe của bà.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3327,7 +3252,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 9/GIƯỜNG 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình kĩ về thuốc uống đúng ngày. Hạn chế chi phí phát sinh. Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3338,7 +3263,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 16/GIƯỜNG 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình con gái làm chủ. Kinh tế ổn định ít lên thăm ông. Nhưng rất quan tâm đến vấn đề sinh hoạt của ông.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3349,7 +3274,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 5/GIƯỜNG 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình ở xa ít lên thăm ông. nhưng thường muốn xem hình ảnh video của ông.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3360,7 +3285,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 5/GIƯỜNG 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Bà mất chồng và con có  em ruột và cháu gái lên thăm bà.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3371,7 +3296,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 4/GIƯỜNG 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình ít đến thăm ông.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3382,7 +3307,7 @@
       "songay": 31,
       "cs": "Tầng Trệt-DQH-CSTYC/Phòng 4/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Khi bà chuyển biến nặng, cần gọi điện xin ý kiến GD. Gia đình khó tính"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3393,7 +3318,7 @@
       "songay": 31,
       "cs": "Tầng Trệt-DQH-CSTYC/Phòng 1/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ vui vẻ hợp tác.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3404,7 +3329,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 10/GIƯỜNG 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ dễ chịu nhưng lưu ý những vấn đề tóc tai, quần áo, xe lăn khi đưa cụ ra thăm. Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3415,7 +3340,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 7/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ gửi bà lâu năm rồi, nên dễ trao đổi . Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3426,7 +3351,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 9/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD giữ CCCD+BHYT của bà. Khi cấp cứu chuyển BV 175. GĐ khó tính hay phàn nàn về vấn đề chăm sóc nhưng không thanh lý . Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3437,7 +3362,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 11/GIƯỜNG 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "con cái ở xa, ông k hợp tác ở VDL nên lưu ý những thông tin mà ông cung cấp cần xác thực lại.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3448,7 +3373,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 4/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Cấp cứu chuyển BV 175. người đại diện là người quen, anh em ở đài loan. nên lưu ý chi phí phát sinh. Báo trước tã và sữa, thuốc sớm 1 tuần để gia đình chuẩn bị  Gia đình khó hợp tác khi đổi tã."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3459,7 +3384,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 3/GIƯỜNG 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "cụ không có vợ con, hiện tại các anh chị em lo cho chú. GĐ kinh tế tầm trung. dễ thương, dễ trao đổi. Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3470,7 +3395,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 5/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Cấp cứu chuyển BV Thống Nhất. GD giữ BHYT của cụ. GĐ dễ tính .  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3481,7 +3406,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 16/GIƯỜNG 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ cực kỳ quan tâm, lưu ý biến đồng về sức khoẻ dù nhỏ hay lớn đều phải báo gia đình. GĐ có điều kiện kinh tế tôt. có lưu ý về người thăm. Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3492,7 +3417,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 4/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Cấp cứu chuyển BV Thống Nhất. GĐ có điều kiện và quan tâm nhiều, lưu ý khi trao đổi thông tin.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3503,7 +3428,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 1/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "không chồng con bán nhà vào VDL hiện taị cô Phượng là e gái lo cho bà, GĐ + cụ rối loạn lo âu nên lưu ý khi trao đổi, thuốc thang sẽ rất quan tâm. Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3514,7 +3439,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 16/GIƯỜNG 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "cụ không hợp tác hay đòi về, GĐ quan tâm. Khi cần chuyển viện thì đi BV Thống Nhất. Quan tâm về vấn đề sức khỏe và thuốc uống. Gia đình khó tính.\nGD muốn tất cả những hình ảnh và thông tin của ông lên truyền thông phải thông qua ý kiến gia đình"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3525,7 +3450,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 8/GIƯỜNG 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Cô Phượng người đại diện là con chồng, chỉ hỗ trợ chi phí do bà khó khăn, chú Mai là e trai ruột chăm sóc cho bà trước giờ hiểu về bệnh tình nhưng không hợp tác làm việc qua nhóm nên lễ tân lưu ý. kinh tế có hạn nên lưu ý phát sinh. Khi nào có lịch tái khám bên DHYD thì gọi điện cho chú Mai báo cắt thuốc khỏi đi khám. SDT 0903717671. Chú rất khó chịu và kĩ tính sắp xếp HS bệnh phải đúng BV và kĩ không được lộn.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3536,7 +3461,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 5/GIƯỜNG 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ con cái ở nước ngoài, GĐ quan tâm nhiều, bà minh mẫn đi lại được. GĐ có điều kiện.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3547,7 +3472,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 16/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ đông con khi có phát sinh cần hỏi ý kiến tất cả anh chị em trong nhà, nên trao đổi trên nhóm không trao đổi riêng hoặc chốt vấn đề riêng với 1 cá nhân trong gia đình. GĐ kỹ tính về đồ đạc gửi vào, chi tiết nên lưu ý khi thông tin với gia đình về sức khoẻ, sữa, thuốc, .... GĐ hợp tác nhưng quan tâm chi tiết nên làm việc chỉnh chủ với GĐ để tạo sự tin tưởng, yên tâm.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3558,7 +3483,7 @@
       "songay": 31,
       "cs": "Tầng 1-DQH-CSTYC/Phòng 4/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ dễ chịu, hợp tác."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3569,7 +3494,7 @@
       "songay": 31,
       "cs": "Tầng 2 - AH/Phòng 1/Giường 8",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ khó tính, rất quan tâm sức khoẻ của bà, thích xem hình ảnh và clip sinh hoạt, vui chơi  của bà tại VDL\nĐánh giá: GĐ khó tính"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3580,7 +3505,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 1/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Quan tâm đến tình trạng  sức khỏe của bà có biến động báo gia đình ngay, Gia đình kinh tế ổn.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3591,7 +3516,7 @@
       "songay": 31,
       "cs": "Tầng 1 - AH/Phòng 1/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Khi báo toa thuốc cho GĐ, cần báo thêm giá tiền của toa thuốc. Nếu dưới 100.000đ có thể không cần đợi GĐ phản hồi. Nhưng nếu trên 100.000đ nên gọi điện hỏi ý chú Tuấn xem có đồng ý không. Sữa của bà Hảo sẽ được tính vào phí phát sinh của bà Đinh Thị Vân\nĐánh giá: gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3602,7 +3527,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 3/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ quan tâm đến phục hồi chức năng và đi lại. lưu ý vấn đề chuyển đổi phòng nên báo trước cho GĐ.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3613,7 +3538,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 5/GIƯỜNG 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "cụ không con cái ở với chị gái là bà Truyền hiện cháu ở nước ngoài đại diện lo và có tiền tiết kiệm của bà. ở VN có chị Thanh hỗ trợ trường hợp khẩn cấp. Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3624,7 +3549,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 10/GIƯỜNG 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "cụ không con cái ở với em trai là ông Cẩn hiện cháu ở nước ngoài đại diện lo và có tiền tiết kiệm của bà. ở VN có chị Thanh hỗ trợ trường hợp khẩn cấp.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3635,7 +3560,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 2/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ ở xa nên hay quan tâm hình ảnh và tình hình của ông .  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3646,7 +3571,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 8/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "cụ không chồng con, các chị em ở với nhau bao bọc, GĐ kinh tế có hạn chủ yếu dựa vào lương hưu nên lưu ý chi phí phát sinh cho GĐ.  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3657,7 +3582,7 @@
       "songay": 31,
       "cs": "Tầng 1-DQH-CSTYC/Phòng 1/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ ở Pháp hiện tại chỉ có anh Đạt là người thân ở việt nam hỗ trợ khẩn cấp. GĐ dễ chịu nhưng cần giải thích chi tiết rõ ràng vì đôi khi nói tiếng việt gia đình không hiểu hết ý nội dung .  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3668,7 +3593,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 2/GIƯỜNG 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Cô Quang vợ chú quan tâm chi phí. Nếu có phát sinh trình bày rõ ràng. Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3679,7 +3604,7 @@
       "songay": 31,
       "cs": "Tầng 1 - AH/Phòng 3/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ hay ghé thăm ông + bà vào buổi sáng. 1 tuần khoảng 3 lần. \nĐánh giá: GĐ phối hợp tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3690,7 +3615,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 8/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Bà không có gia đình. Có 2 người em là đai diện chăm lo cho bà. Bà có lương hưu của bà tự lo viện phí. Kinh tế ổn định. Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3699,9 +3624,9 @@
       "ten": "Nguyễn Yến Ngọc",
       "ngay": "2025-04-01",
       "songay": 31,
-      "cs": "Tầng 5 - AH/Phòng 1/Giường 5",
+      "cs": "Tầng 2 - AH/Phòng 1/Giường 6",
       "ck": "Có",
-      "gc": ""
+      "gc": "Bà có điện thoại liên lạc thường xuyên với GĐ. GĐ cũng quan tâm tới sức khoẻ và tình hình vận động, tập phục hồi chức năng của bà\nĐánh giá: GĐ phối hợp tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3712,7 +3637,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 12/GIƯỜNG 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD mong muốn viện kí luật với chú Đức về vận động, GD dễ chịu"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3723,7 +3648,7 @@
       "songay": 31,
       "cs": "Tầng 2 - AH/Phòng 1/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình khó tính, Hay kiểm tra bà có được ở phòng 2 người hay không. Nên phải lưu ý báo với NVCS nếu gia đình đến thì cần kiểm tra lại. \nĐánh giá: GĐ khó tính"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3734,7 +3659,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 4/GIƯỜNG 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "bà bị K tuyến giáp điều trị hơn 10 năm. GD muốn đưa bà vào viện để theo dõi tình trạng sức khỏe"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3745,7 +3670,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 12/GIƯỜNG 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Ông không có con cái. Chỉ có cháu ở bên nước ngaoif. GD muốn ông ở trong viện chăm sóc y tế. GD dễ chịu"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3756,7 +3681,7 @@
       "songay": 31,
       "cs": "Tầng 3 - AH/Phòng 1/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ kỹ tính, bà cũng khó tính. Nên thông tin gửi cho gia đình cần rõ ràng, cẩn thận. Bà có điện thoại thường xuyên liên lạc với GĐ\nĐánh giá: gia đình khó tính"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3767,7 +3692,7 @@
       "songay": 31,
       "cs": "Tầng 4 - AH/Phòng 2/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ quan tâm tới sức khoẻ và lịch sinh hoạt của ông.\nĐánh giá: GĐ phối hợp tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3778,7 +3703,7 @@
       "songay": 31,
       "cs": "Tầng 1 - AH/Phòng 1/Giường 9",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ quan tâm tới bệnh sa sút trí tuệ của ông. Cũng quan tâm tới sức khoẻ của ông nữa. \nĐánh giá: gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3789,7 +3714,7 @@
       "songay": 31,
       "cs": "Tầng 1 - AH/Phòng 1/Giường 8",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD kỹ tính, mua thuốc gửi vào cho ông uống. Nếu ông có vấn đề gì thì sẽ đưa đi BV Trưng Vương khám. Quan tâm chế độ ăn uống, tập thể dục của ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3800,7 +3725,7 @@
       "songay": 31,
       "cs": "Tầng 3 - AH/Phòng 2/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ của ông ở bên Mỹ. Muốn xem hình ảnh + clip sinh hoạt thường ngày của ông\nĐánh giá: gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3822,7 +3747,7 @@
       "songay": 31,
       "cs": "Tầng 1 - AH/Phòng 1/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ muốn xem hình ảnh sinh hoạt + tập VLTL của ông. Tuy nhiên không được quay thẳng mặt ông. Phải đứng 1 bên hoặc đằng sau quay ông\nĐánh giá: gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3833,7 +3758,7 @@
       "songay": 31,
       "cs": "Tầng 1 - AH/Phòng 1/Giường 10",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình quan tâm tới ông, về môi trường sống và thái độ của ông đối với mọi người ở VDL\nĐánh giá: gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3844,7 +3769,7 @@
       "songay": 31,
       "cs": "Tầng 2 - AH/Phòng 1/Giường 10",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ quan tâm sức khoẻ và lịch tập vật lý trị liệu của bà. Muốn cập nhật hình ảnh + clip của bà lúc bà tập VLTL\nĐánh giá: gia đình bình thường. \nTài khoản app : \nTên đăng nhập : 2300381 \nMật khẩu: duonglaobinhmy"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3855,7 +3780,7 @@
       "songay": 31,
       "cs": "Tầng 2 - AH/Phòng 1/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ quan tâm đến sức khoẻ của bà, thường gửi yến, sữa vào cho bà. Chú Triển con trai bà chỉ được thăm bà nếu đi 1 mình . Còn nếu chú đi với người khác thì không cho vào thăm. anh Khoa - cháu nội của bà - người ký hợp đồng sẽ được thăm bà. Ngoài ra không ai được phép vào thăm bà.\nĐánh giá: gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3866,7 +3791,7 @@
       "songay": 31,
       "cs": "Tầng 2 - AH/Phòng 1/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình quan tâm về việc tiêu tiểu của bà, chỉ số huyết áp của bà, tình hình ăn uống, sức khoẻ của bà. Gia đình muốn buổi sáng đưa bà xuống sảnh tắm nắng, 3 bữa 1 tuần thì rọi đèn hồng ngoại. Đã báo anh Lý buổi chiều mang đèn lên rọi cho bà trên lầu 2.\nĐánh giá: gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3877,7 +3802,7 @@
       "songay": 31,
       "cs": "Tầng trệt - DQH/Phòng 10/GIƯỜNG 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD dễ chịu."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3888,7 +3813,7 @@
       "songay": 31,
       "cs": "Tầng 5 - AH/Phòng 1/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình khó khăn về kinh tế, nên thường những toa thuốc có giá trị tiền cao thì nên gọi điện báo số tiền trước, để gia đình xem xét và cân nhắc. Gia đình quan tâm về những sinh hoạt thường ngày và sức khoẻ của bà\nĐánh giá: gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3899,7 +3824,7 @@
       "songay": 31,
       "cs": "Tầng 1 - DQH/Phòng 3/GIƯỜNG 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD quan tâm nhiều về sức khỏe của ông .\nSDT cô Hằng khi ông biến động sức khỏe yếu không qua khỏi gọi cô 0908139733\nNếu cô Yến có việc gì không liên hệ được gọi 2 chị\nTina Phạm 7039446395\nTrâm úc +61422611050"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3914,17 +3839,6 @@
     },
     {
       "ct": "1. HIỆN HỮU",
-      "zone": "DQH",
-      "ma": "2500187",
-      "ten": "Trần Thị Thanh Hà",
-      "ngay": "2025-04-01",
-      "songay": 31,
-      "cs": "Tầng 1 - DQH/Phòng 12 Bis/GIƯỜNG 1",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
       "zone": "AH",
       "ma": "2500185",
       "ten": "Huỳnh Thị Hoà",
@@ -3932,7 +3846,7 @@
       "songay": 31,
       "cs": "Tầng 5 - AH/Phòng 1/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Chị Tâm là người ký hợp đồng, em gái của bà Huỳnh Thị Năm. GĐ dễ tính, quan tâm sức khoẻ của bà. \nĐánh giá: gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3943,7 +3857,7 @@
       "songay": 31,
       "cs": "Tầng 3 - AH/Phòng 3/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD rất quan tâm đến tình hình sức khoẻ của bà, bà bị thần kinh bàng quang, GĐ muốn điều trị dứt điểm cho bà. GD dễ tính\nĐánh giá: GĐ phối hợp tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3954,7 +3868,7 @@
       "songay": 31,
       "cs": "Tầng 2 - AH/Phòng 1/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD dễ tính, thích xem clip của bà. Thường xuyên hỏi tình trạng ăn uống ngủ nghỉ, lịch sinh hoạt của bà.\nĐánh giá: GĐ phối hợp tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3965,7 +3879,7 @@
       "songay": 31,
       "cs": "Tầng 1 - AH/Phòng 1/Giường 12",
       "ck": "Có",
-      "gc": ""
+      "gc": "Theo phiếu đánh giá ban đầu. Có thuốc tốt sử dụng cho ông.  anh Việt và anh Cường là người đóng tiền. GD rất quan tâm sức khoẻ của ông, rất thích coi clip hình ảnh về ông. Gia đình rất kỹ tính. chị Nga hỏi rất nhiều. Trao đổi trên nhóm gia đình những thông tin về sức khoẻ, ăn uống, sinh hoạt của ông. Riêng chuyện tiền bạc, giấy xuất viện thì gửi riêng cho anh Việt. Không gửi lên nhóm\nĐánh giá: gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3976,7 +3890,7 @@
       "songay": 31,
       "cs": "Tầng 3 - AH/Phòng 3/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ gửi 2 cụ vào VDL. ông Nguyễn Sĩ Giáo là chồng bà. GĐ quan tâm sức khoẻ của bà.  Bà tỉnh táo nên cần phải để ý. Nếu sức khoẻ của bà có vấn đề gì thì báo lên nhóm gia đình. Thường thì GD sẽ tự đưa bà đi khám BV 175, VDL không cần đưa đi. Nếu Bs VDL ra toa thuốc, cần hỏi thêm giá của toa để báo GD. Nếu GD đồng ý hẵng mua.  GD không hạn chế người thăm, tuy nhiên, nếu anh Đạt (con trai ông bà lên thăm thì báo chị Quyền 1 tiếng để chị Quyền tránh mặt)\nĐánh giá: GĐ bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3987,7 +3901,7 @@
       "songay": 31,
       "cs": "Tầng 3 - AH/Phòng 4/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ gửi 2 ông bà vào VDL để chăm sóc. bà Nguyễn Thị Tuyết là vợ ông Nguyễn Sĩ Giáo. GĐ quan tâm sức khoẻ của cụ. Ông có điện thoại riêng, thường xuyên liên hệ với con gái. Ông tỉnh táo nên cần phải để ý. Nếu sức khoẻ của ông có vấn đề gì thì báo lên nhóm gia đình. Thường thì GD sẽ tự đưa ông đi khám BV 175, VDL không cần đưa đi. Nếu Bs VDL ra toa thuốc, cần hỏi thêm giá của toa để báo GD. Nếu GD đồng ý hẵng mua.  GD không hạn chế người thăm, tuy nhiên, nếu anh Đạt (con trai ông bà lên thăm thì báo chị Quyền 1 tiếng để chị Quyền tránh mặt)\nĐánh giá: GĐ bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -3998,7 +3912,7 @@
       "songay": 31,
       "cs": "Tầng 3 - AH/Phòng 1/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Bà có con trai, gia đình đi nước ngoài, ở VN không ai chăm sóc bà nên gửi bà vào VDL. Gia đình rất quan tâm về sức khoẻ và tình hình sức khoẻ của bà\nĐánh giá: GĐ phối hợp tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4009,7 +3923,7 @@
       "songay": 31,
       "cs": "Tầng 4 - AH/Phòng 1/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD quan tâm tới sinh hoạt của bà tại VDL. Đặc biệt là vấn đề phục hồi chức năng, muốn BS tập vật lý trị liệu cho bà đi lại được. GĐ ghé thăm bà thường xuyên\nĐánh giá: GĐ bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4020,7 +3934,7 @@
       "songay": 31,
       "cs": "Tầng 2 - AH/Phòng 2/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình đông con cháu. Các cháu trai là người đại diện gia đình gửi bà vào viện, thường xuyên thăm bà và hay hỏi thăm sức khoẻ, tình hình ăn uống, ngủ nghỉ của bà\nĐánh giá: Gia đình khó tính"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4031,7 +3945,7 @@
       "songay": 31,
       "cs": "Tầng 2 - AH/Phòng 1/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ đông con cháu phức tạp và quan tâm, ngày sinh của cụ là nhập mặc định 01/01 vì phần mềm không cho bỏ trống, trên giấy tờ chỉ hiển thị năm sinh 1921\nĐánh giá: GĐ phối hợp tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4042,7 +3956,7 @@
       "songay": 31,
       "cs": "Tầng 5 - AH/Phòng 1/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ dễ tính, thăm bà thường xuyên. Bà hơi trầm tính ít nói nhưng dễ chịu, ăn uống tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4053,7 +3967,7 @@
       "songay": 31,
       "cs": "Tầng 3 - AH/Phòng 1/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ kỹ tính, rất quan tâm đến sức khoẻ, ăn uống, ngủ nghỉ của bà. Bà là người Hoa, không rành tiếng Việt, thường phải nhờ cụ khác người Hoa phiên dịch giùm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4064,7 +3978,7 @@
       "songay": 31,
       "cs": "Tầng 4 - AH/Phòng 1/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình đông con cái nhưng đi làm xa, ở xa. Bà thường ở nhà 1 mình, chiều tối con cái mới về  nên vấn đề vệ sinh, tắm giặt cho bà không đảm bảo, bà bị ghẻ ngứa da. GĐ muốn đưa bà vào VDL để có môi trường chăm sóc bà tốt hơn."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4075,7 +3989,7 @@
       "songay": 31,
       "cs": "Tầng 3 - AH/Phòng 3/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Bà là người Hoa không nói được tiếng Việt nhiều, bà mới đi du lịch nước ngoài trước khi vào viện và bị tai biến. Gia đình đưa bà về VN vào VDL luôn. Gia đình đông con cái, quan tâm hay hỏi thăm tình hình sức khoẻ bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4086,7 +4000,7 @@
       "songay": 31,
       "cs": "Tầng 3 - AH/Phòng 3/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "- GĐ đông con, rất quan tâm đến tình hình sức khoẻ, sinh hoạt của bà. Chị Hậu con gái là người quyết định chính trong gia đình"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4097,7 +4011,7 @@
       "songay": 31,
       "cs": "Tầng 1 - AH/Phòng 1/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ đông con cái, rất quan tâm và hay hỏi thăm tình hình sức khoẻ, sinh hoạt của ông tại viện."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4108,7 +4022,7 @@
       "songay": 31,
       "cs": "Tầng 1 - AH/Phòng 1/Giường 11",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ quan tâm, thường xuyên hỏi thăm vấn đề sức khoẻ, ăn uống, sinh hoạt của bà tại VDL. Chị Hằng con gái là người đại diện HĐ cho bà sống ở nước ngoài thường xuyên gọi về hỏi thăm bà."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4119,7 +4033,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 26/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình có lịch kết nối điện thoại với anh Cường vào lúc 14h30 các ngày CN. \nĐánh giá: GĐ phối hợp tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4130,7 +4044,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 2/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ dễ chịu, nhưng cần lưu ý cụ .  Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4152,7 +4066,7 @@
       "songay": 31,
       "cs": "Tầng 2/Phòng 5/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV Nhân dân 115.\nGD khó tính, GD nhiều người, người khó người dễ"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4163,7 +4077,7 @@
       "songay": 31,
       "cs": "Tầng trệt/ICU 1/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Bệnh viện Quân y 175/ Nhân dân Gia Định\nDi chứng mạch máu não - Tăng huyết áp - Thiếu máu cơ tim - Thoái hóa cột sống cổ - Suy yếu tuổi già, suy dinh dưỡng - Chưa có XNTQ.\nNơi đăng ký KCBBĐ: BV Quận 9\nGD Bình Thường, quan tâm cụ"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4174,7 +4088,7 @@
       "songay": 31,
       "cs": "Tầng 1/Phòng 3/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV Gò Vấp.\nGD Bình Thường, do GD lớn tuổi nên thỉnh thoảng hơi khó khăn"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4185,7 +4099,7 @@
       "songay": 31,
       "cs": "Tầng 1/PHÒNG LỚN/Giường 10",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV nhân dân Gia Định\nGD phối hợp tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4196,7 +4110,7 @@
       "songay": 31,
       "cs": "Tầng 2/Phòng 5/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "BV Gia Định hoặc gia đình chỉ định.\nNơi đăng ký KCBBĐ: TYT xã phú Chánh.\nGD Bình Thường, hợp tác"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4207,7 +4121,7 @@
       "songay": 31,
       "cs": "Tầng trệt/ICU 2/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV Nguyễn Trãi\nGD Bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4218,7 +4132,7 @@
       "songay": 31,
       "cs": "Tầng trệt/ICU 1/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV Thống Nhất\nGD hợp tác tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4229,7 +4143,7 @@
       "songay": 31,
       "cs": "Tầng trệt/Phòng 3/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV đa khoa khu vực Thủ Đức\nGD hợp tác tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4240,7 +4154,7 @@
       "songay": 31,
       "cs": "Tầng trệt/ICU/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ quan tâm nhiều, có điều kiện về tài chính, Con cái sẽ đi định cư nên sẽ chỉ nhờ người quen tới thăm nom. Chị Vân là người đại diện quyết định vấn đề chính. Đã trao đổi với GĐ về phương án chăm bệnh ngoài da của bà sẽ cột cố định tay vào ban đêm để bà không cào gãi làm bệnh nặng thêm và không lành được gia đình đã đồng ý."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4251,7 +4165,7 @@
       "songay": 31,
       "cs": "Tầng 1/PHÒNG LỚN/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV nhân dân Gia Định\nGD Bình Thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4262,7 +4176,7 @@
       "songay": 31,
       "cs": "Tầng 2/Phòng 3/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV Thống Nhất.\nTăng huyết áp, Cơn đau thắt ngực không ổn định, tăng lipid máu hỗn hợp, Đái tháo đường không phụ thuộc insulline, Bệnh trào ngược dạ dày thực quản\nGD Bình Thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4273,7 +4187,7 @@
       "songay": 31,
       "cs": "Tầng trệt/ICU/Giường 6",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV Hữu Nghị\nGD hợp tác tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4284,7 +4198,7 @@
       "songay": 31,
       "cs": "Tầng 2/Phòng 4/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: phòng khám đa khoa (thuộc CN2-CTy TNHH TTYK Phước An) P14, Q.10.\nGD phối hợp tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4295,7 +4209,7 @@
       "songay": 31,
       "cs": "Tầng 1/Phòng 4/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký BHYTBĐ: BV Quận 11.\nGD Bình Thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4306,7 +4220,7 @@
       "songay": 31,
       "cs": "Tầng 2/Phòng 3/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV nhân dân Gia Định.\nGD Bình Thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4317,7 +4231,7 @@
       "songay": 31,
       "cs": "Tầng 1/PHÒNG LỚN/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Khi nào ông mất rồi thì gọi cho cha sở của nhà thờ Mân Côi cha Nhật 0902684388 hoặc cha Tiến  0902769395 nhờ cha qua làm phép xác cho ông liền, sau đó gọi cho anh Trường hoặc cô Dung để báo về việc ông mất. Nếu gọi 2 cha không được thì gọi cho anh Trường hoặc cô Dung báo việc ông mất rồi để nhờ 2 người này chạy tới nhà thờ gọi cha qua. SDT ở phần thông tin liên hệ khác."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4328,18 +4242,7 @@
       "songay": 31,
       "cs": "Tầng 1/Phòng 6/Giường 4",
       "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "NT",
-      "ma": "2500094",
-      "ten": "La Văn Thôi",
-      "ngay": "2025-03-01",
-      "songay": 31,
-      "cs": "Tầng 1/Phòng 3/Giường 2 ",
-      "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV Quận 1 cơ sở 1\nGD bình thường, ở nước ngoài nên ít quan tâm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4350,7 +4253,7 @@
       "songay": 31,
       "cs": "Tầng 1/Phòng 2/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV Trưng Vương\nGD Bình Thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4372,7 +4275,7 @@
       "songay": 31,
       "cs": "Tầng 1/PHÒNG LỚN/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Lẫn tuổi già\nGD Bình Thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4383,7 +4286,7 @@
       "songay": 31,
       "cs": "Tầng 1/PHÒNG LỚN/Giường 9",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký BHYTBĐ: BV Hoàn Mỹ Sài Gòn.\nGD Bình Thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4394,7 +4297,7 @@
       "songay": 31,
       "cs": "Tầng 1/Phòng 2/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Lẫn tuổi già\nGD hợp tác tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4405,7 +4308,7 @@
       "songay": 31,
       "cs": "Tầng 2/Phòng 1/Gường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký BHYTBĐ: BV Lê Văn Việt ( TP Thủ Đức).\nGD hợp tác tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4416,7 +4319,7 @@
       "songay": 31,
       "cs": "Tầng 2/Phòng 3/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV nhân dân Gia Định.\nGD Bình Thường, rất quan tâm cụ"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4427,7 +4330,7 @@
       "songay": 31,
       "cs": "Tầng 2/Phòng 3/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi KCBBĐ: BV đa khoa TƯ Cần Thơ\nGD Bình Thường, ít quan tâm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4438,7 +4341,7 @@
       "songay": 31,
       "cs": "Tầng 2/Phòng 5/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV Quận Phú Nhuận\nGD hợp tác tốt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4449,7 +4352,7 @@
       "songay": 31,
       "cs": "Tầng 2/Phòng 1/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "BV Quận 11\nGD Bình Thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4460,7 +4363,7 @@
       "songay": 31,
       "cs": "Tầng 1/Phòng 3/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD Bình Thường\nGD kĩ tính quan tâm cụ"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4471,7 +4374,7 @@
       "songay": 31,
       "cs": "Tầng trệt/ICU 1/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4487,13 +4390,24 @@
     {
       "ct": "1. HIỆN HỮU",
       "zone": "NT",
+      "ma": "2500069",
+      "ten": "Nguyễn Thanh Sáng",
+      "ngay": "2025-03-01",
+      "songay": 31,
+      "cs": "Tầng 2/Phòng 2/Giường 1",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "NT",
       "ma": "2500064",
       "ten": "Hà Nhi",
       "ngay": "2025-03-01",
       "songay": 31,
       "cs": "Tầng 2/Phòng 4/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký BHYTBĐ: Trung tâm y tế quận 5\nGD Bình Thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4504,7 +4418,7 @@
       "songay": 31,
       "cs": "Tầng 2/Phòng 4/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký BHYTBĐ: BV Quận Phú Nhuận.\nGD Bình Thường, quan tâm cụ"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4515,7 +4429,7 @@
       "songay": 31,
       "cs": "Tầng 2/Phòng 4/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD Bình Thường, quan tâm cụ"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4526,7 +4440,7 @@
       "songay": 31,
       "cs": "Tầng 1/Phòng 6/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV An Bình.\nGD Bình Thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4537,7 +4451,7 @@
       "songay": 31,
       "cs": "Tầng trệt/Phòng 4/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD Bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4546,9 +4460,9 @@
       "ten": "Nguyễn Thị Sáp",
       "ngay": "2025-03-01",
       "songay": 31,
-      "cs": "Tầng 1/Phòng 1/Giường 3",
+      "cs": "Tầng trệt/ICU/Giường 8",
       "ck": "Có",
-      "gc": ""
+      "gc": "GD Bình Thường\nDK KCBBD tại BV 115, Cấp cứu 115"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4592,7 +4506,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 2/Giường 22",
       "ck": "Có",
-      "gc": ""
+      "gc": "Khi đi khám đi BV Gia Định , đi cấp cứu đi BV Tỉnh BD . GD quan tâm ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4603,7 +4517,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 12/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Nơi đăng ký KCBBĐ: BV Quận Bình Thạnh.( ngày sinh 12/03/1910)\nGD Bình Thường, ít tương tác"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4636,7 +4550,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 3/Giường 9",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình khó tính\nGd anh chị em đông cực kỳ khó tính, rất quan tâm tình trạng biến động sức khỏe nên có thay đổi phải báo ngây, các phát sinh rõ ràng, cập nhật hình ảnh thường xuyên ( hình ảnh tập PHCN ), hay phản ánh."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4669,7 +4583,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 8/Giường 9",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình quan tâm sức khỏe bà. Nhưng không chăm được bà vì bà hay kích động.  Gia đình khó tính"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4724,7 +4638,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 5/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình Bình thường\nEm trai quan tâm ,hay hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4735,7 +4649,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 3/Giường 10",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình hợp tác tốt\nCon trai quan tâm, hay hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4746,7 +4660,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 3/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình Bình Thường\nCon trai quan tâm hay hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4757,7 +4671,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 5/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình rất quan tâm,hay liên lạc bà qua ĐT cá nhân"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4768,7 +4682,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 2/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình rất quan tâm đến sức khỏe bà, GĐ ở  nước ngoài thường xuyên nhắn tin hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4779,7 +4693,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 14/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình Bình thường\nGia đình quan tâm, gửi thuốc cho bà đều đặn"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4790,7 +4704,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 23/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình Bình thường\nGia đình tiết kiệm chi phí, gửi thuốc cho ông.\nĐơn thuốc mới + đi khám: hỏi trước"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4801,18 +4715,18 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 3/Giường 9",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình Bình thường\nÔng bị lao, tâm lý bất ổn, gia đình rất quan tâm sức khỏe"
     },
     {
       "ct": "1. HIỆN HỮU",
-      "zone": "HH",
+      "zone": "TCDB1",
       "ma": "2400355",
       "ten": "Lê Ngọc Xuân",
       "ngay": "2024-07-23",
       "songay": 31,
-      "cs": "Hoa Hồng Ông/Phòng 25/Giường 5",
+      "cs": "Chăm sóc Đặc biệt 1/Phòng 3/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình Bình thường\nGia đình ít thăm ông sợ ông hay đòi về\nGĐ đã chọn khi có cấp cứu sẽ chuyển đến BV 175, hiện đang nhờ đổi nơi KCB ban đầu trong thẻ BHYT"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4823,7 +4737,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 01/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường, thỉnh thoảng hỏi thăm\nBà Hoặc Muối cụ mới vào khu Tích cực \nTình trạng : Yếu, gọi không phản xạ. Ghẻ ngứa toàn thân tình trạng nặng.\nSpo2 92%, m 52l/p\nHa 70/40 mmHg\n=> thở râu 4 l/p, phun khí dung.\nTruyền 1 chai Natri 40g/p"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4834,7 +4748,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 12/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình Bình thường\nGia đình quan tâm đến bà\nMã định danh: 056172006224\nBà chưa có CCCD, BHYT\nCó lãnh lương hưu hàng tháng"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4845,7 +4759,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 2/Giường 23",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình Bình thường\nHay hỏi thăm sức khỏe, thuốc của ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4856,7 +4770,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 1/Giường 24",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình Bình thường\nGia đình rất quan tâm, hỏi thăm liên tục,quan tâm và theo dõi kĩ sức khỏe  của bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4867,7 +4781,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 22/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGia đình quan tâm đến ông, lâu lâu vào thăm ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4878,7 +4792,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 01/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình rất quan tâm đến bà, hỏi thăm tình hình liên tục mỗi ngày, thích chụp hình ảnh"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4889,7 +4803,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 3/Giường 9",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGia đình thỉnh thoảng hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4900,7 +4814,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 18/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình rất quan tâm, hỏi thăm liên tục"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4911,7 +4825,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 14/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGia đình rất quan tâm, thường đến thăm bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4922,7 +4836,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 1/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình quan tâm đến sức khỏe, ăn uống của bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4933,7 +4847,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 16/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình muốn giảm cân cho ông. Tiết kiệm chi phí."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4944,7 +4858,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 8/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình quan tâm,hỏi thăm nhiều, chi tiết, khám BHYT"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4966,7 +4880,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 2/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình hạn chế người thăm, chỉ chị Dung được thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4977,7 +4891,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 3/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình rất quan tâm , đến thăm thường xuyên."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4988,7 +4902,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 6/Giường 9",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nLà con gái ông Khắc Hoàn HHO, rất ghét các tên nhắc lại như Hoàng, hoàn, Loan"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -4999,7 +4913,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 1/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường,ít hỏi thăm bà\nA Long đã đi Úc, không liên lạc ĐT (số VN) được"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5010,7 +4924,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 3/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ quan tâm cập nhật hình ảnh thường xuyên \nBHYT tích hợp"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5021,7 +4935,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 19/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nQuan tâm đến các phát sinh, tiền thuốc."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5032,7 +4946,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 12 Bis/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình thỉnh thoảng hỏi thăm, đang giữ CCCD, BHYT của bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5043,7 +4957,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 10/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nCon cái đang ở nước ngoài\nBà đang giữ CCCD, BHYT"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5054,7 +4968,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 3/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ quan tâm, thích hình ảnh sinh hoạt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5065,7 +4979,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 4 /Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\ngia đình rất quan tâm, lâu lâu lên thăm bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5076,7 +4990,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 12/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình quan tâm đến bà,hay hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5087,7 +5001,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 4/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGia đình quan tâm, thích Cập nhật hình ảnh bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5098,7 +5012,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 2/Giường 9",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nCon gái đóng viện phí , nội bộ GD không hợp, hết sữa báo GD gửi thêm , cập nhật hình ảnh"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5109,7 +5023,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 18/Giường 8",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình quan tâm, hay hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5120,7 +5034,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 11/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ thích hình ảnh sinh hoạt, quan tâm ăn uống, sinh hoạt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5131,7 +5045,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 1/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGD thích hình ảnh sinh hoạt của bà , gia đình hay đem đồ lên nhưng ít gặp, sợ bà đòi về"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5142,7 +5056,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 14/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình khó\nGĐ hay phản ánh và ghi ngờ viện bạo hành, quay chụp hình ảnh gửi gia đình phải chỉnh chu"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5153,7 +5067,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 11/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình ít hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5164,7 +5078,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 3/Giường 6",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGD thích hình ảnh bà ngồi xe lăn, tự múc ăn"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5175,7 +5089,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 3/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGD lên thăm bà thường xuyên, Cần hình ảnh tập PHCN, chi phí phát sinh rõ ràng, điều kiện thấp"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5186,7 +5100,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 14/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nbà không có gia đình, người đang lo chị phí là cháu họ, người linh mục bà nhận là con nuôi rất thương và cho chi phí phụ. GĐ có điều kiện kinh tế, quan hệ xã hội rộng!"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5197,7 +5111,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 16/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình quan tâm đến sức khỏe ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5208,7 +5122,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 3/Giường 10",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình quan tâm ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5219,7 +5133,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 9/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGia đình quan tâm ông, hay đưa ông ra ngoài chơi"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5230,7 +5144,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 1/Giường 29",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGia đình thỉnh thoảng hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5252,7 +5166,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 1/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ thích hình ảnh sinh hoạt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5263,7 +5177,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 7/Giường 6",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGia đình quan tâm sưc khỏe, ăn uống của bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5274,7 +5188,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 2/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGia đình thỉnh thoảng hỏi thăm bà\nCó 2 người con trai và gái, xưa kinh doanh, sau khi phát bệnh gđ đưa điều trị ở BV tâm thần Đồng Nai. Em trai và em dâu là người đi tìm cs để nói con gái bà đưa lên ở."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5285,7 +5199,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 6/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình quan tâm, hay hỏi thăm sức khỏe bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5296,7 +5210,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 10/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGia đình quan tâm, hay hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5307,7 +5221,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 12 BIS/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nThỉnh thoảng hỏi thăm sức khỏe bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5318,7 +5232,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 18/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGĐ ở xa cần cập nhật hình ảnh để gia đình yên tâm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5329,7 +5243,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 2/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình quan tâm đến sức khỏe, khám bệnh của bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5340,18 +5254,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 19/Giường 3",
       "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "TCDB1",
-      "ma": "2300112",
-      "ten": "Trần Thị Hoa",
-      "ngay": "2023-04-09",
-      "songay": 31,
-      "cs": "Chăm sóc Tích cực/Phòng 1/Giường 9",
-      "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình thỉnh thoảng hỏi thăm, quan tâm đến sinh hoạt ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5362,7 +5265,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 15/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình quan tâm ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5373,7 +5276,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 5/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ thích hình ảnh ăn uống, sinh hoạt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5384,7 +5287,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 4 /Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình quan tâm bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5395,7 +5298,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 11/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình rất quan tâm bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5406,18 +5309,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 11/Giường 10",
       "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "TCDB1",
-      "ma": "2300032",
-      "ten": "Hoàng Xuân Thanh",
-      "ngay": "2023-02-01",
-      "songay": 31,
-      "cs": "Chăm sóc Đặc biệt 1/Phòng 3/Giường 2",
-      "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nNgười nhà quan tâm đến sức khoẻ của cô, hay gọi điện thoại hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5428,7 +5320,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 4 /Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình ít hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5439,7 +5331,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 12 Bis/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình hay gửi đồ ăn cho bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5450,7 +5342,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 18/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGia đình quan tâm sức khỏe ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5461,7 +5353,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 2/Giường 21",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình khó\nGD lên thăm thường xuyên, Kỹ tính quan tâm vấn đề biến động sức khỏe"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5472,7 +5364,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 1/Giường 13",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ quan tâm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5483,7 +5375,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 7/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình quan tâm, thăm bà thường xuyên"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5494,7 +5386,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 14/Giường 6",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ quan tâm đến tình trạng biến động sức khoẻ của bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5505,7 +5397,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 6/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ thỉnh thoảng hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5516,7 +5408,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 10/Giương 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình quan tâm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5527,7 +5419,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 6/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nBệnh viện Nhân Dân Gia Định\nTổn thương nội sọ ( xuất huyết dưới nhện, dây não thái dương trái ) - Di chứng: yếu chân, tay, đi lại yếu, dễ té - Rối loạn tâm thần - Rối loạn chức năng não - Thị lực giảm - Có xét nghiệm tổng quát, siêu âm tim và MRI\nBất kỳ ai lên thăm ông đều phải thông qua người ký hợp đồng"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5538,7 +5430,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 3/Giường 12",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ quan tâm bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5549,7 +5441,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 7/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ thỉnh thoảng hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5560,18 +5452,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 6/Giường 3",
       "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "HLDB2",
-      "ma": "20000517",
-      "ten": "Nguyễn Trúc Phương",
-      "ngay": "2020-10-12",
-      "songay": 31,
-      "cs": "Hoa lan/Phòng 8/Giường 3",
-      "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình quan tâm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5582,7 +5463,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 21/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nToa thuốc phải kèm giá\nGia đình rất chi tiết"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5593,7 +5474,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 3/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình rất quan tâm, muốn gặp nhật hàng tuần"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5604,7 +5485,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 19/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ dễ tính\nGĐ quan tâm đến sức khỏe\nTrước khi hết thuốc báo trước 1 tuần"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5615,7 +5496,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 3/Giường 8",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia Đình không muốn khám định kỳ, chỉ muốn khám những bệnh cần thiết.\n-Tiểu đường, Cao Huyết Áp, Tai biến MMN (yếu liệt 1/2 người P)\n-Thoái hóa cột sống thắt lưng\n-Gan nhiễm mỡ\nChưa có xét nghiệm tổng quát đầy đủ-> yêu cầu xét nghiệm tổng quát"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5626,7 +5507,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 2/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nQuan tâm sức khỏe và hình ảnh sinh hoạt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5637,7 +5518,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 10/Giường 8",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nRối loạn cân bằng nước, điện giải và thăng bằng kiềm toan - Áp xe da, nhọt, cụm nhọt ở chi - Sa sút trí tuệ - Loạn nhịp tim - Tăng huyết áp - Rối loạn giấc ngủ - Dãn tĩnh mạch chi dưới - Xuất viện BV Nguyễn Trãi 12/1/2021"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5648,7 +5529,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 10/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ quan tâm ông. lâu lâu hay gọi nói chuyện với ông\nTăng huyết áp vô căn\nBệnh tim thiếu máy cục bộ mạn\nĐái tháo đường k phụ thuộc insulline\nTăng lipid máu hổn hợp\nTrào ngược dạ dày thực quản\n- GĐ tự gia hạn BHYT"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5659,7 +5540,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 6/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nThông tin đến gia đình khi trở nặng/ chuyển viện"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5670,7 +5551,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 1/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nBV Gia Định \nLão suy - co quắt chân phải - u xơ tuyến tiền liệt - cao huyết áp - di chứng nhồi máu não -tăng lipid - thiếu máu cơ tim - rối loạn tiền đình - chưa có xét nghiệm tổng quát."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5681,7 +5562,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 6/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5692,7 +5573,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 10/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ muốn mỗi lần đi khám phải cho biết trước ông đã uống thuốc gì"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5703,7 +5584,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 10/Giường 6",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nbênh viện 175\nchưa có hồ sơ sức khỏe\nthay khớp háng trái (tháng 07/2020)\nYêu cầu khám tổng quát chụp MRI não"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5714,7 +5595,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 7/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nBệnh Viện Nhân Dân Gia Định\nLẫn tuổi già, có Cao Huyết Áp, tự mua thuốc\nChưa có hồ sơ khám tổng quát"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5725,7 +5606,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 12 Bis/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nCô khỏe, con gái nước ngoài, cô có điện thoại riêng để liên hệ"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5736,7 +5617,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 1/Giường 9",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nbệnh viện Thống Nhất\nThoái hóa khớp gối nguyên phát 2 bên - Bệnh mạch máu não khác - Suy nhược thần kinh - Rối loạn giấc ngủ - Parkinson - Hội chứng ống cổ tay - Suy tĩnh mạch mạn - Hạ calci - Tăng huyết áp vô căn ( hiện tại HA thấp ) - Đi lại yếu"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5747,7 +5628,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 11/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường, thỉnh thoảng lên thăm\nBV Gia Định\nLẫn tuổi già - Yếu 2 chân - say tai biến do rượu - chưa có xét nghiệm tổng quát.\nGia đình thỉnh thoảng hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5758,7 +5639,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 5/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình khó\nGĐ quan tâm đến thuốc bà đang uống , thông tin phải chính xác\nBV ND 115\nNằm tai chỗ - Đã mổ thay khớp háng (Trái) - Gãy cổ xương đùi (T) - Tiểu đường + Alzheimer (Chưa có hồ sơ)"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5769,7 +5650,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 8/Giường 8",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình yêu cầu mọi vấn đề giấy tờ hay Thông tin app phải được thông qua người đại diện,không được đưa người khác\nNhồi máu não nhiều ổ chuyển dạng xuất huyết bán cầu phải - Rung nhĩ đáp ứng thất trung bình - Suy tim - Tăng huyết áp - Rối loạn lipid - Viêm mũi họng - Viêm màng não mủ - Rối loạn lo âu - Rung nhĩ và cuồng nhĩ"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5780,7 +5661,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 24/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nBV Thống Nhất \nDi chứng mạch máu não - liệt 1/2 chân trái - yếu 2 chân - cao huyết áp - chưa có xét nghiệm tổng quát.\n0908700898 chị Thuỷ\n0913917360 chị Uyên"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5791,7 +5672,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 7/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nBV Gia Định \nLẫn - Mất trí nhớ - Tâm thần trầm cảm chậm phát triển bẩm sinh - tăng huyết áp - đau dạ dày - tăng lipid máu - chưa có xét nghiệm tổng quát ."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5802,7 +5683,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 3/Giường 6",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nHay hỏi thăm tình hình sức khỏe"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5813,7 +5694,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 16/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ thỉnh thoảng hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5824,7 +5705,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 16/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nBệnh viện Gia Định khi chuyển viện"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5835,7 +5716,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 1/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nBV ND 115\nParkinson - Viêm bàng quang - Cao HA - Chưa có XNTQ"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5846,7 +5727,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 10/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình thỉnh thoảng hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5857,7 +5738,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 19/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ Thỉnh thoảng hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5868,7 +5749,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 15/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGđ quan tâm đến tình trạng sức khoẻ, biến động sức khoẻ"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5879,7 +5760,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 12 Bis/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nThỉnh thoảng hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5890,7 +5771,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 1/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình muốn gửi hình của bà thường xuyên"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5905,17 +5786,6 @@
     },
     {
       "ct": "1. HIỆN HỮU",
-      "zone": "HLDB2",
-      "ma": "19000145",
-      "ten": "Nguyễn Minh Đức",
-      "ngay": "2019-04-17",
-      "songay": 31,
-      "cs": "Hoa lan/Phòng 19/Giường 2",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
       "zone": "HH",
       "ma": "21000265",
       "ten": "Trịnh Thị Đầm",
@@ -5923,7 +5793,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 8/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nbệnh viện 175\nđau khớp, chưa có hồ sơ liên quan sức khỏe\nrối loạn giấc ngủ\nalzheimer\nchưa có hồ sơ tổng quát, yêu cầu khám tổng quát, chụp MRI não"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5934,7 +5804,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 4/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nThông tin với gia đình khi trở nặng/ chuyển đi bệnh viện"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5945,18 +5815,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 7/Giường 5",
       "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "HLDB2",
-      "ma": "18000125",
-      "ten": "Trần Minh",
-      "ngay": "2013-07-03",
-      "songay": 31,
-      "cs": "Hoa lan/Phòng 7/Giường 3",
-      "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nBV Gia Định\nĐược đính kèm theo phiếu đánh giá sức khỏe ban đầu\n- Bao phí tả lót-> Không tính phát sinh\n- Hạn chế phát sinh ( có phát sinh thuốc vui lòng báo người nhà)\n- Lãnh thuốc BHYT để tiết kiệm tối đa chi phí cho người nhà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5967,7 +5826,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 12 BIS/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ quan tâm, thích hình ảnh sinh hoạt \nHay hỏi về da mông của bà (hăm)"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5978,7 +5837,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 6/Giường 6",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nBV Gia Định\nThiểu năng tuần hoàn hai bán cầu - độ đàn hồi thành mạch máu giảm - chưa có xét nghiệm tổng quát."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -5989,7 +5848,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 8/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6000,7 +5859,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 19/Giường 9",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGđ quan tâm sức khoẻ, biến động sức khoè"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6011,7 +5870,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 19/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nQuan tâm đến cân nặng và vận động của ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6022,7 +5881,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 5/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ bình thường\nGĐ thỉnh thoảng hỏi thăm bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6033,7 +5892,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 11/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gđ bình thường\nBV Gia Định\nTheo phiếu đánh giá sức khỏe chi tiết ban đầu"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6044,7 +5903,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 14/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ thường xuyên đến thăm, kỷ tính"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6053,9 +5912,9 @@
       "ten": "Mai Thùy Vân",
       "ngay": "2019-01-28",
       "songay": 31,
-      "cs": "Chăm sóc Đặc biệt 1/Phòng 5/Giường 6",
+      "cs": "Chăm sóc Đặc biệt 1/Phòng 7/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gi đình bình thường\nGĐ hay hỏi thăm súc khỏe"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6066,7 +5925,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 4/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\ngđ thỉnh thoảng hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6077,18 +5936,18 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 10/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ bình thường\nGia đình ít hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
-      "zone": "HH",
+      "zone": "HLDB2",
       "ma": "20000255",
       "ten": "Huỳnh Thị Tố Nga",
       "ngay": "2020-04-16",
       "songay": 31,
-      "cs": "Hoa Hồng Bà/Phòng 8/Giường 4",
+      "cs": "Hoa lan/Phòng 2/Giường 9",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nBệnh viên nhân dân Gia Định\nTai biến mạch máu não trên 4 năm - Liệt nửa người bên trái - Chưa có toa thuốc, xét nghiệm tổng quát và MRI\nXét nghiệm tổng quát và MRI sau."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6099,7 +5958,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 12 BIS/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình thỉnh thoảng hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6110,7 +5969,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 20/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình khó về thuốc , hay đi khám bệnh sẽ hỏi chi tiết, cân nhắc\nGĐ có con gái ở nước ngoài, gđ rất rắc rối cần lưu ý những phát sinh, thuốc uống"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6121,7 +5980,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 12 BIS/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ bình thường\nGĐ hay lên thăm bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6132,7 +5991,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 23/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nBV 175\n Nhồi máu não vành tia phải\n- Tăng huyết áp - rối loạn chuyển hóa lipid\n- Viêm phổi"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6143,7 +6002,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 08/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nthích hình ảnh sinh hoạt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6154,7 +6013,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 19/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\ncon gái rất quan tâm sức khoẻ, và hình ảnh sinh hoạt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6165,7 +6024,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 18/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình khó phối hợp khó liên hệ\nGĐ ít phản hồi các thông tin sức khỏe ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6176,7 +6035,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 11/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nUng thư tiền liệt tuyến\nYếu 1 bên (T)\nĐặt sonde tiểu liên tục\nChú đang sử dụng tiền tiết kiệm của chú để chi trả viện phí"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6187,7 +6046,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 19/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nThinh thoảng hỏi thăm ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6198,7 +6057,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 8/Giường 6",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ bình thường\nBV Gia Định\nSau TBMMN > 1 năm liệt 1/2 T ( lần 2 )"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6209,7 +6068,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 5/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ thỉnh thỉnh gọi gặp bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6220,7 +6079,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 20/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ bình thường\nGĐ thỉnh thoảng hỏi thăm ông\nLiệt tứ chi - sau tai nạn giao thông chấn thương cột sống cổ (2014) - chưa có xét nghiệm tổng quát ."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6231,7 +6090,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 25/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình thỉnh thoảng hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6242,7 +6101,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 5/Giường 10",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nBV ND Gia Định\nTai biến - Di chứng nhồi máu não lỡ khuyết - Tiểu đường - Parkinson - Loạn thần không thực tổn, không biệt định - Méo miệng - Liệt chân Trái - Đã có Xét nghiệm Tổng quát - Kết quả di chứng nhồi máu não lỗ khuyết - Không yêu cầu xét nghiệm gì thêm\nTái khám ngày 30/08/2019 BV Nhân Dân 115"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6253,7 +6112,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 15/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ bình thường\nGĐ thỉnh thoảng hỏi thăm sức khỏe"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6264,7 +6123,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 3/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ thỉnh thoảng hỏi thăm\nBệnh viện Quân Y 175\nTâm thần phân liệt di chứng - Hội chứng Parkinson - Bệnh lý chất trắng não tiến triển theo mạch máu - Chưa có XNTQ"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6275,7 +6134,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 14/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình khó phối hợp\ncon gái khó tính, hình ảnh gửi chỉnh chu, hay phản ánh \nChỉ cần một vết bầm trên người của bà thì sẽ làm rất căng, nói bà bị bạo hành"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6286,7 +6145,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 2/Giường 8",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ thỉnh thoảng hỏi thăm ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6297,18 +6156,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 14/Giường 8",
       "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "HLDB2",
-      "ma": "21000110",
-      "ten": "Đặng Quý Lân",
-      "ngay": "2021-03-25",
-      "songay": 31,
-      "cs": "Hoa lan/Phòng 5/Giường 6",
-      "ck": "Có",
-      "gc": ""
+      "gc": "GIA ĐÌNH BÌNH THƯỜNG\nGia đình quan tâm sức khỏe bà, ăn uống , sinh hoạt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6319,7 +6167,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 24/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình khó hợp tác, nợ phí\nGia định nợ viện phí nhiều, không hợp tác đóng => thanh lý"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6330,7 +6178,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 11/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ khó phối hợp\nGia đình nợ phí , không còn liên hệ với viện,không hỏi thăm ông\nLiên hệ Gia đình trước khi chuyển viện"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6341,7 +6189,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 1/giường 12",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nThỉnh thoảng hỏi thăm bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6352,18 +6200,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 2/Giường 18",
       "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "1. HIỆN HỮU",
-      "zone": "TCDB1",
-      "ma": "20000629",
-      "ten": "Đặng Thị Phách",
-      "ngay": "2020-12-25",
-      "songay": 31,
-      "cs": "Chăm sóc Tích cực/Phòng 1/Giường 27",
-      "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\ncon gái lên thăm 1 tuần 2 lần, rất kỹ tính quan tâm biến động sức khỏe, thuốc, ăn uống, sinh hoạt của bà."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6374,7 +6211,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 11/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ hay vào thăm ông\nBV Thống Nhất\nLoạn thần nhẹ dạng stress\ntiền sử thủng dạ dạy\n-Chưa có hồ sơ tổng quát\n-Yêu cầu khám tổng quát + chụp MRI não"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6385,7 +6222,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 6/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ dễ tính\nVợ mất ông buồn nhậu nhiều, tai biến nên các con dụ vào Nam rồi gửi ông vào VDL"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6396,7 +6233,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 16/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình ít hỏi thông tin ông\nCon trai nợ phí không đủ chi trả, có dì sẽ chi trả khoảng sau này hàng tháng\nTai biến mạch máu não, di lị vợ, có  1 con trai đang gặp khó khăn công việc. không có BHYT"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6407,7 +6244,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 7/Giường 8",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nBV ND Gia Định\nCao HA - Lẫn tuổi già - Parkinson - Rối loạn giấc ngủ"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6418,7 +6255,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 8/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGĐ quan tâm bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6429,7 +6266,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 17/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nThỉnh thoảng hỏi thăm ông\nBv Gia Định \nTâm thần phân liệt thể di chứng - viêm phổi - tràn dịch màng phổi - thiếu máu - đau dạ dày - gầy yếu - lẫn tuổi già - chưa có xét nghiệm tổng quát .\nGĐ Tự Gia Hạn"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6440,7 +6277,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 2/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ bình thường\nBV Gia Định \nLẫn tuổi già - Tiểu đường type 2 - cao huyết áp - Tai biến mạch máu não năm 2000 - đi lại yếu."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6451,7 +6288,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 11/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình thỉnh thoảng hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6462,7 +6299,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 3/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ bình thường\nGĐ Thỉnh thoảng hỏi thông tin sức khỏe bà\nNhiễm coivd 19 xuất viện ngày 16/09/2021\nĐái tháo đường không phụ thuộc insulline\nTăng huyết áp vô căn nguyên phát\nĐột quỵ không xác định do xuất huyết hay nhồi máu"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6473,7 +6310,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 9/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ quan tâm đến sức khỏe, hay hỏi thông tin về ông\nLoạn thần\nTăng huyết áp- đái tháo đường type 2"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6484,7 +6321,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 6/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình thỉnh thoảng hỏi thăm sức khỏe bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6495,7 +6332,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 1/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình khó\nGia đình muốn cập nhật thông tin sức khỏe liền, không muốn qua app\nTheo phiếu đánh giá ban đầu"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6506,7 +6343,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 12 Bis/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ Thỉnh thoảng hỏi thăm\nBV ND Gia Định\nLẫn tuổi già - Da khô - nghe kém - Răng giả - Chưa có xét nghiệm TQ"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6517,7 +6354,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 7/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nBV Gia Định\nThiểu năng trí tuệ - chưa có xét nghiệm tổng quát .\nChị gái ở nước ngoài trả chi phí--> cho người cậu ruột tới lui thăm nom."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6528,7 +6365,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 8/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ thỉnh thoảng hỏi thăm sức khỏe ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6539,7 +6376,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 21/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ bình thường\nYếu tay phải - Dập não đỉnh trái - CTSN cũ - Viêm mô bào bàn chân trái, rối loạn điện giải / nghiện rượu (L03) - Đau khớp, xơ gan mật - Đốt xạ 4 ngón tay phải.\nHiện tại li dị vợ con gái đang lo chi phí"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6550,7 +6387,18 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 24/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGia đình quan tâm đến sức khỏe, sinh hoạt của ông\nGĐ bán nhà chia tài sản cho các anh chị em, chú không gia đình con cái nên em gái gửi vào VDL, có vấn đề trí não"
+    },
+    {
+      "ct": "1. HIỆN HỮU",
+      "zone": "HH",
+      "ma": "18000381",
+      "ten": "Phạm Đức Thanh",
+      "ngay": "2019-07-19",
+      "songay": 31,
+      "cs": "Hoa Hồng Ông/Phòng 14/Giường 9",
+      "ck": "Có",
+      "gc": "Gia đình bình thường\nGĐ thỉnh thoảng hỏi thăm sức khỏe và gọi cho ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6561,7 +6409,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 7/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình rất quan tâm về sức khỏe bà\nBệnh viện Gia Định\nĐi lại yếu - Chưa có XNTQ"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6572,7 +6420,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 5/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình Bình thường\nỞ nhà có ông và bà vợ, cả 2 đều bệnh, ông hoan tưởng hay đi lại nhiều không ngủ nên ảnh hưởng đến sưc khỏe của bà\nGđ quyết định gửi 1 người vào VDL.\nthích hình ảnh sinh hoạt"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6583,7 +6431,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 12/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nBệnh Viện Nhân Dân Gia Định\nThiểu năng tâm thần\nKhông giao tiếp được\nTiểu đường đã ngưng thuốc\nNhiều vết thẹo trên đầu, Vết thẹo thái dương P do tai nạn\nGĐ hay hỏi thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6594,7 +6442,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 18/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ hay goi điện, hỏi thăm ông\nBV Gia Định \nTâm thần phân liệt >22 năm - đang điều BV tâm thần Biên Hòa - chưa có xét nghiệm tổng quát .\nGia đình không yêu cầu xét nghiệm tổng quát - sử dụng thuốc tâm thần BS Ân"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6605,7 +6453,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 4/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình Bình thường\nGia đình thỉnh thoảng hỏi thăm bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6616,7 +6464,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 9/Giường 8",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ quan tâm đến sức khỏe ông\nBệnh viện ND Gia Định\nTai biến mạch máu não ( 2016 ) - Liệt nhẹ 1/2 (P) - Cao huyết áp - Tiểu đường type 2 - Chưa có XNTQ"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6627,7 +6475,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 16/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ quan tâm đến tình trạng sức khoẻ\nSau tai biến con cái không thể ở bên cs vì ai cũng có gia đình riêng nên khuyên ông vào VDL"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6638,7 +6486,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 6/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ thỉnh thoảng  hỏi thăm ông\nBệnh Viện Gia Định\nTâm thần nhẹ/Lãnh thuốc tại địa phương\nXét nghiệm tổng quát: chưa có\nYêu cầu khám tổng quát + Chụp MRI não"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6649,7 +6497,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 4/Giường 9",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGĐ thỉnh thoảng hỏi thăm sức khỏe bà\nBệnh Viện Gia Định\nĐính kèm phiếu đánh giá sức khỏe ban đầu chi tiết\nGia Đình tự GH BHYT"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6660,7 +6508,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 3/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGia đình quan tâm đến sức khỏe của bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6671,7 +6519,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 2/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nThỉnh thoảng hỏi thăm bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6682,7 +6530,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 5/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGĐ lâu lâu hay lên thăm ông\nChị gái ở nước ngoài lo- Cô Lê Bình\nChú bị té từ tầng cao chung cư nên ảnh hưởng trí não"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6693,7 +6541,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 12 BIS/Giường 6",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình thỉnh thoảng hỏi thăm bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6704,7 +6552,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 12/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\ngia đình, bạn bè thăm thường xuyên"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6715,7 +6563,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 16/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình ít hỏi thăm \nSuy giảm tuổi già\nSa sút trí tuệ\nKhông hồ sơ khám tổng quát.\nYêu cầu khám tổng quát chụp MRI"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6726,7 +6574,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 3/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "GĐ Bình thường\nGia đình quan tâm sức khỏe và tập đông y của ông\nBV 115( theo tuyến ) - Bv Gia Định ( khi cấp cứu)\nLẫn tuổi già - nhiều vết loét mông , lưng , sau đầu - yếu tứ chi - tai biến mạch máu não - xuất huyết não 2018 - chưa có xét nghiệm tổng quát ."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6737,7 +6585,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 1/Giường 10",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nThỉnh thoảng hỏi thăm sức khỏe bà\nBv Gia Định \nNhồi máu não - loét tì đè - viêm phổi - Pakinson - động kinh - liệt tứ chi - chưa có xét nghiệm tổng quát .\nThu thêm 2.000.000 (hai triệu đồng) chăm sóc vết loét  khi nào khỏi thì thôi."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6748,7 +6596,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 23/Giường 3",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nChị gái rất quan tâm, hay lên thăm thường xuyên"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6759,7 +6607,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 11/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nKhông gia đình con cái. chị gái và cháu gái lo lắng và chi trả phí hàng tháng"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6770,7 +6618,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 8/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "BV Nguyễn Tri Phương\nLão Suy- yếu - Đau chân -nhìn giảm- chưa có xét nghiệm tổng quát."
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6781,7 +6629,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 4/Giường 9",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGia đình quan tâm đến bà, hay lên thăm\ncon trai ở Bình Dương nhưng bà hay chưởi kích động không ở cùng được nên gửi vào VDL"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6792,7 +6640,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 8/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGĐ thỉnh thoảng hỏi thăm ông\nChuyển từ CS NT về"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6803,7 +6651,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 2/Phòng 12 BIS/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nLiên hệ Gia đình trước khi chuyển viện\nVợ chồng ly hôn. con gái đi làm không chăm sóc được do bà hay chửi, cọc tính nên con gái khuyên bà vào VDL để tập đi lại! trước đây là người tri thức, kêu ca, tính hay coi thường người khác, nên người chồng không có chiu đựng được.\nBà thường hay muốn nói chuyện với con gái, muốn con gái đến thăm"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6814,7 +6662,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 16/Giường 4",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nKhông gia đình con cái, là điều đưỡng bệnh viện thống nhất, sau khi phát bệnh người anh trai ở ĐN lo. Mỗi gia đình có 1 hoàn cảnh nên k thể ở bên hỗ trợ suốt. Động viên chú lên VDL ở để được chăm sóc"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6825,7 +6673,7 @@
       "songay": 31,
       "cs": "Hoa Hồng Bà/Phòng 6/Giường 2",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình quan tâm đến bà"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6836,7 +6684,7 @@
       "songay": 31,
       "cs": "Hoa lan/Phòng 6/Giường 1",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình dễ tính\nGĐ quan tâm đến ăn ngủ, sinh hoạt của ông"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6847,7 +6695,7 @@
       "songay": 31,
       "cs": "Chăm sóc Đặc biệt 1/Phòng 6/Giường 5",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nTai biến ,ngồi xe lăn\nChi tiết kèm theo phiếu đánh giá ban đầu"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6858,7 +6706,7 @@
       "songay": 31,
       "cs": "Chăm sóc Tích cực/Phòng 1/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nSau tai biến gđ thuê người chăm sóc tại nhà nhưng ông qua lại với người chăm. Con gái đã cho nghỉ việc và đưa ông vào VDL"
     },
     {
       "ct": "1. HIỆN HỮU",
@@ -6869,535 +6717,1496 @@
       "songay": 31,
       "cs": "Hoa Hồng Ông/Phòng 16/Giường 7",
       "ck": "Có",
-      "gc": ""
+      "gc": "Gia đình bình thường\nGia đình thỉnh thoảng hỏi thăm"
     },
     {
       "ct": "2. HĐ MỚI",
-      "zone": "HH",
-      "ma": "KH2600242",
-      "ten": "Lê Thị Hai",
-      "ngay": "2026-07-30",
-      "songay": 2,
-      "cs": "Hoa Hồng Bà/Phòng 22",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "2. HĐ MỚI",
-      "zone": "NT",
-      "ma": "KH2600241",
-      "ten": "Nguyễn Thị Ngọc Mai",
-      "ngay": "2026-07-28",
-      "songay": 4,
-      "cs": "Tầng trệt/Phòng 3",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "2. HĐ MỚI",
-      "zone": "DQH",
-      "ma": "KH2600240",
-      "ten": "Thái Hoàng Minh",
-      "ngay": "2026-07-28",
-      "songay": 4,
-      "cs": "Tầng trệt - DQH/Phòng 14",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "2. HĐ MỚI",
-      "zone": "DQH",
-      "ma": "KH2600239",
-      "ten": "Nguyễn Thị Đâu",
-      "ngay": "2026-07-31",
+      "zone": "AH",
+      "ma": "KH2600273",
+      "ten": "Trần Thị Minh",
+      "ngay": "2026-08-31",
       "songay": 1,
-      "cs": "Tầng trệt - DQH/PHÒNG CHỜ",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "2. HĐ MỚI",
-      "zone": "AH",
-      "ma": "KH2600238",
-      "ten": "Trần Thị Xuân",
-      "ngay": "2026-07-27",
-      "songay": 5,
-      "cs": "Tầng 5 - AH/Phòng 3",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "2. HĐ MỚI",
-      "zone": "AH",
-      "ma": "KH2600236",
-      "ten": "Hồ Duy Trinh",
-      "ngay": "2026-07-26",
-      "songay": 6,
-      "cs": "Tầng 3 - AH/Phòng 4",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "2. HĐ MỚI",
-      "zone": "DQH",
-      "ma": "KH2600231",
-      "ten": "Nguyễn Minh Chánh",
-      "ngay": "2026-07-22",
-      "songay": 10,
-      "cs": "Tầng trệt - DQH/Phòng 14",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "2. HĐ MỚI",
-      "zone": "AH",
-      "ma": "KH2600230",
-      "ten": "Trần Thị Tuyết",
-      "ngay": "2026-07-20",
-      "songay": 12,
-      "cs": "Tầng 4 - AH/Phòng 4",
+      "cs": "Tầng 4 - AH/Phòng 3",
       "ck": "Có",
       "gc": ""
     },
     {
       "ct": "2. HĐ MỚI",
       "zone": "HHG",
-      "ma": "KH2600225",
-      "ten": "Trần Dũng",
-      "ngay": "2026-07-11",
-      "songay": 21,
-      "cs": "khuA/VIP01",
+      "ma": "KH2600270",
+      "ten": "Trần Thế Hiệp",
+      "ngay": "2026-08-30",
+      "songay": 2,
+      "cs": "khuA/VIP08",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "HHG",
+      "ma": "KH2600271",
+      "ten": "PARRET ép. TRAN",
+      "ngay": "2026-08-30",
+      "songay": 2,
+      "cs": "khuA/VIP04",
       "ck": "Có",
       "gc": ""
     },
     {
       "ct": "2. HĐ MỚI",
       "zone": "HH",
-      "ma": "KH2600224",
-      "ten": "Trần Chí Thanh",
-      "ngay": "2026-07-10",
-      "songay": 22,
+      "ma": "KH2600269",
+      "ten": "Vũ Đình Định",
+      "ngay": "2026-08-26",
+      "songay": 6,
       "cs": "Hoa Hồng Ông/Phòng 20",
       "ck": "Có",
       "gc": ""
     },
     {
       "ct": "2. HĐ MỚI",
-      "zone": "NT",
-      "ma": "KH2600222",
-      "ten": "Trần Thị Bích",
-      "ngay": "2026-07-06",
-      "songay": 26,
-      "cs": "Tầng trệt/ICU",
+      "zone": "HH",
+      "ma": "KH2600268",
+      "ten": "Trà Văn Hai",
+      "ngay": "2026-08-26",
+      "songay": 6,
+      "cs": "Hoa Hồng Ông/Phòng 14",
       "ck": "Có",
       "gc": ""
     },
     {
       "ct": "2. HĐ MỚI",
-      "zone": "HH",
-      "ma": "KH2600221",
-      "ten": "Hoàng Văn So",
-      "ngay": "2026-07-05",
-      "songay": 27,
-      "cs": "Hoa Hồng Ông/Phòng 22",
+      "zone": "DQH",
+      "ma": "KH2600254",
+      "ten": "Lương Thị Thu",
+      "ngay": "2026-08-24",
+      "songay": 8,
+      "cs": "Tầng 1 - DQH/Phòng 12 Bis",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "HLDB2",
+      "ma": "KH2600267",
+      "ten": "Phan Thị Nhân",
+      "ngay": "2026-08-19",
+      "songay": 13,
+      "cs": "Hoa lan/Phòng 3",
       "ck": "Có",
       "gc": ""
     },
     {
       "ct": "2. HĐ MỚI",
       "zone": "HHG",
-      "ma": "KH2600220",
-      "ten": "Nguyễn Thị Hương",
-      "ngay": "2026-07-04",
-      "songay": 28,
+      "ma": "KH2600266",
+      "ten": "Vũ Ngọc Lan",
+      "ngay": "2026-08-18",
+      "songay": 14,
+      "cs": "Khu B/VIP09",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "HH",
+      "ma": "KH2600263",
+      "ten": "Huỳnh Thị Chinh",
+      "ngay": "2026-08-17",
+      "songay": 15,
+      "cs": "Hoa Hồng Bà/Phòng 7",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "HH",
+      "ma": "KH2600265",
+      "ten": "Phạm Thị Hải",
+      "ngay": "2026-08-17",
+      "songay": 15,
+      "cs": "Hoa Hồng Bà/Phòng 10",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "NT",
+      "ma": "KH2600264",
+      "ten": "Phạm Văn Khôi",
+      "ngay": "2026-08-17",
+      "songay": 15,
+      "cs": "Tầng 2/Phòng 2",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "DQH",
+      "ma": "KH2600262",
+      "ten": "Phan Văn Được",
+      "ngay": "2026-08-15",
+      "songay": 17,
+      "cs": "Tầng Trệt-DQH-CSTYC",
+      "ck": "Không",
+      "gc": "→ Về nhà chơi 31/08 (chưa về khu tại thời điểm chốt báo cáo)"
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "HHG",
+      "ma": "KH2600261",
+      "ten": "Nguyễn Văn Minh",
+      "ngay": "2026-08-15",
+      "songay": 17,
       "cs": "khuA/VIP01",
       "ck": "Có",
       "gc": ""
     },
     {
       "ct": "2. HĐ MỚI",
-      "zone": "DQH",
-      "ma": "KH2600218",
-      "ten": "Trần Thị Phấn",
-      "ngay": "2026-07-05",
-      "songay": 27,
-      "cs": "Tầng trệt - DQH/Phòng 2",
+      "zone": "HHG",
+      "ma": "KH2600256",
+      "ten": "Nguyễn Thị Hoa",
+      "ngay": "2026-08-15",
+      "songay": 17,
+      "cs": "khuA/VIP02",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "NT",
+      "ma": "KH2600260",
+      "ten": "Đặng Thị Dung Hợp",
+      "ngay": "2026-08-13",
+      "songay": 19,
+      "cs": "Tầng trệt/Phòng 4",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "HLDB2",
+      "ma": "HD2600243",
+      "ten": "Mai Thị Hậu",
+      "ngay": "2026-08-13",
+      "songay": 19,
+      "cs": "Hoa lan",
+      "ck": "Không",
+      "gc": "→ Thanh lý HĐ 24/08 (Mai Thị Hậu)"
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "HH",
+      "ma": "KH2600257",
+      "ten": "Nguyễn Cẩm Yến Hương",
+      "ngay": "2026-08-12",
+      "songay": 20,
+      "cs": "Hoa Hồng Bà/Phòng 8",
       "ck": "Có",
       "gc": ""
     },
     {
       "ct": "2. HĐ MỚI",
       "zone": "HHG",
-      "ma": "KH2600217",
-      "ten": "Đậu Minh Cường",
-      "ngay": "2026-07-01",
-      "songay": 31,
-      "cs": "khuA/VIP07",
-      "ck": "Có",
-      "gc": ""
-    },
-    {
-      "ct": "2. HĐ MỚI",
-      "zone": "HHG",
-      "ma": "KH2600216",
-      "ten": "Nguyễn Thị Hằng",
-      "ngay": "2026-07-01",
-      "songay": 31,
+      "ma": "KH2600255",
+      "ten": "Đoàn Thị Cảnh",
+      "ngay": "2026-08-15",
+      "songay": 17,
       "cs": "khuA/VIP05",
       "ck": "Có",
       "gc": ""
     },
     {
       "ct": "2. HĐ MỚI",
+      "zone": "HH",
+      "ma": "KH2600253",
+      "ten": "Hồng Thị Đoan Thùy",
+      "ngay": "2026-08-12",
+      "songay": 20,
+      "cs": "Hoa Hồng Bà",
+      "ck": "Không",
+      "gc": "→ Về nhà chơi lễ 30/08 (chưa về khu tại thời điểm chốt báo cáo)"
+    },
+    {
+      "ct": "2. HĐ MỚI",
       "zone": "DQH",
-      "ma": "KH2600215",
-      "ten": "Hoàng Thị Nguyệt",
-      "ngay": "2026-07-01",
-      "songay": 31,
-      "cs": "Tầng trệt - DQH/Phòng 6",
+      "ma": "KH2600226",
+      "ten": "Thái Ngọc Hoàng",
+      "ngay": "2026-08-11",
+      "songay": 21,
+      "cs": "Tầng 1 - DQH/Phòng 6",
       "ck": "Có",
       "gc": ""
     },
     {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "HH",
-      "ma": "KH2600209",
-      "ten": "Nguyễn Văn Thành",
-      "ngay": "2026-07-30",
-      "songay": 29,
-      "cs": "Hoa Hồng",
-      "ck": "Không",
-      "gc": "Cơ sở báo 30/07; HĐ thanh lý KH2600209 ghi hiệu lực 30/07/2026. Gia đình đưa ông về chuẩn bị định cư nước ngoài. LƯU Ý: hệ thống có 2 người tên 'Nguyễn Văn Thành' — mã này KHÁC mã KH2600114 (khu HHG, vẫn còn trong khu)."
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "HLDB2",
-      "ma": "2400308",
-      "ten": "Quách Chấn Nguyên",
-      "ngay": "2026-07-31",
-      "songay": 30,
-      "cs": "Hoa lan",
-      "ck": "Không",
-      "gc": "Cơ sở báo 30/07; HĐ thanh lý ghi ngày ký/hiệu lực chính thức là 31/07/2026 (lệch 1 ngày so với cơ sở báo, có thể do nhớ theo ngày làm thủ tục). Gia đình khó khăn tài chính, đưa cụ về nhà."
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "TCDB1",
-      "ma": "2300400",
-      "ten": "Trần Văn Hậu",
-      "ngay": "2026-07-06",
-      "songay": 5,
-      "cs": "Chăm sóc Tích cực",
-      "ck": "Không",
-      "gc": "Thanh lý HĐ cũ 2300400 ngày 06/07/2026 (ông hôn mê sâu, điều trị ICU BV Gia Định). Ông sau đó ký HĐ MỚI 2600217 hiệu lực 17/07/2026 — case riêng, đang chờ sếp chốt quy tắc tính lương (đi viện 29/07, về khu tối 31/07 sau giờ chốt báo cáo)."
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "HH",
-      "ma": "KH2600227",
-      "ten": "Nguyễn Mạnh Hưng",
-      "ngay": "2026-07-28",
-      "songay": 27,
-      "cs": "Hoa Hồng Ông",
-      "ck": "Không",
-      "gc": ""
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "HH",
-      "ma": "KH2600057",
-      "ten": "Nguyễn Minh Thông",
-      "ngay": "2026-07-15",
-      "songay": 14,
-      "cs": "Hoa Hồng Ông",
-      "ck": "Không",
-      "gc": ""
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "HH",
-      "ma": "KH2600180",
-      "ten": "Trần Thị Bé",
-      "ngay": "2026-07-09",
-      "songay": 8,
-      "cs": "Hoa Hồng Bà",
-      "ck": "Không",
-      "gc": ""
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "HH",
-      "ma": "2400425",
-      "ten": "Phạm Văn Long",
-      "ngay": "2026-07-03",
-      "songay": 2,
-      "cs": "Hoa Hồng Ông",
-      "ck": "Không",
-      "gc": ""
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "HH",
-      "ma": "KH2600093",
-      "ten": "Đặng Thị Lệ Thy",
-      "ngay": "2026-07-01",
-      "songay": 0,
-      "cs": "Hoa Hồng Bà",
-      "ck": "Không",
-      "gc": ""
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "AH",
-      "ma": "KH2600035",
-      "ten": "Nguyễn Phương Nam",
-      "ngay": "2026-07-27",
-      "songay": 26,
-      "cs": "Tầng 4 - AH",
-      "ck": "Không",
-      "gc": ""
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "AH",
-      "ma": "HD2600070",
-      "ten": "Nguyễn Thị Thu Hồng",
-      "ngay": "2026-07-06",
-      "songay": 5,
-      "cs": "Tầng 2 - AH",
-      "ck": "Không",
-      "gc": ""
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "AH",
-      "ma": "HD2600083",
-      "ten": "Đậu Minh Cường",
-      "ngay": "2026-07-01",
-      "songay": 0,
-      "cs": "Tầng 4 - AH",
-      "ck": "Không",
-      "gc": ""
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "ct": "2. HĐ MỚI",
       "zone": "HHG",
-      "ma": "KH2600214",
-      "ten": "Nguyễn Thị Hoa",
-      "ngay": "2026-07-30",
-      "songay": 29,
+      "ma": "KH2600248",
+      "ten": "La Kim Hà",
+      "ngay": "2026-08-10",
+      "songay": 22,
+      "cs": "khuA/VIP04",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "HHG",
+      "ma": "KH2600251",
+      "ten": "Nguyễn Thị Kim Tươi",
+      "ngay": "2026-08-07",
+      "songay": 25,
       "cs": "khuA",
       "ck": "Không",
-      "gc": ""
+      "gc": "→ Thanh lý HĐ 21/08 (Nguyễn Thị Kim Tươi)"
     },
     {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "HHG",
-      "ma": "KH2600223",
-      "ten": "Võ Thị Minh Hương",
-      "ngay": "2026-07-11",
-      "songay": 10,
-      "cs": "khuA",
-      "ck": "Không",
-      "gc": ""
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "HHG",
-      "ma": "HD2600157",
-      "ten": "Hoàng Thị Anh",
-      "ngay": "2026-07-03",
-      "songay": 2,
-      "cs": "khuA",
-      "ck": "Không",
-      "gc": ""
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "HHG",
-      "ma": "KH2600210",
-      "ten": "Bùi Thiên Tạo",
-      "ngay": "2026-07-01",
-      "songay": 0,
-      "cs": "khuA",
-      "ck": "Không",
-      "gc": ""
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "HLDB2",
-      "ma": "KH2600170",
-      "ten": "Nguyễn Thị Châu Yến",
-      "ngay": "2026-07-31",
-      "songay": 30,
-      "cs": "Chăm sóc Đặc biệt 2",
-      "ck": "Không",
-      "gc": ""
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "DQH",
-      "ma": "HD2600220",
-      "ten": "Phạm Đắc Thắng",
-      "ngay": "2026-07-31",
-      "songay": 30,
-      "cs": "Tầng 1-DQH-CSTYC",
-      "ck": "Không",
-      "gc": ""
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "TCDB1",
-      "ma": "19000156",
-      "ten": "Nguyễn Thị Hoa",
-      "ngay": "2026-07-30",
-      "songay": 29,
-      "cs": "Chăm sóc Đặc biệt 1",
-      "ck": "Không",
-      "gc": ""
-    },
-    {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "TCDB1",
-      "ma": "KH2600228",
-      "ten": "Nguyễn Ngọc Trâm",
-      "ngay": "2026-07-29",
+      "ct": "2. HĐ MỚI",
+      "zone": "HH",
+      "ma": "KH2600249",
+      "ten": "Nguyễn Huyền Hùng",
+      "ngay": "2026-08-04",
       "songay": 28,
-      "cs": "Chăm sóc Tích cực",
-      "ck": "Không",
+      "cs": "Hoa Hồng Ông/Phòng 22",
+      "ck": "Có",
       "gc": ""
     },
     {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "DQH",
-      "ma": "2500281",
-      "ten": "Nguyễn Thị Ngọc Mai",
-      "ngay": "2026-07-28",
-      "songay": 27,
-      "cs": "Tầng 1 - DQH",
-      "ck": "Không",
+      "ct": "2. HĐ MỚI",
+      "zone": "AH",
+      "ma": "KH2600247",
+      "ten": "Ngô Muội",
+      "ngay": "2026-08-03",
+      "songay": 29,
+      "cs": "Tầng 2 - AH/Phòng 3",
+      "ck": "Có",
       "gc": ""
     },
     {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "HLDB2",
-      "ma": "KH2600177",
-      "ten": "Nguyễn Tấn Quốc",
-      "ngay": "2026-07-27",
-      "songay": 26,
-      "cs": "Chăm sóc Đặc biệt 2",
-      "ck": "Không",
+      "ct": "2. HĐ MỚI",
+      "zone": "HHG",
+      "ma": "KH2600246",
+      "ten": "Nguyễn Thị Hạnh",
+      "ngay": "2026-08-02",
+      "songay": 30,
+      "cs": "Khu B/VIP09",
+      "ck": "Có",
       "gc": ""
     },
     {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "ct": "2. HĐ MỚI",
+      "zone": "AH",
+      "ma": "KH2600245",
+      "ten": "Phan Doãn Thích",
+      "ngay": "2026-08-02",
+      "songay": 30,
+      "cs": "Tầng 3 - AH/Phòng 4",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
+      "ct": "2. HĐ MỚI",
+      "zone": "HHG",
+      "ma": "KH2600243",
+      "ten": "Huỳnh Thanh Phong",
+      "ngay": "2026-08-01",
+      "songay": 31,
+      "cs": "khuA/VIP01",
+      "ck": "Có",
+      "gc": ""
+    },
+    {
       "zone": "TCDB1",
-      "ma": "KH2600172",
-      "ten": "Mai Thành Bá",
-      "ngay": "2026-07-27",
-      "songay": 26,
-      "cs": "Chăm sóc Tích cực",
-      "ck": "Không",
-      "gc": ""
+      "ma": "KH2600229",
+      "ten": "Trần Văn Hậu",
+      "ngay": "2026-08-26",
+      "cs": "Chăm sóc Đặc biệt 1",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-11 | Ngày vào lại: 2026-08-26 | Ông bị Lao phổi ( thuê phòng trọ và người chăm ông chánh lây nhiễm chéo) ngày 11/08/2026",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
     },
     {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "TCDB1",
+      "ma": "KH2600212",
+      "ten": "Nguyễn Anh Kiệt",
+      "ngay": "2026-08-02",
+      "cs": "Chăm sóc Đặc biệt 1",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-02 | Tái khám nhập viện Bệnh viện Gia Định ngày 29/07/ 2026",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "KH2600203",
+      "ten": "Vũ Ích Thinh",
+      "ngay": "2026-08-19",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-07 | Ngày vào lại: 2026-08-19 | Ông đi cấp cứu tại Bv 175",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "KH2600196",
+      "ten": "Trần Lâm Hải",
+      "ngay": "2026-08-24",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-02 | Ngày vào lại: 2026-08-24 | Cấp cứu BV 175 ngày 02/08/2026",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
       "zone": "DQH",
-      "ma": "2500212",
-      "ten": "Phạm Thành Chương",
-      "ngay": "2026-07-20",
-      "songay": 19,
+      "ma": "KH2600194",
+      "ten": "Vũ Thị Thanh Hà",
+      "ngay": "2026-08-07",
+      "cs": "Tầng 1 - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-04 | Ngày vào lại: 2026-08-07",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600158",
+      "ten": "Nguyễn Thị Tuyết Nga",
+      "ngay": "2026-08-04",
+      "cs": "Khu B",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-04 | đi viện lúc 21h ngày 3/6/2026",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "HH",
+      "ma": "KH2600132",
+      "ten": "Nguyễn Tấn Sĩ",
+      "ngay": "2026-08-28",
+      "cs": "Hoa Hồng Ông",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-26 | Ngày vào lại: 2026-08-28 | Ông nhập viện từ ngày 20/8/2026. Bấm nhầm về nhà chơi, bấm lại nhập khu, bấm xuất lại.",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "HLDB2",
+      "ma": "KH2600109",
+      "ten": "Đoàn Thị Kim Hoa",
+      "ngay": "2026-08-07",
+      "cs": "Hoa lan",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-05 | Ngày vào lại: 2026-08-07 | Bà đi nhập viện tại Bv Hóc Môn",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600097",
+      "ten": "Vĩnh Hống",
+      "ngay": "2026-08-05",
+      "cs": "khuA",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-03 | Ngày vào lại: 2026-08-05",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "DQH",
+      "ma": "KH2600091",
+      "ten": "Đào Hùng",
+      "ngay": "2026-08-28",
+      "cs": "Tầng trệt - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-21 | Ngày vào lại: 2026-08-28",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600048",
+      "ten": "Nguyễn Văn Thân",
+      "ngay": "2026-08-25",
+      "cs": "khuA",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-24 | Ngày vào lại: 2026-08-25",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600047",
+      "ten": "Bùi Văn Nhân",
+      "ngay": "2026-08-30",
+      "cs": "khuA",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-30 | Ngày vào lại: 2026-08-30 | xuất khu lúc 22h ngày 29/8",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600033",
+      "ten": "Nguyễn Thị Giàu",
+      "ngay": "2026-08-12",
+      "cs": "Khu B",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-12",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "NT",
+      "ma": "2600002",
+      "ten": "Lâm Hoài Trí",
+      "ngay": "2026-08-28",
+      "cs": "Tầng 2",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-21 | Ngày vào lại: 2026-08-28 | TÁI KHÁM NHẬP VIỆN BV GIA ĐỊNH",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "HH",
+      "ma": "2500533",
+      "ten": "Nguyễn Thị Lụa",
+      "ngay": "2026-08-04",
+      "cs": "Hoa Hồng Bà",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-04 | Tái khám nhập viện 26/7/2026",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "HLDB2",
+      "ma": "2500458",
+      "ten": "Hồ Vũ Duệ",
+      "ngay": "2026-08-12",
+      "cs": "Chăm sóc Đặc biệt 2",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-12 | Ông đi khám và nhập viện theo dõi sức khoẻ",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500313",
+      "ten": "Nguyễn Thị Tám",
+      "ngay": "2026-08-03",
+      "cs": "Tầng trệt - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-03",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500313",
+      "ten": "Nguyễn Thị Tám",
+      "ngay": "2026-08-26",
+      "cs": "Tầng trệt - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-09 | Ngày vào lại: 2026-08-26 | Theo yêu cầu gia đình",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500293",
+      "ten": "Annie Lê",
+      "ngay": "2026-08-13",
+      "cs": "Tầng 1 - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-09 | Ngày vào lại: 2026-08-13",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500283",
+      "ten": "Phạm Thị Nhị",
+      "ngay": "2026-08-07",
+      "cs": "Tầng 1 - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-05 | Ngày vào lại: 2026-08-07",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "NT",
+      "ma": "2500094",
+      "ten": "La Văn Thôi",
+      "ngay": "2026-08-21",
+      "cs": "Tầng 1",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-20 | Ngày vào lại: 2026-08-21 | NHẬP VIỆN BV GIA ĐỊNH",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "HLDB2",
+      "ma": "2400205",
+      "ten": "Nguyễn Thị Gái",
+      "ngay": "2026-08-22",
+      "cs": "Hoa lan",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-19 | Ngày vào lại: 2026-08-22 | Bà đi tái khám và nhập viện theo chỉ định BS BV Gia Định",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "20000629",
+      "ten": "Đặng Thị Phách",
+      "ngay": "2026-08-19",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-18 | Ngày vào lại: 2026-08-19 | Bà mất tại viện ngày 18/08/2026",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "19000326",
+      "ten": "Đỗ Ngọc Thái",
+      "ngay": "2026-08-26",
+      "cs": "Chăm sóc Đặc biệt 1",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-16 | Ngày vào lại: 2026-08-26 | Ông đi tái khám nhập viện ngày 15/08/2026 ( Ngày 15/08 phần mềm Bcare bị lỗi không đăng nhập vào được để bấm xuất khu cho ông=> bấm xuất khu ngày 16/08)",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "19000041",
+      "ten": "Mai Thùy Vân",
+      "ngay": "2026-08-12",
+      "cs": "Chăm sóc Đặc biệt 1",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-05 | Ngày vào lại: 2026-08-12 | Tái khám bác sĩ yêu cầu nhập viện từ  ngày 05/08/2026",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "HH",
+      "ma": "18000381",
+      "ten": "Phạm Đức Thanh",
+      "ngay": "2026-08-10",
+      "cs": "Hoa Hồng Ông",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-10 | Nhập Viện theo chỉ định",
+      "ct": "3. XUẤT VIỆN VỀ KHU LẠI"
+    },
+    {
+      "zone": "NT",
+      "ma": "KH2600264",
+      "ten": "Phạm Văn Khôi",
+      "ngay": "2026-08-29",
+      "cs": "Tầng 2",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-29 | Ngày vào lại: 2026-08-29 | VỀ NHÀ CHƠI",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "DQH",
+      "ma": "KH2600262",
+      "ten": "Phan Văn Được",
+      "ngay": "2026-08-31",
       "cs": "Tầng Trệt-DQH-CSTYC",
       "ck": "Không",
-      "gc": ""
+      "gc": "Ngày xuất khu: 2026-08-31 | Ngày vào lại: 2026-09-01",
+      "ct": "4. VỀ THĂM NHÀ"
     },
     {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "HLDB2",
-      "ma": "2500551",
-      "ten": "Phạm Văn Thoại",
-      "ngay": "2026-07-16",
-      "songay": 15,
-      "cs": "Hoa lan",
+      "zone": "HH",
+      "ma": "KH2600253",
+      "ten": "Hồng Thị Đoan Thùy",
+      "ngay": "2026-08-30",
+      "cs": "Hoa Hồng Bà",
       "ck": "Không",
-      "gc": ""
+      "gc": "Ngày xuất khu: 2026-08-30 | Ngày vào lại: 2026-09-01 | Bà về nhà chơi lễ",
+      "ct": "4. VỀ THĂM NHÀ"
     },
     {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HHG",
+      "ma": "KH2600251",
+      "ten": "Nguyễn Thị Kim Tươi",
+      "ngay": "2026-08-17",
+      "cs": "khuA",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-17 | Ngày vào lại: 2026-08-21",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
       "zone": "DQH",
-      "ma": "2500571",
-      "ten": "Nguyễn Đức Hinh",
-      "ngay": "2026-07-14",
-      "songay": 13,
+      "ma": "KH2600218",
+      "ten": "Trần Thị Phấn",
+      "ngay": "2026-08-08",
+      "cs": "Tầng trệt - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-08 | Ngày vào lại: 2026-08-09",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "DQH",
+      "ma": "KH2600218",
+      "ten": "Trần Thị Phấn",
+      "ngay": "2026-08-29",
+      "cs": "Tầng trệt - DQH",
+      "ck": "Không",
+      "gc": "Ngày xuất khu: 2026-08-29 | Ngày vào lại: 2026-09-01",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "DQH",
+      "ma": "KH2600207",
+      "ten": "Tạ Văn Lân",
+      "ngay": "2026-08-20",
+      "cs": "Tầng Trệt-DQH-CSTYC",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-20 | Ngày vào lại: 2026-08-23",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "NT",
+      "ma": "KH2600206",
+      "ten": "Đặng Phi Long",
+      "ngay": "2026-08-05",
+      "cs": "Tầng trệt",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-05 | Ngày vào lại: 2026-08-05 | THANH LÝ",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "DQH",
+      "ma": "KH2600143",
+      "ten": "Nguyễn Thị Trâm",
+      "ngay": "2026-08-27",
+      "cs": "Tầng trệt - DQH",
+      "ck": "Không",
+      "gc": "Ngày xuất khu: 2026-08-27 | Ngày vào lại: 2026-09-01",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "HH",
+      "ma": "KH2600132",
+      "ten": "Nguyễn Tấn Sĩ",
+      "ngay": "2026-08-20",
+      "cs": "Hoa Hồng Ông",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-20 | Ngày vào lại: 2026-08-26 | Nhập Viện",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600114",
+      "ten": "Nguyễn Văn Thành",
+      "ngay": "2026-08-13",
+      "cs": "khuA",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-13 | Ngày vào lại: 2026-08-17",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600114",
+      "ten": "Nguyễn Văn Thành",
+      "ngay": "2026-08-24",
+      "cs": "khuA",
+      "ck": "Có (chuyển thành thanh lý HĐ)",
+      "gc": "Về nhà 24/08, sau đó gia đình quyết định thanh lý HĐ 30/08 (không quay lại khu) | Ngày xuất khu: 2026-08-24 | Ngày vào lại: 2026-09-01",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "NT",
+      "ma": "KH2600104",
+      "ten": "Nguyễn Thị Nữ",
+      "ngay": "2026-08-07",
+      "cs": "Tầng 2",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-07 | Ngày vào lại: 2026-08-07 | TIÊN LƯỢNG XẤU, GĐ ĐƯA BÀ VỀ",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "AH",
+      "ma": "KH2600098",
+      "ten": "Lê Bác Ái",
+      "ngay": "2026-08-01",
+      "cs": "Tầng 3 - AH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-07-31 | Về nhà chơi 31/07/2026",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600080",
+      "ten": "Nguyễn Thị Oanh",
+      "ngay": "2026-08-05",
+      "cs": "Khu B",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-05 | Ngày vào lại: 2026-08-09",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "DQH",
+      "ma": "KH2600059",
+      "ten": "Trần Thị Mộng Thúy",
+      "ngay": "2026-08-12",
+      "cs": "Tầng trệt - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-12 | Ngày vào lại: 2026-08-20",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500563",
+      "ten": "Nguyễn Thị Vệ",
+      "ngay": "2026-08-31",
       "cs": "Tầng 1 - DQH",
       "ck": "Không",
-      "gc": ""
+      "gc": "Ngày xuất khu: 2026-08-31",
+      "ct": "4. VỀ THĂM NHÀ"
     },
     {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "HLDB2",
-      "ma": "2500401",
-      "ten": "Trần Dũng",
-      "ngay": "2026-07-11",
-      "songay": 10,
-      "cs": "Chăm sóc Đặc biệt 2",
+      "zone": "DQH",
+      "ma": "2500563",
+      "ten": "Nguyễn Thị Vệ",
+      "ngay": "2026-08-03",
+      "cs": "Tầng 1 - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-03 | Ngày vào lại: 2026-08-10",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "HH",
+      "ma": "2500544",
+      "ten": "Tôn Thất Tứ",
+      "ngay": "2026-08-11",
+      "cs": "Hoa Hồng Ông",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-11 | Ngày vào lại: 2026-08-12 | Về nhà chơi",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "HH",
+      "ma": "2500541",
+      "ten": "Nguyễn Thành Phụng",
+      "ngay": "2026-08-02",
+      "cs": "Hoa Hồng Ông",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-02 | Ngày vào lại: 2026-08-02 | Thanh Lý về nhà chăm sóc",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500390",
+      "ten": "Huỳnh Muối",
+      "ngay": "2026-08-01",
+      "cs": "Tầng trệt - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-07",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500306",
+      "ten": "Nguyễn Thị Hòa",
+      "ngay": "2026-08-16",
+      "cs": "Tầng trệt - DQH",
       "ck": "Không",
-      "gc": ""
+      "gc": "Ngày xuất khu: 2026-08-16 | Ngày vào lại: 2026-09-01",
+      "ct": "4. VỀ THĂM NHÀ"
     },
     {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "DQH",
+      "ma": "2500306",
+      "ten": "Nguyễn Thị Hòa",
+      "ngay": "2026-08-01",
+      "cs": "Tầng trệt - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-09",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500255",
+      "ten": "Vũ Văn Yên",
+      "ngay": "2026-08-17",
+      "cs": "Tầng 1 - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-17 | Ngày vào lại: 2026-08-19",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500187",
+      "ten": "Trần Thị Thanh Hà",
+      "ngay": "2026-08-29",
+      "cs": "Tầng 1 - DQH",
+      "ck": "Không",
+      "gc": "Ngày xuất khu: 2026-08-29 | Ngày vào lại: 2026-09-01",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500187",
+      "ten": "Trần Thị Thanh Hà",
+      "ngay": "2026-08-07",
+      "cs": "Tầng 1 - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-07 | Ngày vào lại: 2026-08-10",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "AH",
+      "ma": "2500165",
+      "ten": "Minh Há Nữ",
+      "ngay": "2026-08-25",
+      "cs": "Tầng 3 - AH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-25 | Ngày vào lại: 2026-08-25 | Bà đi chơi cùng GĐ",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
       "zone": "NT",
-      "ma": "KH2600084",
-      "ten": "Nguyễn Thị Tùng",
-      "ngay": "2026-07-06",
-      "songay": 5,
-      "cs": "Tầng trệt",
-      "ck": "Không",
-      "gc": ""
+      "ma": "2500095",
+      "ten": "Phạm Xuân Phượng",
+      "ngay": "2026-08-24",
+      "cs": "Tầng 1",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-24 | Ngày vào lại: 2026-08-26 | ĐI CHƠI CÙNG GIA ĐÌNH",
+      "ct": "4. VỀ THĂM NHÀ"
     },
     {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "HH",
+      "ma": "2400369",
+      "ten": "Hồ Thị Bông",
+      "ngay": "2026-08-01",
+      "cs": "Hoa Hồng Bà",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-10 | Về nhà chơi",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "HH",
+      "ma": "2300113",
+      "ten": "Nguyễn Quốc Thọ",
+      "ngay": "2026-08-26",
+      "cs": "Hoa Hồng Ông",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-26 | Ngày vào lại: 2026-08-28 | Ông về nhà chơi",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
       "zone": "TCDB1",
-      "ma": "18000090",
-      "ten": "Văn Thiên Long",
-      "ngay": "2026-07-06",
-      "songay": 5,
+      "ma": "2300112",
+      "ten": "Trần Thị Hoa",
+      "ngay": "2026-08-19",
       "cs": "Chăm sóc Tích cực",
-      "ck": "Không",
-      "gc": ""
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-19 | Ngày vào lại: 2026-08-25 | Bà về nhà chơi từ ngày 19/08/2026",
+      "ct": "4. VỀ THĂM NHÀ"
     },
     {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "TCDB1",
+      "ma": "22000327",
+      "ten": "Đỗ Thị Kim Loan",
+      "ngay": "2026-08-09",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-09 | Ngày vào lại: 2026-08-14 | Bà về nhà chơi từ ngày 09/08/2026 ( buổi chiều sau khi ăn uống, vệ sinh xong )",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
       "zone": "HLDB2",
-      "ma": "HD2600058",
-      "ten": "Đặng Quốc Hùng",
-      "ngay": "2026-07-04",
-      "songay": 3,
+      "ma": "21000110",
+      "ten": "Đặng Quý Lân",
+      "ngay": "2026-08-04",
+      "cs": "Hoa lan",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-04 | Ngày vào lại: 2026-08-04",
+      "ct": "4. VỀ THĂM NHÀ"
+    },
+    {
+      "zone": "HLDB2",
+      "ma": "19000145",
+      "ten": "Nguyễn Minh Đức",
+      "ngay": "2026-08-23",
       "cs": "Hoa lan",
       "ck": "Không",
-      "gc": ""
+      "gc": "Ngày xuất khu: 2026-08-23 | Ngày vào lại: 2026-09-01 | Về nhà chơi",
+      "ct": "4. VỀ THĂM NHÀ"
     },
     {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
-      "zone": "DQH",
-      "ma": "2500221",
-      "ten": "Trương Ánh Lang",
-      "ngay": "2026-07-03",
-      "songay": 2,
-      "cs": "Tầng trệt - DQH",
+      "zone": "HLDB2",
+      "ma": "18000125",
+      "ten": "Trần Minh",
+      "ngay": "2026-08-30",
+      "cs": "Hoa lan",
       "ck": "Không",
-      "gc": ""
+      "gc": "Ngày xuất khu: 2026-08-30 | Ngày vào lại: 2026-09-01 | Về nhà chơi",
+      "ct": "4. VỀ THĂM NHÀ"
     },
     {
-      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "zone": "TCDB1",
+      "ma": "KH2600229",
+      "ten": "Trần Văn Hậu",
+      "ngay": "2026-08-11",
+      "cs": "Chăm sóc Đặc biệt 1",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-11 | Ngày vào lại: 2026-08-26 | Ông bị Lao phổi ( thuê phòng trọ và người chăm ông chánh lây nhiễm chéo) ngày 11/08/2026",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "KH2600229",
+      "ten": "Trần Văn Hậu",
+      "ngay": "2026-08-01",
+      "cs": "Chăm sóc Đặc biệt 1",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-07-31 | Ông tái khám bệnh viện Đa Khoa Thủ Đức, sau khi thăm khám BS chỉ định nhập viện để theo dõi, nội soi phế quản kiểm tra lao phổi. Ngày 29/07/2026",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "KH2600212",
+      "ten": "Nguyễn Anh Kiệt",
+      "ngay": "2026-08-01",
+      "cs": "Chăm sóc Đặc biệt 1",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-02 | Tái khám nhập viện Bệnh viện Gia Định ngày 29/07/ 2026",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "KH2600203",
+      "ten": "Vũ Ích Thinh",
+      "ngay": "2026-08-07",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-07 | Ngày vào lại: 2026-08-19 | Ông đi cấp cứu tại Bv 175",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "KH2600196",
+      "ten": "Trần Lâm Hải",
+      "ngay": "2026-08-02",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-02 | Ngày vào lại: 2026-08-24 | Cấp cứu BV 175 ngày 02/08/2026",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
       "zone": "DQH",
-      "ma": "KH2600213",
-      "ten": "Nguyễn Trọng Dần",
-      "ngay": "2026-07-03",
-      "songay": 2,
+      "ma": "KH2600194",
+      "ten": "Vũ Thị Thanh Hà",
+      "ngay": "2026-08-04",
+      "cs": "Tầng 1 - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-04 | Ngày vào lại: 2026-08-07",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600158",
+      "ten": "Nguyễn Thị Tuyết Nga",
+      "ngay": "2026-08-01",
+      "cs": "Khu B",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-04 | đi viện lúc 21h ngày 3/6/2026",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "HH",
+      "ma": "KH2600132",
+      "ten": "Nguyễn Tấn Sĩ",
+      "ngay": "2026-08-26",
+      "cs": "Hoa Hồng Ông",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-26 | Ngày vào lại: 2026-08-28 | Ông nhập viện từ ngày 20/8/2026. Bấm nhầm về nhà chơi, bấm lại nhập khu, bấm xuất lại.",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "KH2600115",
+      "ten": "Hoàng Hưng Thụy",
+      "ngay": "2026-08-01",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Không",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-09-01 | Ông đi khám được chỉ định nhập viện Gia Định ngày 13/07/2026",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "HLDB2",
+      "ma": "KH2600109",
+      "ten": "Đoàn Thị Kim Hoa",
+      "ngay": "2026-08-05",
+      "cs": "Hoa lan",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-05 | Ngày vào lại: 2026-08-07 | Bà đi nhập viện tại Bv Hóc Môn",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600097",
+      "ten": "Vĩnh Hống",
+      "ngay": "2026-08-03",
+      "cs": "khuA",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-03 | Ngày vào lại: 2026-08-05",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "DQH",
+      "ma": "KH2600091",
+      "ten": "Đào Hùng",
+      "ngay": "2026-08-21",
+      "cs": "Tầng trệt - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-21 | Ngày vào lại: 2026-08-28",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600048",
+      "ten": "Nguyễn Văn Thân",
+      "ngay": "2026-08-24",
+      "cs": "khuA",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-24 | Ngày vào lại: 2026-08-25",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600047",
+      "ten": "Bùi Văn Nhân",
+      "ngay": "2026-08-30",
+      "cs": "khuA",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-30 | Ngày vào lại: 2026-08-30 | xuất khu lúc 22h ngày 29/8",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600033",
+      "ten": "Nguyễn Thị Giàu",
+      "ngay": "2026-08-01",
+      "cs": "Khu B",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-12",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "NT",
+      "ma": "2600002",
+      "ten": "Lâm Hoài Trí",
+      "ngay": "2026-08-21",
+      "cs": "Tầng 2",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-21 | Ngày vào lại: 2026-08-28 | TÁI KHÁM NHẬP VIỆN BV GIA ĐỊNH",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500548",
+      "ten": "Quách Đại Phương",
+      "ngay": "2026-08-06",
       "cs": "Tầng trệt - DQH",
       "ck": "Không",
-      "gc": ""
+      "gc": "Ngày xuất khu: 2026-08-06 | Ngày vào lại: 2026-09-01",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "HH",
+      "ma": "2500533",
+      "ten": "Nguyễn Thị Lụa",
+      "ngay": "2026-08-01",
+      "cs": "Hoa Hồng Bà",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-04 | Tái khám nhập viện 26/7/2026",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "HLDB2",
+      "ma": "2500458",
+      "ten": "Hồ Vũ Duệ",
+      "ngay": "2026-08-01",
+      "cs": "Chăm sóc Đặc biệt 2",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-12 | Ông đi khám và nhập viện theo dõi sức khoẻ",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500313",
+      "ten": "Nguyễn Thị Tám",
+      "ngay": "2026-08-01",
+      "cs": "Tầng trệt - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-03",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500313",
+      "ten": "Nguyễn Thị Tám",
+      "ngay": "2026-08-09",
+      "cs": "Tầng trệt - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-09 | Ngày vào lại: 2026-08-26 | Theo yêu cầu gia đình",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500313",
+      "ten": "Nguyễn Thị Tám",
+      "ngay": "2026-08-29",
+      "cs": "Tầng trệt - DQH",
+      "ck": "Không",
+      "gc": "Ngày xuất khu: 2026-08-29 | Ngày vào lại: 2026-09-01",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500293",
+      "ten": "Annie Lê",
+      "ngay": "2026-08-09",
+      "cs": "Tầng 1 - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-09 | Ngày vào lại: 2026-08-13",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "DQH",
+      "ma": "2500283",
+      "ten": "Phạm Thị Nhị",
+      "ngay": "2026-08-05",
+      "cs": "Tầng 1 - DQH",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-05 | Ngày vào lại: 2026-08-07",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "NT",
+      "ma": "2500094",
+      "ten": "La Văn Thôi",
+      "ngay": "2026-08-20",
+      "cs": "Tầng 1",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-20 | Ngày vào lại: 2026-08-21 | NHẬP VIỆN BV GIA ĐỊNH",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "HLDB2",
+      "ma": "2400205",
+      "ten": "Nguyễn Thị Gái",
+      "ngay": "2026-08-19",
+      "cs": "Hoa lan",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-19 | Ngày vào lại: 2026-08-22 | Bà đi tái khám và nhập viện theo chỉ định BS BV Gia Định",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "2300112",
+      "ten": "Trần Thị Hoa",
+      "ngay": "2026-08-29",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Không",
+      "gc": "Ngày xuất khu: 2026-08-29 | Ngày vào lại: 2026-09-01 | Đi cấp cứu",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "2300056",
+      "ten": "Giang Cẩm Đường",
+      "ngay": "2026-08-01",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Không",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-09-01",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "2300032",
+      "ten": "Hoàng Xuân Thanh",
+      "ngay": "2026-08-19",
+      "cs": "Chăm sóc Đặc biệt 1",
+      "ck": "Không",
+      "gc": "Ngày xuất khu: 2026-08-19 | Ngày vào lại: 2026-09-01 | Ông tái khám nhập viện ngày : 19/08/2026",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "21000322",
+      "ten": "Trần Lê Diệu",
+      "ngay": "2026-08-01",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Không",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-09-01 | Ông cấp cứu bệnh viện Gia Định ngày 11/07/2026",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "20000629",
+      "ten": "Đặng Thị Phách",
+      "ngay": "2026-08-18",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-18 | Ngày vào lại: 2026-08-19 | Bà mất tại viện ngày 18/08/2026",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "19000326",
+      "ten": "Đỗ Ngọc Thái",
+      "ngay": "2026-08-16",
+      "cs": "Chăm sóc Đặc biệt 1",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-16 | Ngày vào lại: 2026-08-26 | Ông đi tái khám nhập viện ngày 15/08/2026 ( Ngày 15/08 phần mềm Bcare bị lỗi không đăng nhập vào được để bấm xuất khu cho ông=> bấm xuất khu ngày 16/08)",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "19000041",
+      "ten": "Mai Thùy Vân",
+      "ngay": "2026-08-05",
+      "cs": "Chăm sóc Đặc biệt 1",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-05 | Ngày vào lại: 2026-08-12 | Tái khám bác sĩ yêu cầu nhập viện từ  ngày 05/08/2026",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "zone": "HH",
+      "ma": "18000381",
+      "ten": "Phạm Đức Thanh",
+      "ngay": "2026-08-01",
+      "cs": "Hoa Hồng Ông",
+      "ck": "Có",
+      "gc": "Ngày xuất khu: 2026-08-01 | Ngày vào lại: 2026-08-10 | Nhập Viện theo chỉ định",
+      "ct": "5. ĐI VIỆN"
+    },
+    {
+      "ct": "6. TỬ VONG",
+      "zone": "NT",
+      "ma": "KH2600199",
+      "ten": "Lương Kinh",
+      "ngay": "2026-08-08",
+      "cs": "Tầng trệt",
+      "ck": "Không",
+      "gc": "MẤT TẠI VDL",
+      "songay": 8
+    },
+    {
+      "zone": "NT",
+      "ma": "2500094",
+      "ten": "La Văn Thôi",
+      "ngay": "2026-08-21",
+      "cs": "Tầng 1",
+      "ck": "Không",
+      "gc": "KHÔNG ĐÁP ỨNG ĐIỀU TRỊ: CHUYỂN TỪ BV GIA ĐỊNH VỀ NHÀ MẤT",
+      "ct": "6. TỬ VONG",
+      "songay": 21
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "20000629",
+      "ten": "Đặng Thị Phách",
+      "ngay": "2026-08-19",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Không",
+      "gc": "Bà Đặng Thị Phách sau nhiều ngày được chăm sóc và điều trị tận tình tại VDL, khoảng 14 giờ bà suy hô hấp nặng, da niên mạc nhợt nhạt. Gia đình muốn bà ra đi nhẹ nhàng, hiện bà mất lúc 15 giờ 50 phút ngày 18/08/2026.",
+      "ct": "6. TỬ VONG",
+      "songay": 19
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600114",
+      "ten": "Nguyễn Văn Thành",
+      "ngay": "2026-08-30",
+      "cs": "khuA",
+      "ck": "Không",
+      "gc": "",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 30
+    },
+    {
+      "zone": "AH",
+      "ma": "HD2600142",
+      "ten": "Nguyễn Thị Tuý Loan",
+      "ngay": "2026-08-31",
+      "cs": "Tầng 4 - AH",
+      "ck": "Không",
+      "gc": "Bà Nguyễn Thị Túy Loan đã có thời gian sinh hoạt tại Viện và luôn nhận được sự chăm sóc, hỗ trợ tận tình từ nhân viên VDL do đó sức khoẻ bà tốt hơn. Qua trao đổi với GĐ, hiện tại gia đình có nguyện vọng đón bà về nhà để bà có thể ở bên ông – chồng bà Loan.  Gia đình mong muốn hai ông bà có thêm thời gian trò chuyện, chia sẻ và động viên nhau, qua đó giúp tinh thần của cả hai cụ được vui vẻ, thoải mái hơn. Gia đình cũng đã trao đổi và thống nhất rằng, khi ông đồng ý và có nhu cầu, gia đình sẽ tiếp tục sắp xếp để cả hai ông bà cùng trở lại Viện dưỡng lão sinh hoạt trong thời gian tới. \nGia đình quyết định thanh lý Hợp đồng của bà từ ngày 31/08/2026.",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 31
+    },
+    {
+      "zone": "DQH",
+      "ma": "HD2600150",
+      "ten": "Đỗ Thị Tơ",
+      "ngay": "2026-08-30",
+      "cs": "Tầng trệt - DQH",
+      "ck": "Không",
+      "gc": "Bà Đỗ Thị Tơ sau 3 tháng chăm sóc bà để gia đình đi nước ngoài. Gia đình đón bà về thanh lý HD",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 30
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "KH2600229",
+      "ten": "Trần Văn Hậu",
+      "ngay": "2026-08-26",
+      "cs": "Chăm sóc Đặc biệt 1",
+      "ck": "Không",
+      "gc": "Ông Trần Văn Hậu được chẩn đoán mắc lao phổi kháng thuốc sau khi thực hiện thăm khám và xét nghiệm. Sau khi trao đổi, gia đình đã thống nhất thanh lý hợp đồng để đưa ông về điều trị và cách ly theo đúng quy định. Hợp đồng chăm sóc tại Viện được thanh lý vào ngày 26/08/2026.",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 26
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600048",
+      "ten": "Nguyễn Văn Thân",
+      "ngay": "2026-08-25",
+      "cs": "khuA",
+      "ck": "Không",
+      "gc": "",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 25
+    },
+    {
+      "zone": "HLDB2",
+      "ma": "HD2600243",
+      "ten": "Mai Thị Hậu",
+      "ngay": "2026-08-24",
+      "cs": "Hoa lan",
+      "ck": "Không",
+      "gc": "Bà vào viện trong một thời gian ngắn. Tuy nhiên, do chồng Bà còn thương nhớ và không muốn Bà đi xa nên thời gian qua liên tục gây áp lực tâm lý cho người nhà. Sau khi thống nhất, gia đình quyết định đón Bà về nhà một thời gian để chuẩn bị tâm lý cho Ông, sau đó sẽ tiếp tục thuyết phục để đưa Bà vào lại. Thanh lý hợp đồng 24/08/2026",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 12
+    },
+    {
+      "zone": "TCDB1",
+      "ma": "KH2600196",
+      "ten": "Trần Lâm Hải",
+      "ngay": "2026-08-24",
+      "cs": "Chăm sóc Tích cực",
+      "ck": "Không",
+      "gc": "Ông Trần Lâm Hải nhập viện 175 ngày 02/08/2026 điều trị. Do diễn biến sức khỏe hiện tại của Ông suy giảm gia đình quyết định chuyển Ông qua bệnh viện 1A để điều trị và có nguyện vọng thanh lý hợp đồng để tập trung tối đa cho công tác chăm sóc và điều trị tại bệnh viện. Thanh lý hợp đồng vào ngày 24/08/2026",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 24
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600251",
+      "ten": "Nguyễn Thị Kim Tươi",
+      "ngay": "2026-08-21",
+      "cs": "khuA",
+      "ck": "Không",
+      "gc": "",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 15
+    },
+    {
+      "zone": "DQH",
+      "ma": "KH2600059",
+      "ten": "Trần Thị Mộng Thúy",
+      "ngay": "2026-08-20",
+      "cs": "Tầng trệt - DQH",
+      "ck": "Không",
+      "gc": "Con gái bà ở Mỹ về chơi 3-4 tháng muốn bà ở nhà chơi tập vật lý trị liệu châm cứu do chân bà công quá.",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 20
+    },
+    {
+      "zone": "HLDB2",
+      "ma": "2500569",
+      "ten": "Trần Mỹ Hoa",
+      "ngay": "2026-08-14",
+      "cs": "Chăm sóc Đặc biệt 2",
+      "ck": "Không",
+      "gc": "Bà vào viện từ tháng 12/2025, ở thời điểm này Bà đang trong giai đoạn suy giảm trí nhớ và đang làm giúp việc cho một gia đình đã lâu. Vì chưa liên lạc tìm được người thân Bà, đồng thời đã chăm sóc người gửi từ lúc nhỏ đến hiện tại đã là Bác sĩ. Sự gắn bó đồng hành lâu, gia đình mến xem Bà như người thân. Đến hiện tại người gửi đã tìm và liên lạc được người thân Bà, sau khi thống nhất gia đình thanh lý hợp đồng ngày 14/08/2026 để đón Bà về quê nhà chăm sóc.",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 14
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600033",
+      "ten": "Nguyễn Thị Giàu",
+      "ngay": "2026-08-12",
+      "cs": "Khu B",
+      "ck": "Không",
+      "gc": "Thanh lý về nhà chăm sóc cuối đời",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 12
+    },
+    {
+      "zone": "HH",
+      "ma": "2400369",
+      "ten": "Hồ Thị Bông",
+      "ngay": "2026-08-10",
+      "cs": "Hoa Hồng Bà",
+      "ck": "Không",
+      "gc": "sức khỏe bà cải thiện rõ rệt, có thể tự sinh hoạt cá nhân, ăn uống và nhận thức tốt nên viện chuyển bà sang khu Hoa Hồng phù hợp với tình trạng hiện tại. Ngày 27/07/2026, gia đình đón bà về quê thăm nhà do có con cháu từ nước ngoài về. Sau thời gian ở cùng gia đình, con cháu mong muốn bà ở lại lâu hơn để gần gũi gia đình. CSKH đã trao đổi, việc gia đình vẫn mong muốn gửi bà trong thời gian tới. Gia đình quyết định thanh lý hợp đồng ngày 10/8/2026",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 10
+    },
+    {
+      "zone": "NT",
+      "ma": "KH2600104",
+      "ten": "Nguyễn Thị Nữ",
+      "ngay": "2026-08-07",
+      "cs": "Tầng 2",
+      "ck": "Không",
+      "gc": "BÀ TIÊN LƯỢNG NẶNG, GĐ ĐƯA BÀ VỀ NHÀ",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 7
+    },
+    {
+      "zone": "NT",
+      "ma": "KH2600206",
+      "ten": "Đặng Phi Long",
+      "ngay": "2026-08-05",
+      "cs": "Tầng trệt",
+      "ck": "Không",
+      "gc": "THANH LÝ VỀ NHÀ",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 5
+    },
+    {
+      "zone": "HLDB2",
+      "ma": "21000110",
+      "ten": "Đặng Quý Lân",
+      "ngay": "2026-08-04",
+      "cs": "Hoa lan",
+      "ck": "Không",
+      "gc": "Gia đình Chú Đặng Quý Lân có chia sẻ hiện khoản tiền tích lũy của Chú đã hết. Chú không có vợ con, người chị trong gia đình buôn bán mỹ phẩm tại chợ nhưng điều kiện kinh tế cũng gặp nhiều khó khăn nên không còn khả năng tiếp tục chi trả viện phí.  Hiện tại, tình trạng sức khỏe của Chú ổn định, sinh hoạt và ăn uống bình thường, tâm lý ổn định. Sau khi cân nhắc, gia đình quyết định đón Chú về nhà để thuận tiện chăm sóc và thanh lý hợp đồng vào ngày 04/08/2026.",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 4
+    },
+    {
+      "zone": "HHG",
+      "ma": "KH2600158",
+      "ten": "Nguyễn Thị Tuyết Nga",
+      "ngay": "2026-08-04",
+      "cs": "Khu B",
+      "ck": "Không",
+      "gc": "",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 4
+    },
+    {
+      "zone": "AH",
+      "ma": "HD2600092",
+      "ten": "Lê Bác Ái",
+      "ngay": "2026-08-03",
+      "cs": "Tầng 3 - AH",
+      "ck": "Không",
+      "gc": "Ông Lê Bác Ái hiện tại mẹ ông đang biến động về sức khoẻ nguyện vọng muốn ông về nhà động viên tinh thần cho bà nên Người Đại Diện thông báo chấm dứt hợp đồng, đưa ông về nhà chăm sóc từ ngày 03/08/2026",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 3
+    },
+    {
+      "zone": "HH",
+      "ma": "2500541",
+      "ten": "Nguyễn Thành Phụng",
+      "ngay": "2026-08-02",
+      "cs": "Hoa Hồng Ông",
+      "ck": "Không",
+      "gc": "Dạ ông Nguyễn Thành Phụng vào viện ngày 12/11/2025, tình trạng suy giảm trí nhớ, đi lại bình thường và sinh hoạt tự chủ. Gia đình có 2 chị em lo cho ông, Hiện tại gia đình gặp khó khăn về tài chính, nghỉ việc do công ty nợ lương, nên tạm thời chưa đủ khả năng tiếp tục chi trả viện phí cho ông. Gia đình xin đón ông về chăm sóc trong thời gian chờ xin việc mới và ổn định tài chính sẽ tiếp tục gửi ông. Đồng thời gia đình đề nghị dùng phần tiền ký quỹ của ông để thanh toán viện phí tháng 07/2026. Và quyết định thanh lý ngày 2/8/20266",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 2
+    },
+    {
+      "zone": "AH",
+      "ma": "HD2600072",
+      "ten": "Vũ Thị Phấn",
+      "ngay": "2026-08-01",
+      "cs": "Tầng 4 - AH",
+      "ck": "Không",
+      "gc": "Gia đình yêu cầu thanh lý bà về nhà để chăm sóc từ ngày 1/8/2026.",
+      "ct": "7. THANH LÝ HỢP ĐỒNG",
+      "songay": 1
     }
   ]
 }
