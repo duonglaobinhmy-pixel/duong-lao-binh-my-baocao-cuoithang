@@ -27,43 +27,204 @@
   function parseDay(s){const m=String(s||'').match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);return m?Date.UTC(+m[1],+m[2]-1,+m[3]):null;}
   function refDate(){const m=String(MONTH||'').match(/^(\d{4})-(\d{1,2})/);if(!m)return Date.now();return Date.UTC(+m[1],+m[2],0);} // ngày cuối tháng báo cáo
   function refStart(){const m=String(MONTH||'').match(/^(\d{4})-(\d{1,2})/);if(!m)return 0;return Date.UTC(+m[1],+m[2]-1,1);} // ngày đầu tháng báo cáo
-  function daysOf(r){ // SỐ NGÀY THỰC Ở trong tháng (đã trừ đi viện + về nhà). Ưu tiên số tính sẵn từ node.
-    if(r.songay!=null&&r.songay!=='')return Number(r.songay);
-    if(/^[12]\./.test(r.ct)){ // HIỆN HỮU / HĐ MỚI: tính theo ngày vào -> cuối tháng
-      const d=parseDay(r.ngay); if(d==null)return null;
-      const start=Math.max(d,REFSTART);
-      if(start>REF)return 0;
-      return Math.floor((REF-start)/86400000)+1;
-    }
-    // RULE: bất kỳ dòng nào của người ĐANG HIỆN HỮU (mã có trong HHDAYS) -> mượn số ngày ở của họ.
-    // (xuất viện về khu lại, đi viện đã về, khách hàng phát sinh...). Người đã rời khu -> để trống.
-    const k=digOnly(r.ma);
-    if(k && HHDAYS.has(k))return HHDAYS.get(k);
-    return null;
-  }
-  function awayDays(r){
+  // ============================================================
+// SỐ NGÀY CHĂM SÓC THỰC TẾ TRONG THÁNG
+//
+// RULE:
+// 1. Không phụ thuộc việc cuối tháng còn HIỆN HỮU hay đang tạm vắng.
+// 2. Tính từ ngày bắt đầu thuộc khu trong tháng.
+// 3. Nếu tử vong / thanh lý thì dừng tại ngày đó.
+// 4. Trừ số ngày ĐI VIỆN.
+// 5. Trừ số ngày VỀ NHÀ.
+// 6. Một NCT được xác định ưu tiên theo MÃ, fallback theo HỌ TÊN.
+// ============================================================
 
-    if(r.soNgayDiVien!=null)
-      return Number(r.soNgayDiVien)||0;
-  
-    if(r.soNgayVeNha!=null)
-      return Number(r.soNgayVeNha)||0;
-  
-    if(r.diVienDays!=null)
-      return Number(r.diVienDays)||0;
-  
-    if(r.veNhaDays!=null)
-      return Number(r.veNhaDays)||0;
-  
-    const gc = String(r.gc||'');
-  
-    let m =
-      gc.match(/đi viện.*?(\d+)/i) ||
-      gc.match(/về nhà.*?(\d+)/i) ||
-      gc.match(/(\d+)\s*ngày/i);
-  
-    return m ? Number(m[1]) : 0;
+function personKey(r){
+  const m = digOnly(r.ma);
+  if(m) return 'M|' + m;
+
+  const t = norm(r.ten || '').trim();
+  return t ? 'T|' + t : '';
+}
+
+
+// ------------------------------------------------------------
+// Đọc số ngày tạm vắng trên MỘT dòng
+// ------------------------------------------------------------
+function awayDays(r){
+
+  // Ưu tiên field chuẩn nếu node backend đã tính sẵn
+  if(r.soNgayDiVien != null && r.soNgayDiVien !== '')
+    return Number(r.soNgayDiVien) || 0;
+
+  if(r.soNgayVeNha != null && r.soNgayVeNha !== '')
+    return Number(r.soNgayVeNha) || 0;
+
+  if(r.diVienDays != null && r.diVienDays !== '')
+    return Number(r.diVienDays) || 0;
+
+  if(r.veNhaDays != null && r.veNhaDays !== '')
+    return Number(r.veNhaDays) || 0;
+
+
+  // Fallback: đọc từ ghi chú
+  const gc = String(r.gc || '');
+
+  let m =
+    gc.match(/đi\s*viện.*?(\d+)\s*ngày/i) ||
+    gc.match(/về\s*(?:thăm\s*)?nhà.*?(\d+)\s*ngày/i) ||
+    gc.match(/tạm\s*vắng.*?(\d+)\s*ngày/i);
+
+  return m ? Number(m[1]) : 0;
+}
+
+
+// ------------------------------------------------------------
+// Tìm tất cả dòng của cùng một NCT
+// ------------------------------------------------------------
+function personRows(r){
+  const key = personKey(r);
+
+  if(!key) return [r];
+
+  return merged().filter(x => personKey(x) === key);
+}
+
+
+// ------------------------------------------------------------
+// Xác định ngày bắt đầu thuộc khu trong tháng
+// ------------------------------------------------------------
+function personStartDate(rows){
+
+  const candidates = [];
+
+  rows.forEach(x => {
+
+    // Dòng HIỆN HỮU hoặc HĐ MỚI thường chứa ngày bắt đầu
+    if(/^[12]\./.test(String(x.ct || ''))){
+      const d = parseDay(x.ngay);
+      if(d != null) candidates.push(d);
+    }
+
+    // Fallback cho dữ liệu có tên chỉ tiêu nhập mới/phát sinh
+    if(/HĐ MỚI|HD MOI|NHẬP MỚI|PHÁT SINH|VÀO KHU/i.test(String(x.ct || ''))){
+      const d = parseDay(x.ngay);
+      if(d != null) candidates.push(d);
+    }
+  });
+
+
+  // Có ngày vào rõ ràng
+  if(candidates.length){
+    return Math.max(
+      REFSTART,
+      Math.min(...candidates)
+    );
   }
+
+
+  // Không có ngày vào trong tháng
+  // => hiểu là NCT đã thuộc khu từ trước ngày đầu tháng
+  return REFSTART;
+}
+
+
+// ------------------------------------------------------------
+// Xác định ngày kết thúc được tính trong tháng
+// ------------------------------------------------------------
+function personEndDate(rows){
+
+  let end = REF;
+
+  rows.forEach(x => {
+
+    const ct = String(x.ct || '');
+
+    // Chỉ những sự kiện làm chấm dứt lưu trú mới cắt ngày
+    if(/TỬ VONG|TU VONG|THANH LÝ|THANH LY/i.test(ct)){
+
+      const d = parseDay(x.ngay);
+
+      if(d != null && d < end)
+        end = d;
+    }
+
+  });
+
+  return end;
+}
+
+
+// ------------------------------------------------------------
+// Tổng số ngày đi viện / về nhà của một NCT
+// ------------------------------------------------------------
+function personAwayDays(rows){
+
+  let total = 0;
+
+  rows.forEach(x => {
+
+    const ct = String(x.ct || '');
+
+    // Chỉ cộng trên các dòng thực sự là tạm vắng
+    if(/ĐI VIỆN|DI VIEN|VỀ THĂM NHÀ|VE THAM NHA|VỀ NHÀ|VE NHA/i.test(ct)){
+      total += Math.max(0, Number(awayDays(x)) || 0);
+    }
+
+  });
+
+  return total;
+}
+
+
+// ------------------------------------------------------------
+// Hàm chính: tính số ngày chăm sóc thực tế của một NCT
+// ------------------------------------------------------------
+function careDays(r){
+
+  const rows = personRows(r);
+
+  const start = personStartDate(rows);
+  const end   = personEndDate(rows);
+
+  if(start == null || end == null)
+    return null;
+
+  if(start > REF)
+    return 0;
+
+  if(end < REFSTART)
+    return 0;
+
+  const s = Math.max(start, REFSTART);
+  const e = Math.min(end, REF);
+
+  if(e < s)
+    return 0;
+
+
+  // Tổng ngày lịch NCT thuộc khu
+  let total =
+    Math.floor((e - s) / 86400000) + 1;
+
+
+  // Trừ đi viện + về nhà
+  const away = personAwayDays(rows);
+
+  total -= away;
+
+
+  // Không bao giờ âm
+  return Math.max(0, total);
+}
+
+
+// ------------------------------------------------------------
+// Giữ tên hàm daysOf() để các phần code cũ không phải sửa nhiều
+// ------------------------------------------------------------
+function daysOf(r){
+  return careDays(r);
+}
   const rowKey=r=>[r.ct,r.ma,r.ten,r.ngay].join('|');
   const LSK=()=>'bcare_edit_'+MONTH;
   function loadEdits(){let e;try{e=JSON.parse(localStorage.getItem(LSK()))||{};}catch(_){e={};} e.edits=e.edits||{};e.deleted=e.deleted||[];e.added=e.added||[];e.kpi=e.kpi||{};return e;}
@@ -228,10 +389,84 @@
     const dayf=(document.getElementById('dayf')||{}).value||'';
     let rows=merged().filter(r=>(!fct||r.ct===fct)&&(!fz||r.zone===fz)&&(!kw||norm([r.ten,r.ma,r.gc,r.cs].join(' ')).includes(nk)));
     // bộ lọc số ngày: chỉ lọc trên dòng HIỆN HỮU (1 người 1 dòng) -> ra đúng danh sách như tính lương
-    if(dayf){
-      const test = dayf==='ge30'?(x=>x>=30) : dayf==='lt30'?(x=>x<30) : dayf==='ge15'?(x=>x>=15) : dayf==='lt15'?(x=>x<15) : null;
-      if(test) rows=rows.filter(r=>{ if(!/^1\./.test(r.ct))return false; const x=daysOf(r); return x!=null && test(x); });
-    }
+   // ============================================================
+// BỘ LỌC SỐ NGÀY CHĂM SÓC
+//
+// KHÔNG được chỉ lấy HIỆN HỮU cuối tháng.
+//
+// Ví dụ:
+// - tử vong 18/8 nhưng đã chăm sóc >=15 ngày
+// - đi viện từ 19/8 nhưng trước đó đã chăm sóc >=15 ngày
+// - về nhà 23/8 nhưng trước đó đã chăm sóc >=15 ngày
+//
+// đều phải xuất hiện.
+// ============================================================
+
+if(dayf){
+
+  const test =
+    dayf === 'ge30' ? (x => x >= 30) :
+    dayf === 'lt30' ? (x => x < 30)  :
+    dayf === 'ge15' ? (x => x >= LUONG_MIN) :
+    dayf === 'lt15' ? (x => x < LUONG_MIN) :
+    null;
+
+
+  if(test){
+
+    // --------------------------------------------------------
+    // Gom 1 NCT thành 1 record
+    // Vì một NCT có thể có:
+    // HIỆN HỮU + ĐI VIỆN + VỀ NHÀ + TỬ VONG...
+    // --------------------------------------------------------
+
+    const people = new Map();
+
+    rows.forEach(r => {
+
+      const k = personKey(r);
+      if(!k) return;
+
+      if(!people.has(k)){
+
+        people.set(k, {
+          ...r,
+          _cts: [r.ct]
+        });
+
+      } else {
+
+        const e = people.get(k);
+
+        if(!e._cts.includes(r.ct))
+          e._cts.push(r.ct);
+
+
+        // Ưu tiên dòng HIỆN HỮU / HĐ MỚI làm dòng hiển thị
+        if(/^[12]\./.test(String(r.ct || ''))){
+          e.ct   = r.ct;
+          e.zone = r.zone;
+          e.ngay = r.ngay;
+          e.cs   = r.cs;
+          e.ck   = r.ck;
+          e.gc   = r.gc;
+        }
+
+      }
+
+    });
+
+
+    rows = [...people.values()].filter(r => {
+
+      const x = daysOf(r);
+
+      return x != null && test(x);
+
+    });
+
+  }
+}
     if(sortK)rows=rows.slice().sort((a,b)=>(norm(a[sortK])>norm(b[sortK])?1:-1)*dir);
     if((document.getElementById('dedup')||{}).checked){
       const m=new Map();
@@ -299,21 +534,171 @@
         const e=loadEdits(); if(!e.deleted.includes(b.dataset.rk))e.deleted.push(b.dataset.rk); saveEdits(e); renderDetail();
       });
     }
-    const fz=(document.getElementById('z')||{}).value||'';
-    // RULE: 1 người có thể nằm ở NHIỀU chỉ tiêu (vd cụ HĐ MỚI cũng có dòng HIỆN HỮU)
-    //       => "dòng" KHÁC "người". Trước đây chỉ in số dòng nên [HH] hiện 104 > hiện hữu 101.
-    const dedupOn=!!(document.getElementById('dedup')||{}).checked;
-    const uniq=new Set(rows.map(r=>digOnly(r.ma)||norm(r.ten))).size;
-    // Hiện hữu cuối tháng + phân nhóm số ngày ở: LUÔN tính trên toàn khu đang chọn,
-    // vì đây là số dùng để tính lương. Không phụ thuộc ô tìm kiếm / lọc chỉ tiêu / lọc số ngày.
-    const hh=merged().filter(r=>/^1\./.test(r.ct)&&(!fz||r.zone===fz));
-    const nge=hh.filter(r=>{const x=daysOf(r);return x!=null&&x>=LUONG_MIN;}).length; const nlt=hh.filter(r=>{const x=daysOf(r);return x!=null&&x<LUONG_MIN;}).length;
-    const isHH=r=>(r._cts||[r.ct]).some(x=>/^1\./.test(x));
-    const narrowed=hh.length!==rows.filter(isHH).length; // chỉ nhắc khi tập đang xem thật sự ít hiện hữu hơn toàn khu
-    const view='Hiển thị '+rows.length+(dedupOn?' người':' dòng'+(uniq!==rows.length?' ('+uniq+' người)':''));
-    const kLabel=fz?('['+fz+'] '):'[Tất cả khu] ';
-    count.textContent=view+' • '+kLabel+'Hiện hữu cuối tháng: '+hh.length+' = ≥'+LUONG_MIN+' ngày (lương) '+nge+' + <'+LUONG_MIN+' ngày '+nlt
-      +(narrowed?' — số toàn khu, không theo bộ lọc':'')+(editMode?' • ĐANG SỬA':'');
+    const fz =
+  (document.getElementById('z') || {}).value || '';
+
+
+// ============================================================
+// HIỆN HỮU CUỐI THÁNG
+//
+// Chỉ số này VẪN giữ nguyên logic cũ.
+// Đây là snapshot cuối tháng.
+// ============================================================
+
+const hh = merged().filter(r =>
+  /^1\./.test(String(r.ct || '')) &&
+  (!fz || r.zone === fz)
+);
+
+const hhPeople =
+  new Set(
+    hh.map(r => personKey(r)).filter(Boolean)
+  );
+
+const hhCount = hhPeople.size;
+
+
+// ============================================================
+// TẬP NCT DÙNG ĐỂ TÍNH ≥15 NGÀY
+//
+// KHÔNG dùng hh.
+// Lấy mọi NCT có phát sinh/lưu trú tại khu trong tháng.
+// ============================================================
+
+const salaryMap = new Map();
+
+merged().forEach(r => {
+
+  if(fz && r.zone !== fz)
+    return;
+
+  const k = personKey(r);
+
+  if(!k)
+    return;
+
+
+  if(!salaryMap.has(k)){
+
+    salaryMap.set(k, {
+      ...r,
+      _cts: [r.ct]
+    });
+
+  } else {
+
+    const e = salaryMap.get(k);
+
+    if(!e._cts.includes(r.ct))
+      e._cts.push(r.ct);
+
+
+    // Ưu tiên HIỆN HỮU / HĐ MỚI làm dòng đại diện
+    if(/^[12]\./.test(String(r.ct || ''))){
+
+      e.ct   = r.ct;
+      e.zone = r.zone;
+      e.ngay = r.ngay;
+      e.cs   = r.cs;
+      e.ck   = r.ck;
+
+    }
+
+  }
+
+});
+
+
+const salaryPeople =
+  [...salaryMap.values()]
+    .map(r => ({
+      row: r,
+      days: daysOf(r)
+    }))
+    .filter(x =>
+      x.days != null &&
+      x.days > 0
+    );
+
+
+// ============================================================
+// PHÂN NHÓM LƯƠNG
+// ============================================================
+
+const nge =
+  salaryPeople.filter(x =>
+    x.days >= LUONG_MIN
+  ).length;
+
+const nlt =
+  salaryPeople.filter(x =>
+    x.days < LUONG_MIN
+  ).length;
+
+
+// ============================================================
+// PHẦN HIỂN THỊ SỐ DÒNG / SỐ NGƯỜI ĐANG XEM
+// ============================================================
+
+const dedupOn =
+  !!(document.getElementById('dedup') || {}).checked;
+
+const uniq =
+  new Set(
+    rows.map(r => personKey(r)).filter(Boolean)
+  ).size;
+
+const view =
+  'Hiển thị ' +
+  rows.length +
+  (
+    dedupOn
+      ? ' người'
+      : ' dòng' +
+        (
+          uniq !== rows.length
+            ? ' (' + uniq + ' người)'
+            : ''
+        )
+  );
+
+
+const kLabel =
+  fz
+    ? '[' + fz + '] '
+    : '[Tất cả khu] ';
+
+
+// ============================================================
+// TEXT CUỐI
+// ============================================================
+
+count.textContent =
+  view +
+  ' • ' +
+  kLabel +
+
+  'Hiện hữu cuối tháng: ' +
+  hhCount +
+
+  ' • Có phát sinh chăm sóc trong tháng: ' +
+  salaryPeople.length +
+
+  ' = ≥' +
+  LUONG_MIN +
+  ' ngày (lương) ' +
+  nge +
+
+  ' + <' +
+  LUONG_MIN +
+  ' ngày ' +
+  nlt +
+
+  (
+    editMode
+      ? ' • ĐANG SỬA'
+      : ''
+  );
   }
 
   function addRow(){
