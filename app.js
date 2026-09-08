@@ -780,10 +780,21 @@ count.textContent =
 
   // ---------- boot ----------
   function boot(d){
-    MONTH=d.month||''; BASE=(d.detail||[]).slice(); totalsRef=d.totals||null; KPIBASE=(d.kpi||[]).slice(); DADJUST=(d.adjust||[]); window.__KPI__=KPIBASE; REF=refDate(); REFSTART=refStart();
-    HHDAYS=new Map(); // số ngày ở của từng người đang hiện hữu (để dòng "xuất viện về/đi viện đã về" mượn lại)
-    BASE.forEach(r=>{ if(/^1\./.test(r.ct)){ const v=daysOf(r); const k=digOnly(r.ma); if(v!=null&&k)HHDAYS.set(k,v); } });
-    document.getElementById('sub').textContent='Tháng '+MONTH+(d.generatedAt?(' • cập nhật '+d.generatedAt):'');
+    MONTH=d.month||'';
+    BASE=(d.detail||[]).slice();
+    totalsRef=d.totals||null;
+    KPIBASE=(d.kpi||[]).slice();
+    DADJUST=(d.adjust||[]);
+    window.__KPI__=KPIBASE;
+  
+    REF=refDate();
+    REFSTART=refStart();
+  
+    // Logic mới không còn mượn số ngày từ dòng HIỆN HỮU.
+    HHDAYS=new Map();
+  
+    document.getElementById('sub').textContent=
+      'Tháng '+MONTH+(d.generatedAt?(' • cập nhật '+d.generatedAt):'');
     renderKPI();
     const f=document.getElementById('f'),z=document.getElementById('z');
     [...new Set(BASE.map(r=>r.ct))].sort().forEach(c=>{const o=document.createElement('option');o.value=o.textContent=c;f.appendChild(o);});
