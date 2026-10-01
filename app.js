@@ -40,8 +40,11 @@
 // ============================================================
 
 function personKey(r){
-  const m = digOnly(r.ma);
-  if(m) return 'M|' + m;
+  // Chỉ bỏ tiền tố KH (KH2600114 ≡ 2600114). Mã HĐ (HD2600243) giữ nguyên tiền tố,
+  // tránh trùng số với mã NCT khác (HD2600243 Mai Thị Hậu ≠ KH2600243 Huỳnh Thanh Phong).
+  const s = String(r.ma == null ? '' : r.ma).trim().replace(/^KH(?=\d)/i, '');
+  if(/^\d+$/.test(s)) return 'M|' + s;
+  if(s) return 'C|' + s.toUpperCase();
 
   const t = norm(r.ten || '').trim();
   return t ? 'T|' + t : '';
@@ -240,16 +243,22 @@ function daysOf(r){
   const AUTO=['tongXuat','lapDay','tamVang','thuocKhu']; // tự tính, không sửa tay
   // RULE: "Tạm vắng" = NCT đi viện/về nhà CHƯA VỀ (Còn trong khu=Không), nhận diện tự động từ danh sách chi tiết.
   // "Thuộc khu (KT)" = Hiện hữu + Tạm vắng = cách đếm của kế toán (tính cả người tạm vắng vẫn giữ giường).
-  function tamVangByZone(){
-    const hh=new Set((BASE||[]).filter(r=>/^1\./.test(r.ct)).map(r=>digOnly(r.ma)));
-    const seen=new Set(); const cnt={};
+  // Danh sách dòng tạm vắng (mỗi người 1 dòng): đi viện/về nhà chưa về, không hiện hữu,
+  // và KHÔNG đã thanh lý/tử vong trong tháng (người đã chấm dứt HĐ không giữ giường).
+  function tamVangRows(){
+    const hh=new Set((BASE||[]).filter(r=>/^1\./.test(r.ct)).map(personKey));
+    const ended=new Set((BASE||[]).filter(r=>/TỬ VONG|THANH LÝ/i.test(r.ct)).map(personKey));
+    const seen=new Set(); const out=[];
     (BASE||[]).forEach(r=>{
       if(!/ĐI VIỆN|VỀ THĂM NHÀ/.test(r.ct))return;       // chỉ nhóm đi viện / về nhà
       if(String(r.ck||'').indexOf('Có')===0)return;       // đã về khu -> không phải tạm vắng
-      const m=digOnly(r.ma); if(!m||hh.has(m)||seen.has(m))return; // đang hiện hữu hoặc đã đếm -> bỏ
-      seen.add(m); cnt[r.zone]=(cnt[r.zone]||0)+1;
+      const m=personKey(r); if(!m||hh.has(m)||ended.has(m)||seen.has(m))return;
+      seen.add(m); out.push(r);
     });
-    return cnt;
+    return out;
+  }
+  function tamVangByZone(){
+    const cnt={}; tamVangRows().forEach(r=>{cnt[r.zone]=(cnt[r.zone]||0)+1;}); return cnt;
   }
   // ---------- DRILL-DOWN: bấm số trong bảng KPI -> mở đúng danh sách chi tiết ----------
   // Map chỉ tiêu KPI -> mẫu nhận dạng tên "Chỉ tiêu" (ct) trong danh sách chi tiết.
@@ -281,7 +290,7 @@ function daysOf(r){
     document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('active',x.dataset.tab===name));
     document.querySelectorAll('.panel').forEach(x=>x.classList.toggle('active',x.id===name));
   }
-  let drillMsg='', drillNone=false;
+  let drillMsg='', drillNone=false, drillTV=false;
   function expectedKpiVal(zone,field){
     // Lấy đúng số đã chốt trên bảng KPI (đã gộp chỉnh tay) cho 1 khu hoặc toàn hệ thống,
     // để so với số dòng chi tiết thật -> phát hiện "còn thiếu tên" mà không cần đụng vào số KPI.
@@ -295,7 +304,9 @@ function daysOf(r){
     q.value=''; if(dayf)dayf.value='';
     z.value=[...z.options].some(o=>o.value===zone)?zone:'';
     const zTxt=zone?('khu '+zone):'toàn hệ thống';
-    if(ct){ f.value=ct; drillNone=false; }
+    drillTV=false;
+    if(field==='tamVang'){ f.value=''; drillNone=false; drillTV=true; } // tạm vắng gom từ 2 nhóm đi viện + về nhà
+    else if(ct){ f.value=ct; drillNone=false; }
     else {  // chưa có dòng chi tiết cho chỉ tiêu này -> trả về RỖNG + nói rõ lý do,
             // không được để lọt cả danh sách khu ra làm người đọc tưởng đó là danh sách đúng
       f.value=''; drillNone=true;
@@ -384,10 +395,11 @@ function daysOf(r){
   // Lọc + sort + gộp người theo bộ điều khiển hiện tại (dùng chung cho hiển thị & xuất Excel)
   function currentRows(){
     if(drillNone)return []; // đang drill vào chỉ tiêu chưa có dòng chi tiết -> đúng là rỗng
+    const tvSet=drillTV?new Set(tamVangRows().map(rowKey)):null;
     const q=document.getElementById('q'),f=document.getElementById('f'),z=document.getElementById('z');
     const kw=q.value.trim(),fct=f.value,fz=z.value,nk=norm(kw);
     const dayf=(document.getElementById('dayf')||{}).value||'';
-    let rows=merged().filter(r=>(!fct||r.ct===fct)&&(!fz||r.zone===fz)&&(!kw||norm([r.ten,r.ma,r.gc,r.cs].join(' ')).includes(nk)));
+    let rows=merged().filter(r=>(!fct||r.ct===fct)&&(!fz||r.zone===fz)&&(!kw||norm([r.ten,r.ma,r.gc,r.cs].join(' ')).includes(nk))&&(!tvSet||tvSet.has(rowKey(r))));
     // bộ lọc số ngày: chỉ lọc trên dòng HIỆN HỮU (1 người 1 dòng) -> ra đúng danh sách như tính lương
    // ============================================================
 // BỘ LỌC SỐ NGÀY CHĂM SÓC
@@ -799,7 +811,7 @@ count.textContent =
     const f=document.getElementById('f'),z=document.getElementById('z');
     [...new Set(BASE.map(r=>r.ct))].sort().forEach(c=>{const o=document.createElement('option');o.value=o.textContent=c;f.appendChild(o);});
     [...new Set(BASE.map(r=>r.zone))].filter(Boolean).sort().forEach(zz=>{const o=document.createElement('option');o.textContent=zz;z.appendChild(o);});
-    const rerender=()=>{drillMsg='';drillNone=false;renderDetail();}; // người dùng tự đổi lọc -> bỏ trạng thái drill
+    const rerender=()=>{drillMsg='';drillNone=false;drillTV=false;renderDetail();}; // người dùng tự đổi lọc -> bỏ trạng thái drill
     document.getElementById('q').oninput=f.onchange=z.onchange=rerender;
     const dayf=document.getElementById('dayf'); if(dayf)dayf.onchange=rerender;
     const dd=document.getElementById('dedup'); if(dd)dd.onchange=renderDetail;
