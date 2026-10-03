@@ -144,7 +144,7 @@ function personEndDate(rows){
     const ct = String(x.ct || '');
 
     // Chỉ những sự kiện làm chấm dứt lưu trú mới cắt ngày
-    if(/TỬ VONG|TU VONG|THANH LÝ|THANH LY/i.test(ct)){
+    if(/TỬ VONG|TU VONG|THANH LÝ|THANH LY|ĐIỀU CHUYỂN NỘI BỘ \(ĐI\)/i.test(ct)){ // điều chuyển đi: dừng tính ngày ở cơ sở cũ
 
       const d = parseDay(x.ngay);
 
@@ -247,7 +247,7 @@ function daysOf(r){
   // và KHÔNG đã thanh lý/tử vong trong tháng (người đã chấm dứt HĐ không giữ giường).
   function tamVangRows(){
     const hh=new Set((BASE||[]).filter(r=>/^1\./.test(r.ct)).map(personKey));
-    const ended=new Set((BASE||[]).filter(r=>/TỬ VONG|THANH LÝ/i.test(r.ct)).map(personKey));
+    const ended=new Set((BASE||[]).filter(r=>/TỬ VONG|THANH LÝ|ĐIỀU CHUYỂN NỘI BỘ \(ĐI\)/i.test(r.ct)).map(personKey));
     const seen=new Set(); const out=[];
     (BASE||[]).forEach(r=>{
       if(!/ĐI VIỆN|VỀ THĂM NHÀ/.test(r.ct))return;       // chỉ nhóm đi viện / về nhà
@@ -311,7 +311,7 @@ function daysOf(r){
             // không được để lọt cả danh sách khu ra làm người đọc tưởng đó là danh sách đúng
       f.value=''; drillNone=true;
       drillMsg='⚠ Chỉ tiêu “'+ZLABEL(field)+'” ('+zTxt+') chỉ có SỐ TỔNG, chưa có danh sách tên trong data.json. '
-        +'Lý do: 3 API customers / term / exit trả HTTP 400 ngày 31/07 nên số này được nhập tay từ báo cáo cơ sở. '
+        +''
         +'Khi bổ sung dòng chi tiết cho chỉ tiêu này vào data.json thì bấm là ra danh sách ngay, không cần sửa code.';
     }
     showTab('detail'); renderDetail();
