@@ -7912,11 +7912,11 @@
       "zone": "TCDB1",
       "ma": "2500558",
       "ten": "Nguyễn Tiến Tờ",
-      "ngay": "2026-09-24",
+      "ngay": "2026-09-18",
       "cs": "Chăm sóc Tích cực",
       "ck": "Không",
-      "gc": "Ngày xuất khu: 2026-09-24 | Ngày vào lại: 2026-10-01 | Tái Khám nhập viện ngày 14/09/2026",
-      "soNgayDiVien": 7
+      "gc": "Ngày xuất khu: 2026-09-18 | Ngày vào lại: chưa về | Cơ sở báo nhập viện 18/09 (Bcare ghi xuất khu 24/09, ghi chú Bcare \"14/09\") — viện phí T9 đang tính theo 24/09",
+      "soNgayDiVien": 13
     },
     {
       "ct": "6. TỬ VONG",

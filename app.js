@@ -546,171 +546,45 @@ if(dayf){
         const e=loadEdits(); if(!e.deleted.includes(b.dataset.rk))e.deleted.push(b.dataset.rk); saveEdits(e); renderDetail();
       });
     }
-    const fz =
-  (document.getElementById('z') || {}).value || '';
-
-
-// ============================================================
-// HIỆN HỮU CUỐI THÁNG
-//
-// Chỉ số này VẪN giữ nguyên logic cũ.
-// Đây là snapshot cuối tháng.
-// ============================================================
-
-const hh = merged().filter(r =>
-  /^1\./.test(String(r.ct || '')) &&
-  (!fz || r.zone === fz)
-);
-
-const hhPeople =
-  new Set(
-    hh.map(r => personKey(r)).filter(Boolean)
-  );
-
-const hhCount = hhPeople.size;
-
-
-// ============================================================
-// TẬP NCT DÙNG ĐỂ TÍNH ≥15 NGÀY
-//
-// KHÔNG dùng hh.
-// Lấy mọi NCT có phát sinh/lưu trú tại khu trong tháng.
-// ============================================================
-
-const salaryMap = new Map();
-
-merged().forEach(r => {
-
-  if(fz && r.zone !== fz)
-    return;
-
-  const k = personKey(r);
-
-  if(!k)
-    return;
-
-
-  if(!salaryMap.has(k)){
-
-    salaryMap.set(k, {
-      ...r,
-      _cts: [r.ct]
+    // ============================================================
+    // ĐỐI CHIẾU (thay dòng tóm tắt cũ): mọi số đều CỘNG KHỚP với bảng KPI,
+    // mỗi cụ chỉ thuộc đúng 1 nhóm trạng thái cuối tháng.
+    //   Có mặt trong tháng = Hiện hữu + Tạm vắng (= Thuộc khu) + Đã ra (Tử vong + Thanh lý + Chuyển cơ sở)
+    //   Có mặt trong tháng = ≥15 ngày (tính lương) + <15 ngày
+    // Lọc theo khu (dropdown Khu); KHÔNG phụ thuộc ô tìm kiếm / chỉ tiêu.
+    // ============================================================
+    const fz=(document.getElementById('z')||{}).value||'';
+    const byP=new Map();
+    merged().forEach(r=>{const k=personKey(r); if(!k)return; if(!byP.has(k))byP.set(k,[]); byP.get(k).push(r);});
+    const tvKeys=new Set(tamVangRows().map(personKey));
+    const c={all:0,hh:0,tv:0,tvong:0,tl:0,dc:0,other:0,ge:0,lt:0,zero:0};
+    byP.forEach((rs,k)=>{
+      const pri=rs.slice().sort((x,y)=>String(x.ct).localeCompare(String(y.ct)))[0];
+      if(fz && pri.zone!==fz) return;
+      const has=re=>rs.some(r=>re.test(String(r.ct||'')));
+      c.all++;
+      if(has(/^1\./)) c.hh++;
+      else if(has(/TỬ VONG/i)) c.tvong++;
+      else if(has(/THANH LÝ/i)) c.tl++;
+      else if(has(/ĐIỀU CHUYỂN NỘI BỘ \(ĐI\)/i)) c.dc++;
+      else if(tvKeys.has(k)) c.tv++;
+      else c.other++;
+      const d=daysOf(pri);
+      if(d!=null && d>=LUONG_MIN) c.ge++; else { c.lt++; if(!d) c.zero++; }
     });
-
-  } else {
-
-    const e = salaryMap.get(k);
-
-    if(!e._cts.includes(r.ct))
-      e._cts.push(r.ct);
-
-
-    // Ưu tiên HIỆN HỮU / HĐ MỚI làm dòng đại diện
-    if(/^[12]\./.test(String(r.ct || ''))){
-
-      e.ct   = r.ct;
-      e.zone = r.zone;
-      e.ngay = r.ngay;
-      e.cs   = r.cs;
-      e.ck   = r.ck;
-
-    }
-
-  }
-
-});
-
-
-const salaryPeople =
-  [...salaryMap.values()]
-    .map(r => ({
-      row: r,
-      days: daysOf(r)
-    }))
-    .filter(x =>
-      x.days != null &&
-      x.days > 0
-    );
-
-
-// ============================================================
-// PHÂN NHÓM LƯƠNG
-// ============================================================
-
-const nge =
-  salaryPeople.filter(x =>
-    x.days >= LUONG_MIN
-  ).length;
-
-const nlt =
-  salaryPeople.filter(x =>
-    x.days < LUONG_MIN
-  ).length;
-
-
-// ============================================================
-// PHẦN HIỂN THỊ SỐ DÒNG / SỐ NGƯỜI ĐANG XEM
-// ============================================================
-
-const dedupOn =
-  !!(document.getElementById('dedup') || {}).checked;
-
-const uniq =
-  new Set(
-    rows.map(r => personKey(r)).filter(Boolean)
-  ).size;
-
-const view =
-  'Hiển thị ' +
-  rows.length +
-  (
-    dedupOn
-      ? ' người'
-      : ' dòng' +
-        (
-          uniq !== rows.length
-            ? ' (' + uniq + ' người)'
-            : ''
-        )
-  );
-
-
-const kLabel =
-  fz
-    ? '[' + fz + '] '
-    : '[Tất cả khu] ';
-
-
-// ============================================================
-// TEXT CUỐI
-// ============================================================
-
-count.textContent =
-  view +
-  ' • ' +
-  kLabel +
-
-  'Hiện hữu cuối tháng: ' +
-  hhCount +
-
-  ' • Có phát sinh chăm sóc trong tháng: ' +
-  salaryPeople.length +
-
-  ' = ≥' +
-  LUONG_MIN +
-  ' ngày (lương) ' +
-  nge +
-
-  ' + <' +
-  LUONG_MIN +
-  ' ngày ' +
-  nlt +
-
-  (
-    editMode
-      ? ' • ĐANG SỬA'
-      : ''
-  );
+    const ra=c.tvong+c.tl+c.dc;
+    const kl=fz?('khu '+fz):'tất cả khu';
+    const uniq=new Set(rows.map(r=>personKey(r)).filter(Boolean)).size;
+    const dedupOn=!!(document.getElementById('dedup')||{}).checked;
+    count.innerHTML=
+      '<div><b>Đối chiếu ('+kl+'):</b> '+c.all+' cụ có mặt trong tháng = '
+        +'Hiện hữu cuối tháng <b>'+c.hh+'</b> + Tạm vắng <b>'+c.tv+'</b> (= Thuộc khu '+(c.hh+c.tv)+') + Đã ra <b>'+ra+'</b> '
+        +'(Tử vong '+c.tvong+' · Thanh lý '+c.tl+' · Chuyển cơ sở '+c.dc+')</div>'
+      +'<div><b>Tính lương:</b> ở ≥'+LUONG_MIN+' ngày <b>'+c.ge+'</b> cụ + dưới '+LUONG_MIN+' ngày '+c.lt+' cụ'
+        +(c.zero?(' (trong đó '+c.zero+' cụ 0 ngày)'):'')+' = '+c.all+' cụ</div>'
+      +(c.other?('<div class="warn">⚠ '+c.other+' cụ chưa xếp được trạng thái cuối tháng — cần kiểm tra</div>'):'')
+      +'<div class="sub">Bảng dưới: '+(dedupOn?(rows.length+' cụ'):(rows.length+' dòng / '+uniq+' cụ'))+' theo bộ lọc đang chọn'
+        +(editMode?' • ĐANG SỬA':'')+'</div>';
   }
 
   function addRow(){

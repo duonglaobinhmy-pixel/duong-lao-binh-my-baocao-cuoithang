@@ -12,7 +12,7 @@ header .sub{font-size:13px;opacity:.92;margin-top:4px}
 .bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
 .bar input,.bar select{padding:8px 10px;border:1px solid #ccc;border-radius:8px;font-size:14px}
 .bar input{flex:1;min-width:180px}
-.count{font-size:13px;color:#555}
+.count{display:block;width:100%;font-size:13px;color:#333;line-height:1.6;margin-top:4px}.count b{color:#1b5e20}.count .sub{color:#888;font-size:12px}.count .warn{color:#c62828}
 .tablewrap{overflow:auto;border:1px solid #e3e6e8;border-radius:8px;background:#fff}
 table{width:100%;border-collapse:collapse;min-width:680px}
 th,td{border:1px solid #e3e6e8;padding:7px 9px;font-size:14px;text-align:center;white-space:nowrap}
