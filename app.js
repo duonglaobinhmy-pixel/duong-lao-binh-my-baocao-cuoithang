@@ -290,7 +290,7 @@ function daysOf(r){
     document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('active',x.dataset.tab===name));
     document.querySelectorAll('.panel').forEach(x=>x.classList.toggle('active',x.id===name));
   }
-  let drillMsg='', drillNone=false, drillTV=false;
+  let drillMsg='', drillNone=false, drillTV=false, drillTK=false;
   function expectedKpiVal(zone,field){
     // Lấy đúng số đã chốt trên bảng KPI (đã gộp chỉnh tay) cho 1 khu hoặc toàn hệ thống,
     // để so với số dòng chi tiết thật -> phát hiện "còn thiếu tên" mà không cần đụng vào số KPI.
@@ -304,8 +304,9 @@ function daysOf(r){
     q.value=''; if(dayf)dayf.value='';
     z.value=[...z.options].some(o=>o.value===zone)?zone:'';
     const zTxt=zone?('khu '+zone):'toàn hệ thống';
-    drillTV=false;
-    if(field==='tamVang'){ f.value=''; drillNone=false; drillTV=true; } // tạm vắng gom từ 2 nhóm đi viện + về nhà
+    drillTV=false; drillTK=false;
+    if(field==='thuocKhu'){ f.value=''; drillNone=false; drillTK=true; } // thuộc khu = hiện hữu + tạm vắng
+    else if(field==='tamVang'){ f.value=''; drillNone=false; drillTV=true; } // tạm vắng gom từ 2 nhóm đi viện + về nhà
     else if(ct){ f.value=ct; drillNone=false; }
     else {  // chưa có dòng chi tiết cho chỉ tiêu này -> trả về RỖNG + nói rõ lý do,
             // không được để lọt cả danh sách khu ra làm người đọc tưởng đó là danh sách đúng
@@ -395,7 +396,7 @@ function daysOf(r){
   // Lọc + sort + gộp người theo bộ điều khiển hiện tại (dùng chung cho hiển thị & xuất Excel)
   function currentRows(){
     if(drillNone)return []; // đang drill vào chỉ tiêu chưa có dòng chi tiết -> đúng là rỗng
-    const tvSet=drillTV?new Set(tamVangRows().map(rowKey)):null;
+    const tvSet=drillTV?new Set(tamVangRows().map(rowKey)):(drillTK?new Set([...BASE.filter(r=>/^1\./.test(r.ct)),...tamVangRows()].map(rowKey)):null);
     const q=document.getElementById('q'),f=document.getElementById('f'),z=document.getElementById('z');
     const kw=q.value.trim(),fct=f.value,fz=z.value,nk=norm(kw);
     const dayf=(document.getElementById('dayf')||{}).value||'';
@@ -685,7 +686,7 @@ if(dayf){
     const f=document.getElementById('f'),z=document.getElementById('z');
     [...new Set(BASE.map(r=>r.ct))].sort().forEach(c=>{const o=document.createElement('option');o.value=o.textContent=c;f.appendChild(o);});
     [...new Set(BASE.map(r=>r.zone))].filter(Boolean).sort().forEach(zz=>{const o=document.createElement('option');o.textContent=zz;z.appendChild(o);});
-    const rerender=()=>{drillMsg='';drillNone=false;drillTV=false;renderDetail();}; // người dùng tự đổi lọc -> bỏ trạng thái drill
+    const rerender=()=>{drillMsg='';drillNone=false;drillTV=false;drillTK=false;renderDetail();}; // người dùng tự đổi lọc -> bỏ trạng thái drill
     document.getElementById('q').oninput=f.onchange=z.onchange=rerender;
     const dayf=document.getElementById('dayf'); if(dayf)dayf.onchange=rerender;
     const dd=document.getElementById('dedup'); if(dd)dd.onchange=renderDetail;
