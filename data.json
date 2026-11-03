@@ -1,6 +1,6 @@
 {
   "month": "2026-10",
-  "generatedAt": "01/11/2026 (tổng hợp từ 5 file Excel Bcare T10 — cuối tháng 10/2026; hiện hữu = thuộc khu cuối T9 + biến động T10, đối chiếu 642 NCT viện phí T10)",
+  "generatedAt": "01/11/2026 (tổng hợp từ 5 file Excel Bcare T10 — cuối tháng 10/2026; hiện hữu = thuộc khu cuối T9 + biến động T10, đối chiếu 642 NCT viện phí T10; rà soát lại 03/11/2026: 642/642 khớp viện phí, 0 trùng)",
   "kpi": [
     {
       "zone": "HH",
@@ -3456,7 +3456,7 @@
       "ct": "1. HIỆN HỮU",
       "zone": "HHG",
       "ma": "KH2600052",
-      "ten": "MIAO-A-KOU",
+      "ten": "Miao-A-Kou",
       "ngay": "2026-03-01",
       "cs": "khuA/VIP04/G4P04",
       "ck": "Có",
@@ -5348,7 +5348,7 @@
       "ct": "1. HIỆN HỮU",
       "zone": "NT",
       "ma": "2500045",
-      "ten": "Nguyễn Kim Hoà",
+      "ten": "Nguyễn Kim Hòa",
       "ngay": "2025-03-01",
       "cs": "Tầng trệt/Phòng 4/Giường 3",
       "ck": "Có",
@@ -5810,7 +5810,7 @@
       "ct": "1. HIỆN HỮU",
       "zone": "TCDB1",
       "ma": "2300396",
-      "ten": "Dương Thị Thanh Thuỷ",
+      "ten": "Dương Thị Thanh Thủy",
       "ngay": "",
       "cs": "Chăm sóc Tích cực/Phòng 3/Giường 7",
       "ck": "Có",
@@ -5931,7 +5931,7 @@
       "ct": "1. HIỆN HỮU",
       "zone": "TCDB1",
       "ma": "19000022",
-      "ten": "Trần Thị Hòa Lộc",
+      "ten": "Trần Thị Hoà Lộc",
       "ngay": "2019-01-15",
       "cs": "Chăm sóc Tích cực/Phòng 2/Giường 2",
       "ck": "Có",

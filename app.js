@@ -481,14 +481,19 @@ if(dayf){
   }
 }
     if(sortK)rows=rows.slice().sort((a,b)=>(norm(a[sortK])>norm(b[sortK])?1:-1)*dir);
-    if((document.getElementById('dedup')||{}).checked){
+    // GỘP THEO NGƯỜI (mặc định bật): 1 cụ = 1 dòng, cột "Chỉ tiêu" liệt kê mọi biến động của cụ trong tháng
+    // (vd Hiện hữu + Đi viện + Xuất viện về khu lại). Dữ liệu gốc vẫn là từng lượt biến động vì KPI đếm theo lượt.
+    // KHÔNG gộp khi đang xem 1 chỉ tiêu cụ thể (dropdown/bấm số KPI): lúc đó danh sách phải khớp số lượt trên KPI.
+    if((document.getElementById('dedup')||{}).checked && !fct && !dayf){
       const m=new Map();
-      rows.forEach(r=>{ const k=(r.ma&&String(r.ma).trim())||norm(r.ten);
-        if(!m.has(k)){ m.set(k,{...r,_cts:[r.ct]}); }
+      rows.forEach(r=>{ const k=personKey(r)||rowKey(r);
+        if(!m.has(k)){ m.set(k,{...r,_cts:[r.ct],_gcs:r.gc?[r.gc]:[]}); }
         else { const e=m.get(k); if(!e._cts.includes(r.ct))e._cts.push(r.ct);
-          if(/^[12]\./.test(r.ct)){ e.ct=r.ct; e.ngay=r.ngay; e.cs=r.cs; e.ck=r.ck; } }
+          if(r.gc&&!e._gcs.includes(r.gc))e._gcs.push(r.gc);
+          if(/^[12]\./.test(r.ct)){ e.ct=r.ct; e.zone=r.zone; e.ngay=r.ngay; e.cs=r.cs; e.ck=r.ck; } }
       });
-      rows=[...m.values()];
+      rows=[...m.values()].map(e=>{ e._cts.sort((x,y)=>String(x).localeCompare(String(y))); e.gc=e._gcs.join(' • '); delete e._gcs; return e; });
+      if(sortK)rows.sort((a,b)=>(norm(a[sortK])>norm(b[sortK])?1:-1)*dir);
     }
     return rows;
   }
@@ -584,7 +589,7 @@ if(dayf){
       +'<div><b>Tính lương:</b> ở ≥'+LUONG_MIN+' ngày <b>'+c.ge+'</b> cụ + dưới '+LUONG_MIN+' ngày '+c.lt+' cụ'
         +(c.zero?(' (trong đó '+c.zero+' cụ 0 ngày)'):'')+' = '+c.all+' cụ</div>'
       +(c.other?('<div class="warn">⚠ '+c.other+' cụ chưa xếp được trạng thái cuối tháng — cần kiểm tra</div>'):'')
-      +'<div class="sub">Bảng dưới: '+(dedupOn?(rows.length+' cụ'):(rows.length+' dòng / '+uniq+' cụ'))+' theo bộ lọc đang chọn'
+      +'<div class="sub">Bảng dưới: '+(rows.length===uniq?(rows.length+' cụ (mỗi cụ 1 dòng)'):(rows.length+' lượt biến động / '+uniq+' cụ — 1 cụ có thể có nhiều lượt'))+' theo bộ lọc đang chọn'
         +(editMode?' • ĐANG SỬA':'')+'</div>';
   }
 
